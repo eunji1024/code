@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+body{
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:15px;
+    color:#ffffff;
+    font-weight:400;
+    letter-spacing:-0.05em;
+    line-height:1.5;
+    word-break:keep-all;
+}/*body에 기본 글자의 스타일을 설정 - body 안에 있는 모든 태그는 글자의 스타일을 상속받는다*/
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style:none;
+}
+div.wrapper{
+    width:1280px;
+    margin:0 auto;
+}/*넓이 1280px에 가운데 정렬*/
+.recruit{
+    background-image:url(../images/recruit.png);
+    background-position:center center;
+    height:614px;
+}
+.tit{
+    font-size:30px;
+    text-align:center;
+    padding:160px 0 70px 0;
+}
+ul{
+    display:flex;
+}
+li{
+    width:250px;
+    margin:0 40px 0 0;
+    text-align:center;
+}
+.last{
+    margin:0;
+}
+h1{
+    font-size:20px;
+    font-weight:700;
+}
