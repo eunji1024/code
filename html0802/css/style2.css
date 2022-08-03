@@ -18,11 +18,11 @@ ul,li{
 }
 body{
     color:#3d3d3d;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family:'Noto Sans KR', sans-serif;
     font-size:15px;
     font-weight:400;
     line-height:1.5;
-    letter-spacing:0.001em;
+    letter-spacing:-0.05em;
 }
 .wrapper{
     width:1280px;
@@ -231,6 +231,6 @@ body{
     border-radius:20px;
     padding:7px 13px;
     display:inline-block;
-    float:right;
-    margin: 62px 0 0 0;
+    float:none;
+    margin:62px 0 0 0;
 }
