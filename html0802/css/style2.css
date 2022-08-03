@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
+body,section,p,div,ul,li{
+    padding:0;
+    margin:0;
+}/*다중 선택자 : body,section등 태그의 모든 여백 삭제*/
+ul,li{
+    list-style:none;/*ul 앞 동그라미 삭제*/
+}
+.clearfix:after{
+    display:block;
+    clear:both;
+    content:".";
+    visibility:hidden;
+    height:0;
+}
+.clearfix{
+    display:block;
+}
+body{
+    color:#3d3d3d;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:15px;
+    font-weight:400;
+    line-height:1.5;
+    letter-spacing:0.001em;
+}
+.wrapper{
+    width:1280px;
+    margin:0 auto;
+}
+.visual{
+    background-image:url(../images/visual_bg.png);
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:1080px;
+    padding:420px 0 0 0;
+    box-sizing:border-box;/*width/height와 padding을 동시에 선언해도 사이즈가 늘어나지 않음*/
+}
+.visual p{
+    color:#ffffff;
+    font-size:50px;
+    font-weight:700;
+    line-height:1.2em;
+    margin:0 0 26px 0;
+}
+.visual a{
+    color:#ffffff;
+    text-decoration:none;
+    border:1px solid #ffffff;
+    border-radius:20px;
+    padding:7px 13px;
+    display:inline-block;/*인라인 요소: a 태그에 padding/border요소를 적용하기 위해서 줌*/
+}
+.intro{
+    text-align:center;/*본인 말고 자손요소를 가운데 정렬*/
+    margin:140px 0 147px 0;
+}
+.intro strong{
+    font-weight:700;
+}
+.intro p{
+    color:#3d3d3d;
+    font-size:50px;
+    font-weight:700;
+    line-height:1.2em;
+    margin:15px 0 26px 0;
+}
+.intro span{
+    color:#999999;
+}
+.intro a{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#3d3d3d;
+    border-radius:20px;
+    padding:7px 13px;
+    display:inline-block;/*인라인 요소: a 태그에 padding/border요소를 적용하기 위해서 줌*/
+}
+.service{
+    background-color:#f4f4f4;
+    padding:145px 0 145px 0;
+}
+.service strong{
+    font-weight:700;
+}
+.service p{
+    color:#3d3d3d;
+    font-size:50px;
+    font-weight:700;
+    line-height:1.2em;
+    margin:15px 0 26px 0;
+}
+.service span{
+    color:#999999;
+}
+.service a{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#3d3d3d;
+    border-radius:20px;
+    padding:7px 13px;
+    display:inline-block;/*인라인 요소: a 태그에 padding/border요소를 적용하기 위해서 줌*/
+}
+.it{
+    background-image:url(../images/it_bg.png);
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:1019px;
+    padding:348px 0 0 0;
+    box-sizing:border-box;/*width/height와 padding을 동시에 선언해도 사이즈가 늘어나지 않음*/
+}
+.it strong{
+    color:#ffffff;
+    font-weight:700;
+}
+.it p{
+    color:#ffffff;
+    font-size:50px;
+    font-weight:700;
+    line-height:1.2em;
+    margin:15px 0 26px 0;
+}
+.it a{
+    color:#ffffff;
+    text-decoration:none;
+    border:1px solid #ffffff;
+    border-radius:20px;
+    padding:7px 13px;
+    display:inline-block;/*인라인 요소: a 태그에 padding/border요소를 적용하기 위해서 줌*/
+}
+.bbs{
+    margin:140px 0 76px 0;
+}
+.bbs p{
+    color:#3d3d3d;
+    font-size:50px;
+    font-weight:700;
+    line-height:1.2em;
+    margin:0 0 64px 0;
+}
+.bbs span{
+    color:#999999;
+}
+/* .bbs ul{
+    display:flex;
+} */
+.bbs ul li{
+    width:290px;
+    margin:0 40px 0 0;
+    float:left;
+}
+.bbs ul li.last{/*li 중에 last 클래스가 있는 li*/
+    margin:0;
+}
+.bbs ul li a{
+    color:#3d3d3d;
+    text-decoration:none;
+    display:block;
+}
+.bbs ul li a img{
+    border:1px solid #999999;
+    border-radius:20px;
+    width:100%;
+    box-sizing:border-box;
+}
+.bbs ul li a strong{
+    display:block;
+    font-size:20px;
+    line-height:1.2em;
+    font-weight:700;
+    margin:18px 0 8px 0;
+}
+.bbs ul li a span{
+    display:block;
+    color:#999999;
+}
+.bbs .more{
+    text-align:center;
+    margin:64px 0 0 0;
+}
+.bbs .more a{
+    color:#3d3d3d;
+    text-decoration:none;
+    border:1px solid #3d3d3d;
+    border-radius:20px;
+    padding:7px 13px;
+    display:inline-block;/*인라인 요소: a 태그에 padding/border요소를 적용하기 위해서 줌*/
+}
+.baner{
+    margin: 0 0 150px 0;
+}
+.baner ul{
+    display:flex;
+}
+.baner ul li{
+    width:620px;
+    height:150px;
+    border-radius:20px;
+    /*display:flex;
+    justify-content:space-between;
+    align-items:flex-end;*/
+    padding:23px 40px 0 40px;
+    box-sizing:border-box;
+}
+.baner ul li.parter{/*li 태그 중 parter라는 클래스명을 가진 li*/
+    background-color:#04C75B;
+    margin:0 40px 0 0;
+}
+.baner ul li.career{/*li 태그 중 career라는 클래스명을 가진 li*/
+    background-color:#08B4EB;
+}
+.baner ul li .tit{
+    float:left;
+}
+.baner ul li .tit strong{
+    color:#ffffff;
+    font-weight:700;
+    line-height:1.2em;
+}
+.baner ul li .tit p{
+    color:#ffffff;
+    font-size:20px;
+    font-weight:700;
+    line-height:1.2em;
+    margin:29px 0 0 0;
+}
+.baner ul li a{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#3d3d3d;
+    border-radius:20px;
+    padding:7px 13px;
+    display:inline-block;
+    float:right;
+    margin: 62px 0 0 0;
+}
