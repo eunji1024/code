@@ -6,16 +6,39 @@ body,section,p,div,ul,li,h1,h2,h3,h4,h5,h6,nav{
 ul,li{
     list-style:none;/*ul 앞 동그라미 삭제*/
 }
+address{
+    font-style:normal;
+}
+button{
+    cursor:pointer;
+    background-color:transparent;
+    color:inherit;
+    font-family:inherit;
+    line-height:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    letter-spacing:inherit;
+}
+.clearfix:after{
+    display:block;
+    clear:both;
+    content:".";
+    visibility:hidden;
+    height:0;
+}
+.clearfix{
+    display:block;
+}
 body{
     color:#3d3d3d;
-    line-height:1.4;
+    line-height:1.5;
     font-family: 'Noto Sans KR', sans-serif;
     font-size:15px;
     font-weight:400;
-    letter-spacing:-0.05em;
+    letter-spacing:-0.06em;
 }
 a{
-    color:#3d3d3d;
+    color:inherit;/* 부모가 정의한 색상을 따른다 */
     text-decoration:none;
 }
 .wrapper{
@@ -28,7 +51,7 @@ header{
 }
 header h1{
     float:left;
-    margin:22px 0 0 0;
+    margin:21px 0 0 0;
 }
 header nav{
     float:right;
@@ -49,8 +72,11 @@ header nav li a{
     background-position:center center;    
     background-repeat:no-repeat;
     height:800px;
+    text-align:center;
 }
 .vis strong{
+    display:block;
+    padding:335px 0 5px 0;
     color:#ffffff;
     font-size:20px;
     font-weight:400;
@@ -60,4 +86,142 @@ header nav li a{
     line-height:1.1;
     font-size:40px;
     font-weight:700;
+}
+.vis p em{
+    font-weight:700;
+}
+/* promo--------------------------------- */
+.promo .art{
+    margin:150px 0 110px 0;
+}
+.promo .art img{
+    float:left;
+}
+.promo p{
+    margin:17px 0 29px 0;
+    line-height:1.49;
+}
+.promo .art .inner{
+    float:left;
+    margin:95px 0 0 88px;
+}
+.promo .lee{
+    margin:0 0 110px 0;
+}
+/* 요소를 float:right;를 주면 코딩순서와 역순으로 요소들이 오른쪽에 정렬 */
+.promo .lee img{
+    float:right;
+}
+.promo .lee .inner{
+    float:right;
+    margin:84px 97px 0 0;
+}
+.promo h2{
+    color:#1d1d1d;
+    font-size:35px;
+    font-weight:700;
+}
+.promo strong{
+    font-size:20px;
+    line-height:1.1;
+    font-weight:700;
+}
+.promo a{
+    display:inline-block;
+    float:left;
+    padding:7px 13px;
+    margin: 0 5px 0 0;
+    border:1px solid #666666;
+}
+/* bbs------------------------------------- */
+.bbs{
+    background-image:url(../images/bbs_bg.png);
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+.bbs .notice{
+    color:#ffffff;
+}
+.bbs .notice .tit{
+    float:left;
+    margin:102px 0 0 0;
+}
+.bbs .notice .tit h2{
+    font-weight:700;
+    font-size:35px;
+}
+.bbs .notice .tit p{
+    margin: 5px 0 23px 0;
+}
+.bbs .notice .tit a{
+    display:inline-block;
+    padding:7px 13px;
+    border:1px solid rgba(255, 255, 255, 0.8);
+}
+.bbs .notice ul{
+    float:right;
+    width: 811px;
+    margin:113px 0 0 0;
+}
+.bbs .notice ul li{
+    border-bottom:1px solid rgba(255, 255, 255, 0.3);
+}
+.bbs .notice ul li.first{
+    border-top:1px solid rgba(255, 255, 255, 0.3);
+}
+.bbs .notice ul li a{
+    padding:22px 10px;
+}
+.bbs .notice ul li a strong{
+    float:left;
+    font-weight:400;
+    font-size:20px;
+}
+.bbs .notice ul li a span{
+    float:right;
+    margin: 4px 0 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight:400;
+    font-size:15px;
+}
+.bbs .movie h2{
+    margin:177px 0 26px 0;
+    color:#ffffff;
+    font-weight:700;
+    font-size:35px;
+}
+.bbs .movie ul li{
+    float:left;
+    width:400px;
+    margin:0 40px 0 0;
+}
+.bbs .movie ul li.last{
+    margin:0;
+}
+.bbs .movie ul li a{
+    display:block;
+}
+.bbs .movie ul li a span{
+    display:block;
+    margin:2px 0 0 0; 
+}
+.bbs .movie ul li a strong{
+    display:block;
+    margin:0 0 102px 0; 
+    font-weight:700;
+    font-size:20px;
+}
+/* footer--------------------------------- */
+footer{
+    background-color:#0a0a0a;
+    color:rgba(255, 255, 255, 0.7);
+}
+footer .inner{
+    float:left;
+    margin:36px 0 123px 0;
+}
+footer button{
+    float:right;
+    width:160px;
+    border:1px solid rgba(255, 255, 255, 0.8);
 }
