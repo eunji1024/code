@@ -75,6 +75,9 @@ header nav li a{
     height:800px;
     text-align:center;
 }
+.vis h2{
+    display: none;/* 공간을 차지하지 않는다 */
+}
 .vis strong{
     display:block;
     padding:335px 0 5px 0;
