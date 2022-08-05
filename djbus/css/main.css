@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
-body,section,p,div,ul,li,h1,h2,h3,h4,h5,h6,nav{
+body,section,p,div,ul,li,h1,h2,h3,h4,h5,h6,nav,button,header,footer{
     padding:0;
     margin:0;
 }/*다중 선택자 : body,section등 태그의 모든 여백 삭제*/
@@ -30,6 +30,7 @@ button{
     display:block;
 }
 body{
+    min-width:1280px;/* wrapper에서 준 바디 넓이를 body에서 최소 넓이로 준다 */
     color:#3d3d3d;
     line-height:1.5;
     font-family: 'Noto Sans KR', sans-serif;
@@ -213,8 +214,30 @@ header nav li a{
 }
 /* footer--------------------------------- */
 footer{
+    overflow:hidden;
     background-color:#0a0a0a;
     color:rgba(255, 255, 255, 0.7);
+}
+footer .fnav li{
+    float:left;
+}
+footer .fnav li a{
+    display:block;
+    padding:0 12px;
+}
+footer .fnav li.pri a{
+    padding-left:0px;
+    font-weight:700;
+}
+footer .info{
+    padding:41px 0 1px 0;
+}
+footer .info address{
+    display:inline;
+}
+footer .info span{
+    display:inline;
+    margin:0 0 0 20px;
 }
 footer .inner{
     float:left;
@@ -223,5 +246,15 @@ footer .inner{
 footer button{
     float:right;
     width:160px;
+    height:36px;
+    padding:0 8px 0 14px;
+    margin:36px 0 0 0;
     border:1px solid rgba(255, 255, 255, 0.8);
+}
+footer button strong{
+    float:left;
+    font-weight:400;
+}
+footer button span{
+    float:right;
 }
