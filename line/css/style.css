@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
+body,section,p,div,ul,li,h1,a{
+    padding:0;
+    margin:0;
+}
+ul,li{
+    list-style:none;
+}
+.clearfix:after{
+    display:block;
+    clear:both;
+    content:".";
+    visibility:hidden;
+    height:0;
+}
+.clearfix{
+    display:block;
+}
+body{
+    min-width:1280px;
+    color:#3d3d3d;
+    line-height:1.6;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:15px;
+    font-weight:400;
+    letter-spacing:-0.06em;
+}
+a{
+    color:inherit;/* 부모가 정의한 색상을 따른다 */
+    text-decoration:none;
+}
+.wrapper{
+    width:1280px;
+    margin:0 auto;
+}
+.messenger h1{
+    padding:60px 0 20px 0;
+    color:#1D1D1D;
+    font-size:30px;
+    font-weight:700;
+}
+.messenger strong{
+    padding:0 0 10px 0;
+    color:#07B53B;
+    font-size:20px;
+    font-weight:700;
+}
+.messenger p{
+    padding:0 0 20px 0;
+}
+
+section .move a{
+    display:inline-block;
+    float:left;
+    padding:8px 43px;
+    margin: 0 5px 40px 0;
+    border:1px solid #666666;
+}
+section .move a.wktpgl{
+    color:#07B53B;
+    border:1px solid #07B53B;
+}
+.last{
+    padding:0 0 70px 0;
+    margin:70px 0 255px 0;
+    background-image:url(../images/store_bg.png);
+    background-position:center top;
+    background-repeat:no-repeat;
+    color:#ffffff;
+    text-align:center;
+}
+.last h1{
+    padding:60px 0 16px 0;
+    font-size:30px;
+    font-weight:700;
+}
+.last p{
+    padding:0 0 20px 0;
+}
+.last a{
+display:inline-block;
+padding:8px 43px;
+margin: 0 5px 40px 0;
+border:1px solid #ffffff;
+}
