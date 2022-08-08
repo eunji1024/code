@@ -1,0 +1,71 @@
+@import url(default.css);/*default.css호출*/
+header{
+    height:100px;
+}
+header h1{
+    float:left;
+    padding: 22px 0 0 0;
+}
+header nav{
+    float:right;
+}
+header nav ul{
+    float:left;
+}
+header nav ul li{
+    float:left;
+}
+header nav ul li a{
+    display:block;
+    padding:20px 10px 10px 10px;
+    margin:17px 6px 10px 6px;
+    color:#1d1d1d;
+    font-size:20px;
+}
+header nav .market{
+    float:left;
+    display:block;
+    padding:3px 15px 3px 39px;
+    margin: 34px 0 0 70px;
+    border:1px solid #13A94F;
+    border-radius:25px;
+    background-image:url(../images/market_ico.png);
+    background-position:left 14px top 8px;
+    background-repeat:no-repeat;
+    color:#13A94F;
+    font-size:18px;
+}
+.visual{
+    padding:0 40px;
+    color:#ffffff;
+    line-height:1;
+    text-align:right;
+    font-family:'Noto Serif KR', serif;
+    text-shadow:0 0 3px rgba(0,0,0,0.4);
+}
+.visual .inner{
+    height:780px;
+    background-image:url(../images/vis_bg.png);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.visual strong{
+    display:block;
+    padding:345px 0 8px 0;
+    font-size:18px;
+    font-weight:400;
+}
+.visual h2{
+    font-size:55px;
+    font-weight:300;
+}
+.category .title{
+    margin:136px 0 23px 0;
+}
+.category .title h2{
+    color:#1d1d1d;
+    line-height:0.9;
+    font-size:35px;
+    font-weight:300;
+}
