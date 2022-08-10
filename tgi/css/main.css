@@ -1,0 +1,249 @@
+@import url(default.css);
+header{
+    height:100px;
+}
+header h1{
+    float:left;
+    margin:31px 0 0 0;
+}
+header nav{
+    float:right;
+    margin:27px 0 0 0;
+}
+header nav ul li{
+    float:left;
+}
+header nav ul li a{
+    display:block;
+    padding:10px 19px 13px 19px;
+    color:#1d1d1d;
+    font-size:22px;
+    font-weight:700;
+}
+.vis{
+    height:770px;
+    background-image:url(../images/vis_bg.png);
+    background-position:center bottom;
+    background-repeat:no-repeat;
+}
+.vis h2{
+    float:right;
+    margin:152px 24px 0 0;
+    color:#1d1d1d;
+    line-height:1;
+    font-size:60px;
+    font-weight:700;
+}
+.vis h2 span{
+    color:#ffffff;
+}
+.food h2{
+    display:none;
+}
+.food .low1{
+margin:139px 0 74px 0;
+}
+.food .low1 img{
+    float:left;
+}
+.food .low1 .menu{
+    float:left;
+    margin:118px 0 0 40px;
+}
+.food .menu h3{
+    margin:0 0 32px 0;
+    line-height:1.1;
+    letter-spacing:-0.065em;
+    font-size:36px;
+    font-weight:700;
+}
+.food .low2{
+    position:relative;/*position:absolute가 여기서부터 움직인다*/
+}
+.food .low2 .menu{
+    position:absolute;
+    left:540px;
+    top: 75px;
+}
+.food .low2 .food_03{
+    float:right;
+}
+.food .low2 .food_02{
+    position:absolute;/*사진과 텍스트가 겹치거나 웹접근성에 맞춰야 할 때 씀*/
+    top: 75px;
+}
+.drink{
+    height:851px;
+    margin:110px 0 0 0;
+    background-image:url(../images/drink_bg.png);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;/*영역을 꽉 채우는 용도*/
+}
+.drink h2{
+    display:none;
+}
+.drink ul{
+    padding:112px 0 0 0;
+}
+.drink ul li{
+    float:left;
+    margin:0 40px 0 0;
+}
+.drink ul li:nth-last-child(2){
+    margin-top:30px;
+}
+.drink ul li:last-child{
+    margin-right:0;
+}
+.drink ul li a{
+    display:block;
+    width:400px;
+    height:600px;
+    padding:0 0 0 40px;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    color:#ffffff;
+}
+.drink ul li.drink_01 a{
+    background-image:url(../images/drink01.png);
+}
+.drink ul li.drink_02 a{
+    background-image:url(../images/drink02.png);
+}
+.drink ul li.drink_03 a{
+    background-image:url(../images/drink03.png);
+}
+.drink ul li a em{
+    display:block;
+    padding-top:418px;
+}
+.drink ul li a strong{
+    display:block;
+    padding:7px 0 10px 0;
+    line-height:1;
+    font-size:30px;
+    font-weight:700;
+}
+.drink ul li a span{
+    display:block;
+}
+.sns{
+    margin:138px 0 0 0;
+}
+.sns .wrapper{
+    position:relative;
+}
+.sns .tit{
+    position:absolute;
+    left:0;
+    top:0;
+}
+.sns .tit h2{
+    margin:0 0 13px 0;
+    line-height:1.1;
+    letter-spacing:-0.065em;
+    font-size:36px;
+    font-weight:700;
+}
+.sns .tit ul{
+    margin:18px 0 0 0;
+}
+.sns .tit ul li{
+    float:left;
+    margin:0 13px 0 0;
+}
+.sns .tit ul li a{
+    display:block;
+    width:50px;
+    height:50px;
+    border:1px solid #999999;
+    border-radius:50px;
+    background-position:center center;
+    background-repeat:no-repeat;
+    font-size:0;
+}
+.sns .tit ul li.ins a{
+    background-image:url(../images/ins.png);
+}
+.sns .tit ul li.twit a{
+    background-image:url(../images/sns_twi.png);
+}
+.sns .tit ul li.fsb a{
+    background-image:url(../images/fsb.png);
+}
+.sns .list li{
+    float:left;
+    margin:0 20px 20px 0;
+}
+.sns .list li:first-child{
+    margin-left:520px;
+}
+.sns .list li:nth-child(3){
+    margin-right:0;
+}
+.sns .list li:nth-child(4){
+    clear:left;
+}
+.sns .list li:last-child{
+    margin-right:0;
+}
+.sns .list li a{/*이미지 하단 여백 없애기*/
+    display:block;
+    font-size:0;
+    line-height:0;
+}
+footer{
+    margin:130px 0 0 0;
+    border-top:1px solid #cccccc;
+    color:#666666;
+    text-align:center;
+}
+footer .flogo{
+    margin:70px 0 19px 0;
+}
+footer .fnav li{
+    display:inline-block;/*가운데정렬해야하는데 float는 가운데정렬이 안되니까 인라인 요소로 변경해서 좌우로 배치하고 가운데 정렬을 적용(정확하지는 않음)*/
+    position:relative;
+}
+footer .fnav li::after{
+    position:absolute;
+    right:-3px;
+    top:7px;
+    width:1px;
+    height:10px;
+    background-color:#cccccc;
+    content:"";
+}
+footer .fnav li:last-child::after{
+    display:none;
+}
+footer .fnav li a{
+    display:block;
+    padding:0 9px;
+}
+footer .finfo{
+    margin:30px 0 10px 0;
+}
+footer .finfo li{
+    display:inline-block;
+    position:relative;
+    padding:0 9px;
+}
+footer .finfo li::after{
+    position:absolute;
+    right:-3px;
+    top:7px;
+    width:1px;
+    height:10px;
+    background-color:#cccccc;
+    content:"";
+}
+footer .finfo li:last-child::after{
+    display:none;
+}
+footer .copy{
+    margin:0 0 70px 0;
+}
