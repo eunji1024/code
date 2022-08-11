@@ -1,0 +1,97 @@
+@import url(default.css);/*default.css호출*/
+.category .title{
+    margin:136px 0 23px 0;
+}
+.category .title h2{
+    color:#1d1d1d;
+    line-height:0.9;
+    font-size:35px;
+    font-weight:300;
+}
+.category ul li{
+    float:left;
+    width:240px;
+    margin:0 20px 0 0;
+}
+.category ul li:last-child{/*li의 마지막 child*/
+    margin-right:0;
+}
+.category ul li strong{
+    display:block;
+    margin:11px 0 0 0;
+    font-weight:400;
+}
+@media screen and (max-width:450px){
+    .category .title{
+        margin:42px 0 23px 0;
+    }
+    .category .title h2{
+        font-size:25px;
+    }
+    .category ul li{
+        width:48%;
+        margin:0 4% 0 0;
+    }
+    .category ul li:nth-child(2),.category ul li:nth-child(4){
+        margin-right:0;
+    }
+    .category ul li:last-child{/*li의 마지막 child*/
+        display:none;
+    }
+    .category ul li a img{
+        width:100%;
+    }
+    .category ul li strong{
+        margin:4px 0 20px 0;
+    }
+}
+.network{
+    height:487px;
+    margin:165px 0 131px 0;
+    background-image:url(../images/net_bg.png);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:#ffffff;
+    text-align:center;
+}
+.network strong{
+    display:block;
+    padding:133px 0 0 0;
+    font-weight:400;
+}
+.network h2{
+    padding:0 0 59px 0;
+    line-height:1;
+    font-size:35px;
+    font-weight:700;
+}
+.network a{
+    display:inline-block;
+    padding:6px 19px;
+    margin: 0 24.5px;
+    border:1px solid #ffffff;
+}
+@media screen and (max-width:450px){
+    .network{
+        height:auto;
+        padding: 0 0 97px 0;
+        margin:0 0 106px 0;
+        background-image:url(../images/net_bg.png);
+    }
+    .network strong{
+        padding:106px 0 0 0;
+    }
+    .network h2{
+        padding:0 0 28px 0;
+        line-height:1;
+        font-size:20px;
+        font-weight:700;
+    }
+    .network a{
+        display:inline-block;
+        padding:6px 18px;
+        margin: 0 20px;
+        border:1px solid #ffffff;
+    }
+}
