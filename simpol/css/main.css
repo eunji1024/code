@@ -71,7 +71,7 @@ header nav .market{
 }
 .category ul li{
     float:left;
-    width:240px;
+    width:290px;
     margin:0 20px 0 0;
 }
 .category ul li:last-child{/*li의 마지막 child*/
