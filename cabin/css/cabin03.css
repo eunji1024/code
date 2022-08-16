@@ -1,0 +1,148 @@
+@import url(default.css);
+.survice .tit{
+    text-align:center;
+    margin:49px 0 68px 0;
+}
+.survice .tit h2{
+    margin:0 0 15px 0;
+    line-height:1;
+    font-size:40px;
+    font-weight:700;
+}
+.survice .tit strong{
+    margin:0 0 3px 0;
+    display:block;
+    font-size:25px;
+    font-weight:700;
+}
+.survice .tit p span{
+    display:block;
+}/*p 태그 안에서 임의로 줄바꿈을 주기 위해서*/
+
+.survice ul li{
+    position:relative;
+    float:left;
+    width:290px;
+    padding-top:70px;
+    margin:0 40px 44px 0;
+}
+.survice ul li h3{
+    margin-bottom:6px;
+    font-size:25px;
+    font-weight:700;
+}
+.survice ul li:nth-child(4),.survice ul li:nth-child(8){
+    margin-right:0;
+}
+.survice ul li:nth-child(5){
+    clear:left;
+}/*두 줄 이상 float로 정리할 때 필수*/
+.survice ul li::before{
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    background-color:#3d3d3d;
+    color:#ffffff;
+    line-height:50px;
+    font-size:25px;
+    text-align:center;
+    content:"";
+}
+.survice ul li:nth-child(1):before{
+    content:"1";
+}
+.survice ul li:nth-child(2):before{
+    content:"2";
+}
+.survice ul li:nth-child(3):before{
+    content:"3";
+}
+.survice ul li:nth-child(4):before{
+    content:"4";
+}
+.survice ul li:nth-child(5):before{
+    content:"5";
+}
+.survice ul li:nth-child(6):before{
+    content:"6";
+}
+.survice ul li:nth-child(7):before{
+    content:"7";
+}
+.survice ul li:nth-child(8):before{
+    content:"8";
+}
+/*----------------------------------모바일----------------------------------*/
+@media screen and (max-width:1280px){
+    .survice ul li{
+        width:22%;
+        margin:0 4% 44px 0;
+    }
+}
+@media screen and (max-width:1024px){
+    .survice ul li{
+        width:48%;
+        margin:0 4% 44px 0;
+    }
+    .survice ul li:nth-child(2),.survice ul li:nth-child(6){
+        margin-right:0;
+    }
+    .survice ul li:nth-child(3), .survice ul li:nth-child(7){
+        clear:left;
+    }
+}
+@media screen and (max-width:640px){
+    .survice .tit{
+        text-align:left;
+        margin:23px 0 46px 0;
+    }
+    .survice .tit h2{
+        margin:0 0 17px 0;
+        font-size:20px;
+    }
+    .survice .tit strong{
+        margin:0 0 4px 0;
+        font-size:15px;
+    }
+    .survice .tit p span{
+        display:inline;
+    }
+    .survice ul li{
+        /* float:none;
+        width:auto; */
+        padding-top:32px;
+        /* margin:0 0 46px 0; */
+    }
+    .survice ul li::before{
+        width:25px;
+        height:25px;
+        border-radius:20px;
+        line-height:23px;
+        font-size:15px;
+    }
+    .survice ul li h3{
+        margin-bottom:3px;
+        font-size:15px;
+    }
+}
+@media screen and (max-width:425px){
+    .survice ul li{
+        float:none;
+        width:auto;
+        margin-right:0;
+    }
+}
+@media screen and (max-width:1280px){
+    html,body{
+        min-width:auto;
+        /* font-size:13px; */
+    }
+    .wrapper{
+        width:auto;
+        margin:0 20px;
+    }
+}
