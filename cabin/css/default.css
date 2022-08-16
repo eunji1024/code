@@ -29,6 +29,7 @@ html,body{
     width:1280px;
     margin:0 auto;
 }
+@media screen and (max-width:640px){}/*브라우저 사이즈 640px 이하부터는 이 안에 정의된 css가 적용됨 초과하면 적용 안 됨*/
 .clearfix::after{
     display:block;
     clear:both;
