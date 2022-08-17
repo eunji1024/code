@@ -1,0 +1,32 @@
+@import url(default.css);
+.bis h2{
+    margin:101px 0 40px 0;
+    color:#1d1d1d;
+    line-height:1;
+    font-size:30px;
+    font-weight:700;
+}
+.bis ul li{
+    float:left;
+    width:33.33%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.bis ul li.plant{
+    background-image:url(../images/bis01.png);
+}
+.bis ul li.infra{
+    background-image:url(../images/bis02.png);
+}
+.bis ul li.building{
+    background-image:url(../images/bis03.png);
+}
+.bis ul li a{
+    display:block;
+    height:556px;
+    padding:376px 0 0 60px;
+    color:#fff;
+}
+
+/*------------------------------------mobile ver------------------------------------*/

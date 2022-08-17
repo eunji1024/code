@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');/*본고딕*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');/*본명조*/
 body,header,div,nav,section,h1,h2,h3,h4,h5,h6,p,footer,address,span,strong,ul,li,em,button,a{
@@ -29,6 +30,19 @@ html,body{
     width:1280px;
     margin:0 auto;
 }
+/*------------------------------------mobile ver.------------------------------------*/
+@media screen and (max-width:640px){
+    html,body{
+        min-width:auto;/*mobile은 주면 안됨*/
+        font-size:13px;
+    }
+    .wrapper{
+        width:auto;
+        margin:0 20px;
+    }
+    /*mobile에서는 고정값을 다 빼줘야 함*/
+}
+/*------------------------------------mobile end------------------------------------*/
 .clearfix::after{
     display:block;
     clear:both;
