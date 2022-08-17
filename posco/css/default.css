@@ -33,7 +33,7 @@ html,body{
 /*------------------------------------mobile ver.------------------------------------*/
 @media screen and (max-width:640px){
     html,body{
-        min-width:auto;/*mobile은 주면 안됨*/
+        min-width:auto;/*mobile은 주면 안돼서 auto*/
         font-size:13px;
     }
     .wrapper{
