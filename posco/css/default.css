@@ -1,5 +1,5 @@
-@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');/*본고딕*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');/*본명조*/
 body,header,div,nav,section,h1,h2,h3,h4,h5,h6,p,footer,address,span,strong,ul,li,em,button,a{
     padding:0;
     margin:0;
@@ -29,16 +29,6 @@ html,body{
     width:1280px;
     margin:0 auto;
 }
-@media screen and (max-width:640px){
-    html,body{
-        min-width:auto;/*넓이 전환 해제*/
-        font-size:13px;
-    }
-    .wrapper{
-        width:auto;
-        margin:0 20px;
-    }
-}/*브라우저 사이즈 640px 이하부터는 이 안에 정의된 css가 적용됨 사이즈 초과하면 적용 안 됨*/
 .clearfix::after{
     display:block;
     clear:both;
