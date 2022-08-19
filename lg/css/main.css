@@ -282,3 +282,81 @@ header .tnb button span{
 3. ul을 감싸고 있는 요소는 좌우 스크롤을 이용해야 함
 4. 감싸고 있는 요소는 내부 컨텐츠만큼의 높이를 줘야함*/
 /*---------------------------------△△biss mobile△△---------------------------------*/
+.purp{
+    position:relative;
+    height:290px;
+    background:url(../images/purpose.png) no-repeat center center / cover;
+    color:#fff;
+    text-align:center;
+}
+.purp::before{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.2);
+    content:"";
+}
+.purp .inner{
+    position:relative;
+    z-index:1;
+}
+.purp h2{
+    padding:80px 0 38px 0;
+    font-size:25px;
+    font-weight:700;
+    line-height:1.1;
+}
+.purp h2 strong{
+    position:relative;
+}
+.purp h2 strong::before{
+    left:-83px;
+    top:-4px;
+    background:url(../images/tt01.png) no-repeat center center;
+    content:"";
+}
+.purp h2 strong::after{
+    right:-58px;
+    bottom:-5px;
+    background:url(../images/tt02.png) no-repeat center center;
+    content:"";
+}
+.purp h2 strong::before,.purp h2 strong::after{
+    position:absolute;
+    width:44px;
+    height:37px;
+    color:rgba(255,255,255,0.5);
+}
+.purp p{
+    line-height:1.1;
+}
+/*---------------------------------▽▽purp mobile▽▽---------------------------------*/
+@media screen and (max-width:640px){
+    .purp{
+        height:auto;
+    }
+    .purp h2{
+        padding:73px 0 80px 0;
+        font-size:18px;
+    }
+    .purp h2 strong::before{
+        left:-22px;
+        top:-40px;
+    }
+    .purp h2 strong::after{
+        right:37px;
+        bottom:-38px;
+    }
+    .purp h2 strong::before,.purp h2 strong::after{
+        background-size:36px;
+    }
+    .purp p{
+        line-height:1.1;
+    }
+    .purp h2 span{
+        display:block;
+    }
+}
+/*---------------------------------△△purp mobile△△---------------------------------*/
