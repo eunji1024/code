@@ -1,0 +1,19 @@
+@import url(default.css);
+.vis{
+    position:relative;
+    height:900px;
+    background-image:url(../images/vis.png);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:#fff;
+}
+.vis::before{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.2);
+    content:"";
+}
