@@ -47,6 +47,16 @@ header .tnb button i{
 header .tnb button span{
     display:none;
 }
+header.fixed{/*header가 고정됐을 때 jquary가 class를 준다*/
+    position:fixed;
+    background-color:#fff;
+}
+header.fixed .gnb ul li a{
+    color:#1d1d1d;
+}
+header.fixed .tnb button i{
+    color:#3d3d3d;
+}
 /*---------------------------------▽▽header mobile▽▽---------------------------------*/
 @media screen and (max-width:640px){
     header{
@@ -80,6 +90,9 @@ header .tnb button span{
     }
     header .tnb{
         display:none;
+    }
+    header.fixed .gnb button i{
+        color:#3d3d3d;
     }
 }
 /*---------------------------------△△header mobile△△---------------------------------*/
@@ -205,7 +218,7 @@ header .tnb button span{
     white-space:nowrap;
     word-wrap:normal;
     direction:ltr;
-    -webkit-font-feature-settings:'liga';
+    font-feature-settings:'liga';
     -webkit-font-smoothing:antialiased;
     content:"\e941";
     white-space:nowrap;
