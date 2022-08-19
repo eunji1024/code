@@ -336,6 +336,7 @@ header .tnb button span{
 @media screen and (max-width:640px){
     .purp{
         height:auto;
+        padding:0 0 29px 0;
     }
     .purp h2{
         padding:73px 0 80px 0;
