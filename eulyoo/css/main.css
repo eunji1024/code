@@ -1,1 +1,63 @@
 @import url(default.css);
+header{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;/*position:absolute;가 wrapper 안에 들어오게 함*/
+    height:100px;
+    color:#fff;
+}
+header h1{
+    float:left;
+    padding:32px 162px 0 0;
+}
+header h1 a{
+    display:block;
+    width:250px;
+    height:39px;
+    background:url(../images/logo_w.svg) no-repeat center center / 100%;/*cover주면 잘림*/
+    font-size:0;
+    line-height:0;/*웹접근성 때문에 썼지만 화면에서 지움*/
+}
+header .gnb{
+    float:left;
+}
+header .tnb{
+    float:right;
+}
+.vis{
+    height:900px;
+    background:url(../images/vis_bg.png) no-repeat center center / cover;
+    color:#fff;
+    text-align:right;
+}
+.vis h2{
+    padding:389px 0 8px 0;
+    font-size:45px;
+    font-weight:400;
+}
+.vis .txt_mob{
+    display:none;
+}
+/*---------------------------------------모바일---------------------------------------*/
+@media screen and (max-width:640px){
+    .vis{
+        height:auto;
+        text-align:center;
+    }
+    .vis h2{
+        padding:136px 0 10px 0;
+        font-size:22px;
+        line-height:1.1;
+    }
+    .vis h2 span{
+        display:block;
+    }
+    .vis .txt_pc{
+        display:none;
+    }
+    .vis .txt_mob{
+        display:block;
+        padding:0 0 174px 0;
+    }
+}
