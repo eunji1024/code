@@ -133,6 +133,64 @@ header .tnb ul li button i{
 .book .list ul li a .writer{
     display:block;
 }
+.inter{
+    padding-bottom:107px;
+    background-color:#F6F3E9;
+}
+.inter .col{
+    position:relative;/*pic_box의 기준점*/
+}
+.inter h2{
+    padding:51px 0 26px 0;
+    color:#1d1d1d;
+    font-size:40px;
+    font-weight:400;
+}
+.inter .pic_box{
+    position:absolute;
+    left:0;
+    top:40px;
+}
+.inter .pic_box img{
+    border:1px solid rgba(0,0,0,0.1);
+}
+.inter .cnt_box{
+    height:400px;
+    margin:0 0 0 70px;
+    background-color:#fff;
+}
+.inter .cnt_box .inner{
+    padding:40px 70px 0 585px;
+}
+.inter .cnt_box h3{
+    margin-bottom:5px;
+    font-size:25px;
+    font-weight:400;
+}
+.inter .cnt_box strong{
+    display:block;
+    font-weight:400;
+}
+.inter .cnt_box p{
+    padding:25px 0 22px 0;
+}
+.inter .cnt_box a{
+    display:block;
+    width:160px;
+    height:37px;
+    padding:0 10px 0 16px;
+    line-height:37px;
+    white-space:nowrap;
+    border:1px solid #3d3d3d;
+}
+.inter .cnt_box a span{
+    float:left;
+}
+.inter .cnt_box a i{
+    float:right;
+    margin-top:7px;
+    font-size:20px;
+}
 /*---------------------------------------모바일---------------------------------------*/
 @media screen and (max-width:640px){
     header{
@@ -253,5 +311,50 @@ header .tnb ul li button i{
     }
     .book .list ul li a .writer{
         display:none;
+    }
+    .inter{
+        padding-bottom:25px;
+    }
+    .inter h2{
+        padding:14px 0 16px 0;
+        font-size:20px;
+        font-weight:400;
+    }
+    .inter .pic_box{
+        position:relative;
+        left:auto;
+        top:auto;
+    }
+    .inter .pic_box img{
+        width:100%;
+        border:1px solid rgba(0,0,0,0.1);
+    }
+    .inter .cnt_box{
+        height:auto;
+        margin:0;
+        background-color:transparent;
+    }
+    .inter .cnt_box .inner{
+        padding:0;
+    }
+    .inter .cnt_box h3{
+        margin-bottom:8px;
+        font-size:15px;
+    }
+    .inter .cnt_box strong{
+        padding-bottom:28px;
+    }
+    .inter .cnt_box p{
+        display: none;
+    }
+    .inter .cnt_box a{
+        width:126px;
+        height:31px;
+        padding:0 7px 0 9px;
+        line-height:31px;
+    }
+    .inter .cnt_box a i{
+        margin-top:7px;
+        font-size:15px;
     }
 }
