@@ -1,4 +1,4 @@
-@font-face {
+@font-face{
 	font-family:'EY';/*내맘대로 지어도 됨*/
 	font-style:normal;
 	font-weight:400;
@@ -8,7 +8,7 @@
 	     url(../fonts/Eulyoo1945-Regular.woff) format('woff'),
 	     url(../fonts/Eulyoo1945-Regular.otf) format('opentype');
 }
-@font-face {
+@font-face{
 	font-family:'EY';
 	font-style:normal;
 	font-weight:700;
@@ -18,4 +18,3 @@
 	     url(../fonts/Eulyoo1945-SemiBold.woff) format('woff'),
 	     url(../fonts/Eulyoo1945-SemiBold.otf) format('opentype');
 }
-

@@ -27,14 +27,19 @@ button{
     cursor:pointer;
 }
 html,body{
-    min-width:1280px;/*안주면 배경 잘림*/
     color:#3d3d3d;
     line-height:1.5;
-    font-family:'EY', sans-serif;
+    font-family:'EY','Noto Sans KR','Malgun Gothic','Apple SD Gothic','Apple SD Gothic Neo','Dotum',sans-serif;/*폰트 적용 우선 순위
+    apple sd gothic은 아이폰에서 지원하는 폰트*/
     font-size:15px;
     font-weight:400;
     letter-spacing:-0.062em;
     word-break:keep-all;
+}
+#wrap{/*id는 #*/
+    position:relative;
+    overflow-x:hidden;
+    min-width:1280px;/*안주면 배경 잘림*/
 }
 .wrapper{
     width:1280px;
@@ -43,8 +48,10 @@ html,body{
 /*------------------------------------mobile ver.------------------------------------*/
 @media screen and (max-width:640px){
     html,body{
-        min-width:auto;/*mobile은 주면 안돼서 auto*/
         font-size:13px;
+    }
+    #wrap{/*id는 #*/
+        min-width:100%;/*안주면 배경 잘림*/
     }
     .wrapper{
         width:auto;

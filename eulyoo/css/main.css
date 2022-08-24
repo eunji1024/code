@@ -1,4 +1,5 @@
 @import url(default.css);
+
 header{
     position:absolute;
     left:0;
@@ -9,7 +10,7 @@ header{
 }
 header h1{
     float:left;
-    padding:32px 162px 0 0;
+    margin:32px 158px 0 0;
 }
 header h1 a{
     display:block;
@@ -21,9 +22,35 @@ header h1 a{
 }
 header .gnb{
     float:left;
+    margin-top:15px;
+}
+header .gnb button{
+    display:none;
+}
+header .gnb ul li{
+    float:left;
+}
+header .gnb ul li a{
+    display:block;
+    padding:20px 42px;
+    font-size:23px;
 }
 header .tnb{
     float:right;
+    margin-top:20px;
+}
+header .tnb ul li{
+    float:left;
+}
+header .tnb ul li button{
+    padding:15px;
+}
+header .tnb ul li button span{
+    display:none;
+}
+header .tnb ul li button i{
+    font-size:30px;
+    font-weight:300;
 }
 .vis{
     height:900px;
@@ -39,8 +66,115 @@ header .tnb{
 .vis .txt_mob{
     display:none;
 }
+.book{
+    margin:123px 0 93px 0;
+}
+.book .tit{
+    float:left;
+}
+.book .tit h2{
+    color:#1d1d1d;
+    font-size:40px;
+    font-weight:400;
+}
+.book .tit p{
+    margin:11px 0 33px 0;
+}
+.book .tit button{
+    float:left;
+    margin-right:14px;
+    width:48px;
+    height:48px;
+    border:1px solid #3d3d3d;
+}
+.book .tit button span{
+    display:none;
+}
+.book .tit button i{
+    font-size:25px;
+    font-weight:300;
+    margin-top:9px;
+}
+/*컨텐츠 영역 밖으로 나가는 스크롤 리스트(모바일)
+1. ul을 감싸는 div가 있어야 함
+2. ul을 감싸는 div는 over-flow:auto;여야함(모바일만) 넓이와 높이를 입력
+3. ul은 li의 전체넓이를 가져야함 --> 모든 li는 좌우 한줄로 들어가야 함
+4. position:absolute;(모바일) - 좌우 슬라이드는 안됨*/
+.book .list{
+    margin-left:330px;
+
+}
+.book .list ul{
+    width:1980px;/*모든 li의 넓이*/
+}
+.book .list ul li{
+    float:left;
+    width:290px;
+    margin-right:40px;
+}
+.book .list ul li a{
+    display:block;
+}
+.book .list ul li a img{
+    border:1px solid rgba(0,0,0,0.1);
+}
+.book .list ul li a .subj{
+    display:block;
+    margin:6px 0 5px 0;
+    font-size:20px;
+    line-height:1.5;
+    height:3em;
+    overflow:hidden;
+    /*무조건 한 줄
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;*/
+}
+.book .list ul li a .writer{
+    display:block;
+}
 /*---------------------------------------모바일---------------------------------------*/
 @media screen and (max-width:640px){
+    header{
+        width:100%;
+        height:45px;
+    }
+    header h1{
+        margin:13px 0 0 0;
+    }
+    header h1 a{
+        width:128px;
+        height:20px;
+    }
+    header .gnb{
+        float:right;
+        margin-top:10px;
+    }
+    header .gnb button{
+        display:block;
+        padding:5px;
+    }
+    header .gnb button span{
+        display:none;
+    }
+    header .gnb button i{
+        font-size:18px;
+    }
+    header .gnb ul{
+        display:none;
+    }
+    header .tnb{
+        margin-top:10px;
+    }
+    header .tnb ul li button{
+        padding:5px;
+    }
+    header .tnb ul li button i{
+        font-size:18px;
+    }
+    header .tnb ul li.mypage{
+        display:none;
+    }
     .vis{
         height:auto;
         text-align:center;
@@ -59,5 +193,65 @@ header .tnb{
     .vis .txt_mob{
         display:block;
         padding:0 0 174px 0;
+    }
+    .book{
+        margin:56px 0 59px 0;
+    }
+    .book .tit{
+        float:none;
+    }
+    .book .tit h2{
+        float:left;
+        font-size:20px;
+    }
+    .book .tit p{
+        display:none;
+        margin:0;
+    }
+    .book .tit .btn{
+        float:right;
+    }
+    .book .tit button{
+        margin:0 0 23px 5px;
+        width:20px;
+        height:20px;
+    }
+    .book .tit button i{
+        font-size:10px;
+        margin-top:0;
+    }
+    .book .list{
+        overflow-y:hidden;/*가로스크롤바 생기는 것 방지*/
+        overflow-x:auto;
+        width:calc(100% + 20px);
+        /*calc는 넓이나 높이의 수치를 계산할 때 사용
+        %와 px을 합칠 때 사용
+        list에 100%를 주면 wrapper가 좌우에 여백 20px을 준 안쪽으로 넓이가 생성된다
+        오른쪽만 컨텐츠 영역 밖으로 더 나가고자 하면 calc(100% + 20px)*/
+        margin-left:0;
+        padding:23px 0 0 0;
+    }
+    .book .list ul{
+        width:900px;/*모든 li의 넓이*/
+    }
+    .book .list ul li{
+        width:130px;
+        margin-right:20px;
+    }
+    .book .list ul li a img{
+        width:100%;
+    }
+    .book .list ul li a .subj{
+        display:block;
+        margin:6px 0 5px 0;
+        font-size:13px;
+        font-weight:400;
+        height:1.5em;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .book .list ul li a .writer{
+        display:none;
     }
 }
