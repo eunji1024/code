@@ -260,16 +260,13 @@ footer .fnav{
     float:left;
     margin:0 65px 0 62px;
 }
-footer .fnav ul li a{
+footer .fnav a{
     display:block;
     line-height:2;
 }
 footer .sns{
     float:right;
     line-height:0;
-}
-footer .sns ul li{
-    float:left;
 }
 footer .sns a{
     display:inline-block;
@@ -497,46 +494,35 @@ footer .copy{
         font-weight:400;
     }
     footer{
-        padding:40px 0 93px 0;
-        background-color:#9B8D78;
-        color:rgba(255,255,255,0.8);
+        padding:20px 0 47px 0;
+        text-align:center;
     }
     footer .flogo{
-        float:left;
+        float:none;
+    }
+    footer .flogo img{
+        width:142px;
     }
     footer .fnav{
-        float:left;
-        margin:0 65px 0 62px;
-    }
-    footer .fnav ul li a{
-        display:block;
-        line-height:2;
+        float:none;
+        margin:13px 0 15px 0;
     }
     footer .sns{
-        float:right;
-        line-height:0;
-    }
-    footer .sns ul li{
-        float:left;
+        float:none;
     }
     footer .sns a{
-        display:inline-block;
-        width:36px;
-        height:36px;
-        margin-left:9px;
-        font-size:0;
+        margin-left:0;
     }
     footer .sns a.insta{
-        background:url(../images/sns01_insta.svg) no-repeat center center;
+        background-size:25px auto;
     }
     footer .sns a.fbk{
-        background:url(../images/sns02_fbook.svg) no-repeat center center;
+        background-size:13px auto;
     }
     footer .sns a.naver{
-        background:url(../images/sns03_naver.svg) no-repeat center center;
+        background-size:18px auto;
     }
     footer .copy{
-        float:left;
-        line-height:2;
+        float:none;
     }
 }
