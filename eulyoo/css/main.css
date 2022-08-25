@@ -122,6 +122,7 @@ header .tnb ul li button i{
     display:block;
     margin:6px 0 5px 0;
     font-size:20px;
+    font-weight:400;
     line-height:1.5;
     height:3em;
     overflow:hidden;
@@ -190,6 +191,105 @@ header .tnb ul li button i{
     float:right;
     margin-top:7px;
     font-size:20px;
+}
+.news{
+    margin:123px 0 90px 0;
+}
+.news .tit h2{
+    float:left;
+    color:#1d1d1d;
+    font-size:40px;
+    font-weight:400;
+}
+.news .tit .btn{
+    float:right;
+}
+.news .tit button{
+    float:left;
+    margin-right:14px;
+    width:48px;
+    height:48px;
+    border:1px solid #3d3d3d;
+}
+.news .tit button span{
+    display:none;
+}
+.news .tit button i{
+    font-size:25px;
+    font-weight:300;
+    margin-top:9px;
+}
+.news .list{
+    padding:30px 0 30px 0;
+}
+.news .list ul{
+    width:2640px;
+    margin:0 0 0 -330px;
+}
+.news .list ul li{
+    float:left;
+    width:290px;
+    margin:0 40px 0 0;
+}
+.news .list ul li a{
+    display:block;
+}
+.news .list ul li a img{
+    width:100%;
+    border:1px solid rgba(0,0,0,0.1);
+    margin:0 0 9px 0;
+}
+.news .list ul li a .subj{
+    display:block;
+    margin:6px 0 5px 0;
+    font-size:20px;
+    font-weight:400;
+    line-height:1.5;
+    height:3em;
+    overflow:hidden;
+}
+footer{
+    padding:40px 0 93px 0;
+    background-color:#9B8D78;
+    color:rgba(255,255,255,0.8);
+}
+footer .flogo{
+    float:left;
+}
+footer .fnav{
+    float:left;
+    margin:0 65px 0 62px;
+}
+footer .fnav ul li a{
+    display:block;
+    line-height:2;
+}
+footer .sns{
+    float:right;
+    line-height:0;
+}
+footer .sns ul li{
+    float:left;
+}
+footer .sns a{
+    display:inline-block;
+    width:36px;
+    height:36px;
+    margin-left:9px;
+    font-size:0;
+}
+footer .sns a.insta{
+    background:url(../images/sns01_insta.svg) no-repeat center center;
+}
+footer .sns a.fbk{
+    background:url(../images/sns02_fbook.svg) no-repeat center center;
+}
+footer .sns a.naver{
+    background:url(../images/sns03_naver.svg) no-repeat center center;
+}
+footer .copy{
+    float:left;
+    line-height:2;
 }
 /*---------------------------------------모바일---------------------------------------*/
 @media screen and (max-width:640px){
@@ -356,5 +456,87 @@ header .tnb ul li button i{
     .inter .cnt_box a i{
         margin-top:7px;
         font-size:15px;
+    }
+    .news{
+        margin:56px 0 30px 0;
+    }
+    .news .tit h2{
+        font-size:20px;
+    }
+    .news .tit button{
+        float:left;
+        margin:0 0 23px 5px;
+        width:20px;
+        height:20px;
+    }
+    .news .tit button i{
+        font-size:10px;
+        margin-top:0;
+    }
+    .news .list{
+        overflow-y:hidden;
+        overflow-x:auto;
+        width:calc(100% + 20px);
+        margin-left:0;
+        padding:23px 0 23px 0;
+    }
+    .news .list ul{
+        width:1360px;
+        margin:0;
+    }
+    .news .list ul li{
+        width:150px;
+        margin:0 20px 0 0;
+    }
+    .news .list ul li a img{
+        margin:0;
+    }
+    .news .list ul li a .subj{
+        margin:6px 0 5px 0;
+        font-size:13px;
+        font-weight:400;
+    }
+    footer{
+        padding:40px 0 93px 0;
+        background-color:#9B8D78;
+        color:rgba(255,255,255,0.8);
+    }
+    footer .flogo{
+        float:left;
+    }
+    footer .fnav{
+        float:left;
+        margin:0 65px 0 62px;
+    }
+    footer .fnav ul li a{
+        display:block;
+        line-height:2;
+    }
+    footer .sns{
+        float:right;
+        line-height:0;
+    }
+    footer .sns ul li{
+        float:left;
+    }
+    footer .sns a{
+        display:inline-block;
+        width:36px;
+        height:36px;
+        margin-left:9px;
+        font-size:0;
+    }
+    footer .sns a.insta{
+        background:url(../images/sns01_insta.svg) no-repeat center center;
+    }
+    footer .sns a.fbk{
+        background:url(../images/sns02_fbook.svg) no-repeat center center;
+    }
+    footer .sns a.naver{
+        background:url(../images/sns03_naver.svg) no-repeat center center;
+    }
+    footer .copy{
+        float:left;
+        line-height:2;
     }
 }
