@@ -2,11 +2,13 @@
 
 header{
     position:absolute;
+    z-index:100;
     left:0;
     top:0;
     width:100%;/*position:absolute;가 wrapper 안에 들어오게 함*/
     height:100px;
     color:#fff;
+    transition:background-color 0.5s;
 }
 header h1{
     float:left;
@@ -52,6 +54,12 @@ header .tnb ul li button i{
     font-size:30px;
     font-weight:300;
 }
+/*----------*/
+header.fixed{
+    position:fixed;
+    background-color:#9B8D78;
+}
+/*-----------*/
 .vis{
     height:900px;
     background:url(../images/vis_bg.png) no-repeat center center / cover;
