@@ -40,7 +40,7 @@ html,body{
 }
 #wrap{/*id는 #*/
     position:relative;
-    overflow:hidden;
+    /* overflow:hidden; */
     min-width:1280px;/*안주면 배경 잘림*/
 }
 .wrapper{
