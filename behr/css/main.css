@@ -375,3 +375,94 @@ aside button i{
     display:none;
     }
 }
+footer{
+    padding-bottom:80px;
+    background-color:#222222;
+    color:rgba(255,255,255,0.5);
+}
+footer .sns{
+    height:79px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+footer .sns ul{
+    float:right;
+    margin-top:29px;
+}
+footer .sns ul li{
+    float:left;
+    margin-left:6px;
+}
+footer .sns ul li a{
+    display:block;
+    width:25px;
+    height:25px;
+    border-radius:15px;
+    background-color:rgba(255,255,255,0.5);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:19px auto;
+    font-size:0;
+    line-height:0;
+}
+footer .sns ul li.fbk a{
+    background-image:url(../images/sns_fbk.svg);
+}
+footer .sns ul li.naver a{
+    background-image:url(../images/sns_naver.svg);
+}
+footer .sns ul li.insta a{
+    background-image:url(../images/sns_insta.svg);
+}
+footer .sns ul li.ytb a{
+    background-image:url(../images/sns_ytb.svg);
+}
+footer .inner{
+    position:relative;
+}
+footer .flogo{
+    position:absolute;
+    left:0;
+    top:29px;
+}
+footer .finfo{
+    margin:26px 0;
+}
+footer .finfo span{
+    margin-right:31px;
+}
+@media screen and (max-width:640px){
+    footer{
+        padding-bottom:45px;
+    }
+    footer .sns{
+        height:43px;
+        text-align:center;
+    }
+    footer .sns ul{
+        display:inline-block;
+        float:none;
+        padding-top:11px;
+        margin-top:0;
+    }
+    footer .sns ul li{
+        margin-left:5px;
+    }
+    footer .sns ul li a{
+        width:21px;
+        height:21px;
+        background-size:15px auto;
+    }
+    footer .flogo{
+        position:relative;
+        left:auto;
+        top:auto;
+        margin-top:10px;
+    }
+    footer .finfo{
+        margin:8px 0 15px 0;
+    }
+    footer .finfo span{
+        display:inline-block;
+        margin-right:31px;
+    }
+}
