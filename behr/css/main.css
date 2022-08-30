@@ -301,6 +301,9 @@ header nav .gnb_close span{
         display: block;
     }
 }
+.service h2{
+    display:none;
+}
 .service ul li{
     float:left;
     width:33.33%;
@@ -341,15 +344,15 @@ header nav .gnb_close span{
     }
     .service ul li a{
         height:auto;
-        padding:40px 0  0 40px;
+        padding:20px 0  32px 40px;
     }
     .service ul li a strong{
-        display:block;
-        margin-bottom:30px;
+        padding-bottom:10px;
+        margin-bottom:0;
         font-size:18px;
     }
     .service ul li a i{
-        font-size:24px;
+        font-size:18px;
     }
 }
 aside{
@@ -457,6 +460,9 @@ footer .finfo span{
         left:auto;
         top:auto;
         margin-top:10px;
+    }
+    footer .flogo img{
+        width:60px;
     }
     footer .finfo{
         margin:8px 0 15px 0;
