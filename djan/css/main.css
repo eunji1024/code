@@ -1,1 +1,347 @@
-@import url(default.css)
+@import url(default.css);
+.header{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:100;
+    width:100%;
+    height:100px;
+    color:#fff;
+}
+.header .logo{
+    float:left;
+    margin:30px 165px 0 0;
+}
+.header .gnb{
+    float:left;
+}
+.header .gnb>ul>li{
+    float:left;
+    width:180px;
+    text-align:center;
+}
+.header .gnb>ul>li>a{
+    display:block;
+    line-height:100px;
+    font-size:20px;
+    font-weight:400;
+    white-space:nowrap;
+}
+.header .gnb>ul>li>ul{
+    display:none;
+}
+.header .gnb .gnb_open{
+    display:none;
+}
+.header .gnb .gnb_close{
+    display:none;
+}
+.header .tnb{
+    float:right;
+    margin-top:39px;
+}
+.header .tnb a{
+    display:block;
+    float:left;
+}
+.header .tnb a span{
+    display:none;
+}
+.header .tnb a i{
+    margin-left:12px;
+    font-size:24px;
+    font-weight:300;
+}
+@media screen and (max-width:640px){
+    .header{
+        height:45px;
+    }
+    .header .logo{
+        margin:11px 0 0 0;
+    }
+    .header .logo a img{
+        width:87px;
+    }
+    .header .gnb{
+        margin-top:15px;
+        float:right;
+    }
+    .header .gnb>ul{
+        display:none;
+    }
+    .header .gnb .gnb_open{
+        display:block;
+    }
+    .header .gnb .gnb_open span{
+        display:none;
+    }
+    .header .gnb .gnb_open i{
+        font-size:18px;
+    }
+    .header .tnb{
+        display:none;
+    }
+}
+.vis{
+    position:relative;
+    height:1000px;
+    background:url(../images/vis.png)no-repeat center center/cover;
+    color:#fff;
+    text-align:right;
+}
+.vis .inner{
+    position:absolute;
+    left:0;
+    top:50%;
+    width:100%;
+    /* margin:-72px 0 0 0; */
+    transform:translate(0,-72px);
+}
+.vis h2{
+    margin-bottom:45px;
+    font-size:40px;
+    font-weight:300;
+    line-height:1;
+}
+.vis a{
+    padding:2px 12px 5px 12px;
+    font-weight:400;
+    border:1px solid rgba(255,255,255,0.5);
+}
+@media screen and (max-width:640px){
+    .vis{
+        height:500px;
+        background-position:left 10% center;
+    }
+    .vis .inner{
+        top:25%;
+        transform:translate(0,-72px);
+    }
+    .vis h2{
+        margin-bottom:20px;
+        font-size:20px; 
+    }
+}
+.care .inner{
+    position:relative;
+}
+.care .tit{
+    margin:115px 0 63px 0;
+}
+.care .tit h2{
+    float:left;
+    color:#1d1d1d;
+    font-size:55px;
+    font-weight:700;
+    line-height:1;
+}
+.care .tit p{
+    float:left;
+    margin:37px 0 0 10px;
+}
+.care .more{
+    position:absolute;
+    right:0;
+    top:38px;
+    width:73px;
+    line-height:24px;
+}
+.care .more span{
+    float:left;
+    font-weight:700;
+}
+.care .more i{
+    float:right;
+    margin-top: 1px;
+    font-size:20px;
+    font-weight:300;
+}
+.care ul li{
+    float:left;
+    width:440px;
+    margin:0 40px 100px 0;
+}
+.care ul li:nth-child(3),.care ul li:nth-child(6){
+    margin-right:0;
+}
+.care ul li a{
+    display:block;
+}
+/*마우스 오버 시 이미지 확대*/
+.care ul li a span{
+    display:block;
+    height:100%;
+    border-radius:10px;
+    overflow:hidden;
+    /*이미지 행간 삭제용 (이미지 태그에 주면 소용 X 이미지태그를 감싸는 태그에 넣어야 함)*/
+    font-size:0;
+    line-height:0;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+}
+.care ul li a span img{
+    transition:0.5s;
+}
+.care ul li a:hover span img{
+    transform:scale3d(1.2,1.2,1);
+}
+/* ------------------------- */
+.care ul li a:hover span{
+    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.care ul li a dl{
+    margin:16px 0 0 0;
+    font-size:20px;
+}
+.care ul li a dl dt{
+    float:left;
+    clear:left;
+    margin-left:20px;
+    font-weight:700;
+}
+.care ul li a dl dd{
+    display:block;
+    margin-left:120px;
+}
+.care ul li:nth-child(2),.care ul li:nth-child(5){
+    margin-top:80px;
+}
+@media screen and (max-width:640px){
+    .care .tit{
+        margin:27px 0 38px 0;
+    }
+    .care .tit h2{
+        float:none;
+        font-size:30px;
+        line-height:1.2;
+    }
+    .care .tit p{
+        float:none;
+        margin:0;
+    }
+    .care .more{
+        position:relative;
+        display:block;
+        right:auto;
+        top:auto;
+        width:60px;
+        margin:auto;
+        line-height:20px;
+    }
+    .care .more i{
+        font-size:15px;
+    }
+    .care ul li{
+        float:none;
+        width:auto;
+        margin:0 0 35px 0;
+    }
+    .care ul li:nth-child(2),.care ul li:nth-child(5){
+        margin-top:0;
+    }
+    .care ul li:nth-child(4),.care ul li:nth-child(5),.care ul li:nth-child(6){
+        display:none;
+    }
+    .care ul li a span{
+        height:100%;
+    }
+    .care ul li a span img{
+        width:100%;
+    }
+    .care ul li a dl{
+        margin:16px 0 0 0;
+        font-size:15px;
+    }
+    .care ul li a dl dt{
+        margin-left:0;
+    }
+}
+.step{
+    height:588px;
+    margin-top:14px;
+    background:url(../images/step_bg.png)no-repeat center center/cover;
+    color:#fff;
+}
+.step .tit{
+    padding:123px 0 146px 0;
+}
+.step .tit h2{
+    float:left;
+    font-size:55px;
+    font-weight:700;
+    line-height:0.9;
+}
+.step .tit p{
+    float:left;
+    margin:37px 0 0 10px;
+}
+.step .ctrl{
+    display:none;
+}
+.step .list ol li{
+    float:left;
+    width:200px;
+    height:200px;
+    padding-left:12px;
+    margin-right:40px;
+}
+.step .list ol li:last-child{
+    margin-right:0;
+}
+.step .list ol li strong{
+    display:block;
+    color:rgba(255, 255, 255, 0.5);
+    font-size:40px;
+}
+.step .list ol li h3{
+    display:block;
+    margin:0 0 7px 0;
+    font-size:25px;
+}
+.step .list ol li p{
+    color:rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width:640px){
+    .step{
+        height:588px;
+        margin-top:52px;
+        background:url(../images/step_bg.png)no-repeat center center/cover;
+        color:#fff;
+    }
+    .step .tit{
+        padding:68px 0 25px 0;
+    }
+    .step .tit h2{
+        float:left;
+        font-size:30px;
+    }
+    .step .tit p{
+        float:left;
+        margin:0;
+    }
+    .step .ctrl{
+        display:block;
+    }
+    .step .list ol li{
+        float:left;
+        width:200px;
+        height:200px;
+        padding-left:12px;
+        margin-right:40px;
+    }
+    .step .list ol li:last-child{
+        margin-right:0;
+    }
+    .step .list ol li strong{
+        display:block;
+        color:rgba(255, 255, 255, 0.5);
+        font-size:40px;
+    }
+    .step .list ol li h3{
+        display:block;
+        margin:0 0 7px 0;
+        font-size:25px;
+    }
+    .step .list ol li p{
+        color:rgba(255, 255, 255, 0.8);
+    }
+}
