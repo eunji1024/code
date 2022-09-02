@@ -36,10 +36,10 @@ html,body{
     letter-spacing:-0.062em;
     word-break:keep-all;
 }
-#wrap{/*id는 #*/
-    position:relative;
-    overflow:hidden;
-    min-width:1400px;/*안주면 배경 잘림*/
+#wrap{
+    /* position:relative;
+    overflow:hidden; */
+    min-width:320px;
 }
 .wrapper{
     width:1400px;
