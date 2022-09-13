@@ -25,7 +25,7 @@ button{
     font-weight: inherit;
     font-size: inherit;
     letter-spacing: inherit;/*button은 폰트를 자동 상속 받지 않기 때문에 상속태그*/
-    cursor: ointer;
+    cursor: pointer;
 }
 html,body{
     color: #3d3d3d;
