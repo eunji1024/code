@@ -1,0 +1,192 @@
+@import url(default.css);
+h1{
+    display: none;
+}
+.vis{
+    height: 850px;
+    padding: 298px 0 0 0;
+    background: url(../images/vis_bg.png) no-repeat center center / cover;
+}
+.vis h2{
+    color: #FFF; font-size: 75px; font-weight: 400; line-height: 1;
+}
+.vis h2 span{
+    font-weight: 700;
+}
+@media screen and (max-width:640px){
+    .vis{
+        height: auto;
+        padding: 107px 0 138px 0;
+    }
+    .vis h2{
+        font-size: 35px;
+    }
+}
+.works{
+    background: #F39800;
+}
+.works .tit{
+    height: 245px;
+    color: #FFF; text-align: center;
+}
+.works .tit h2{
+    padding: 52px 0 10px 0;
+    font-size: 50px; font-weight: 700;
+}
+.works .tit span{
+    display: block;
+}
+.works ul li{
+    float: left;
+    width: 33.33%; height: 300px;
+    background: no-repeat center center / cover;
+    text-align: center;
+}
+.works ul li a{
+    display: block;
+    height:300px;
+}
+.works ul li.works_01{
+    background-image: url(../images/works_01.png);
+}
+.works ul li.works_02{
+    background-image: url(../images/works_02.png);
+}
+.works ul li.works_03{
+    background-image: url(../images/works_03.png);
+}
+.works ul li i{
+    padding-top: 82px;
+    color: rgba(255, 255, 255, 0.8); font-size: 50px; font-weight: 300;
+}
+.works ul li h3{
+    color: #FFF; font-size: 30px; font-weight: 700; line-height: 1.2;
+}
+@media screen and (max-width:640px){
+    .works{
+        padding-bottom: 20px;
+    }
+    .works .tit{
+        height: auto;
+        margin-bottom: 36px;
+        color: #FFF; text-align: center;
+    }
+    .works .tit h2{
+        padding: 36px 0 13px 0;
+        font-size: 25px;
+    }
+    .works .tit span{
+        display: inline-block;
+    }
+    .works ul{
+        margin: 0 20px;
+    }
+    .works ul li{
+        float: none;
+        width: auto; height: auto;
+    }
+    .works ul li a{
+        height: auto;
+    }
+    .works ul li i{
+        padding: 29px 0 0 0;
+        font-size: 30px;
+    }
+    .works ul li h3{
+        padding-bottom: 37px;
+        font-size: 20px;
+    }
+}
+.news{
+    margin: 52px 0 97px 0;
+}
+.news h2{
+    margin-bottom: 45px;
+    text-align: center;
+    font-size: 50px; font-weight: 700;
+}
+.news ul li{
+    float: left;
+    width: 400px;
+    margin: 0 40px 21px 0;
+}
+.news ul li:last-child{
+    margin-right: 0;
+}
+.news ul li h3{
+    font-size: 20px; font-weight: 700;
+    line-height:1.5; height:3em; overflow:hidden;
+}
+.news ul li span{
+    display: block;
+    margin: 10px 0;
+    color: #666;
+}
+.news ul li p{
+    line-height:1.5; height:10.5em; overflow:hidden;
+}
+@media screen and (max-width:640px){
+    .news{
+        margin: 39px 0 48px 0;
+    }
+    .news h2{
+        margin-bottom: 4px;
+        font-size: 25px;
+    }
+    .news ul li{
+        float: none;
+        width: auto;
+        margin: 0;
+        padding: 22px 0 21px 0;
+        border-bottom: 1px solid #ccc;
+    }
+    .news ul li:last-child{
+        margin-right: 0;
+        border-bottom: 0;
+    }
+    .news ul li h3{
+        font-size: 20px;
+        height:auto; overflow:auto;
+    }
+    .news ul li p{
+        height:6em;
+    }
+}
+footer{
+    height: 245px;
+    padding-top: 62px;
+    background-color: #3d3d3d;
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .finfo span{
+    position: relative;
+    margin: 0 30px 17px 0;
+}
+footer .finfo span.address{
+    display: block;
+}
+footer .finfo span::after{
+    position:absolute;
+    right: -15px; top: 6px;
+    width:1px; height:10px;
+    background-color:rgba(255, 255, 255, 0.2);
+    content:"";
+}
+footer .finfo span:nth-child(4):after,footer .finfo span:last-child:after{
+    display:none;
+}
+footer .copy{
+    color: rgba(255, 255, 255, 0.6)
+}
+@media screen and (max-width:640px){
+    footer{
+        height: auto;
+        padding-top: 45px;
+    }
+    footer .finfo span{
+        display: inline-block;
+    }
+    footer .copy{
+        padding-bottom: 47px;
+    }
+}

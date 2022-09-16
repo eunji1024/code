@@ -1,0 +1,85 @@
+/* 모든 페이지에 공통으로 들어가는 스타일 : 헤더랑 푸터 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+html,body{
+    color: #3d3d3d;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR','Malgun Gothic','Apple SD Gothic','Apple SD Gothic Neo','Dotum',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.062em;
+}
+#wrap{
+    /* position:relative; */
+    overflow:hidden;
+    min-width: 1280px;
+}
+.wrapper{
+    width: 1280px;
+    margin: 0 auto;
+}
+/*------------------------------------mobile ver.------------------------------------*/
+@media screen and (max-width:640px){
+    html,body{
+        font-size: 13px;
+    }
+    #wrap{/*id는 #*/
+        min-width: 320px;
+        /*안주면 배경 잘림*/
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 20px;
+    }
+    /*mobile에서는 고정값을 다 빼줘야 함*/
+}
+/*------------------------------------mobile end------------------------------------*/
+.clearfix::after{
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0;
+}
+.clearfix{
+    display: block;
+}
+/* ---------------------------------------------------------------------------------- */
+.header{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; /* position: absolute; 를 쓰면 넓이가 사라지니 넓이값 꼭 주기 */ height: 100px;
+    color: #FFF;
+}
+.header .logo{
+    position: absolute;
+    left: 80px; top: 37px;
+}
+.header .logo a{
+    display: block;
+    width: 125px; height: 42px;
+    background-image: url(../images/common/logo_w.svg); background-repeat: no-repeat; background-position: center center; background-size: contain; /* 로고 안잘리고 나오게 해줌 */
+    font-size: 0; line-height: 0;
+}
+.header .gnb .open{
+    display: none;
+}
+.header .gnb .close{
+    display: none;
+}
+.header .gnb > ul {
+    display: flex;
+    justify-content: center;
+}
+.header .gnb > ul > li > ul{
+    display: none;
+}
+.header .lang{
+    position: absolute;
+    right: 80px; top: 37px;
+}
+.header .lang ul{
+    display: none;
+}
+.header .lang .close{
+    display: none;
+}

@@ -1,0 +1,41 @@
+@import url(default.css);
+@import url(common.css);
+/* 메인에만 존재하는 디자인 스타일 */
+.vis{
+    background: url(../images/main/vis_bg.png) no-repeat center center / cover;
+    color: #FFF; text-align: center;
+}
+.vis .cnt_h{
+    position: relative;
+    height: 1000px;
+}
+.vis .cnt_h .txt{
+    position: absolute;
+    left: 50%; top: 50%;
+    margin: -137px 0 0 -324px;
+}
+.vis h2{
+    padding: 0 0 10px 0;
+    font-size: 45px; font-weight: 700; line-height: 1.2;
+}
+.vis p{
+    color: rgba(255, 255, 255, 0.6); font-size: 20px;
+}
+@media screen and (max-width:640px){
+    .vis{
+        text-align: left;
+    }
+    .vis .cnt_h{
+        height: 600px;
+    }
+    .vis .cnt_h .txt{
+        top: calc(50% - 76px);
+    }
+    .vis h2{
+        padding: 0;
+        font-size: 20px;
+    }
+    .vis p{
+        font-size: 13px;
+    }
+}
