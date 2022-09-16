@@ -29,6 +29,7 @@
         height: 600px;
     }
     .vis .cnt_h .txt{
+        left: 320px;
         top: calc(50% - 76px);
     }
     .vis h2{
