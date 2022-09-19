@@ -85,6 +85,7 @@ html,body{
     margin-top: 15px;
     font-size:20px; line-height: 85px;
 }
+/* hover 요소를 클릭해도 적용됨 */
 .header .gnb > ul > li:hover > a{
     font-weight: 700;
 }
@@ -240,6 +241,12 @@ html,body{
         width: auto; height: auto;
         padding: 8px 0 5px 34px;
         line-height: 2;
+    }
+
+    /* hover 터치 시 반응하는 효과 없애야함 */
+
+    .header .gnb > ul > li:hover > a > span::after{
+        display: none;
     }
 
 

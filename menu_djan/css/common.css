@@ -1,0 +1,193 @@
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    /* 폰트 적용 우선순위
+       을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
+       apple sd gothic - 아이폰에서 지원하는 폰트 */
+    font-size: 15px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all;
+}
+#wrap { /* id="wrap" */
+    position: relative;
+    overflow: hidden;
+    min-width: 1400px;
+    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
+       최소 넓이를 줌 */
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 1400px;
+    margin: 0 auto;
+}
+@media screen and (max-width:640px){
+    /* 640px 이하의 디바이스에서만 아래 css가 적용
+      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
+      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
+      구현방식이 달라서 고정값을 모두 삭제 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 320px;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
+
+
+.header{
+    position: absolute;
+    left: 0; top: 0; z-index: 100; width: 100%; height: 100px;
+    color: #FFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header .inner{
+    position: relative; /* logo와 tnb의 정렬기준 */
+}
+.header .logo{
+    position: absolute;
+    left: 0; top: 32px;
+}
+.header .logo a{
+    display: block;
+    font-size: 0; line-height: 0;
+}
+.header .logo a img{
+    width: 170px;
+}
+.header .tnb{
+    position: absolute;
+    right: 0; top: 39px;
+    display: flex;
+}
+.header .tnb a{
+    display: block;
+    margin-left: 12px;
+}
+
+@media screen and (min-width:641px){ /* pc일때 디자인 */
+    .header .gnb .gnb_open{
+        display: none;
+    }
+    .header .gnb .gnb_close{
+        display: none;
+    }
+    .header .gnb > ul{
+        display: flex; justify-content: center;
+    }
+    .header .gnb > ul > li{
+        width: 180px;
+        text-align: center;
+    }
+    .header .gnb > ul > li > a{
+        display: block;
+        font-size: 20px; line-height: 100px;
+    }
+    .header .gnb > ul > li > ul{
+        display: none;
+        /* position: absolute; */
+        left: 0; top: 100px; width: 100%; height: 174px;
+        padding-top: 31px;
+    }
+
+
+
+    .header.menu_open::after{
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .header.menu_open::before{
+        position: absolute;
+        left: 0; top: 0; width: 100%; height: 293px;
+        background-color: rgba(0, 0, 0, 0.5);
+        content: "";
+    }
+    .header.menu_open .gnb > ul > li > ul{
+        display: block;
+    }
+    .header.menu_open .gnb > ul > li > ul > li > a{
+        display: block;
+        line-height: 25px;
+    }
+    .header.menu_open .gnb > ul > li > ul > li > a:hover{
+        font-weight: 700;
+    }
+    header.menu_open .gnb > ul > li:hover > a{
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width:640px){
+    .header{
+        height: 45px;
+    }
+    .header .logo{
+        height: 11px;
+        top: 13px;
+    }
+    .header .logo a img{
+        width: 87px;
+    }
+    .header .tnb{
+        display: none;
+    }
+    .header .gnb .gnb_open{
+        float: right;
+    }
+    .header .gnb .gnb_open i{
+        margin-top: 13px;
+        font-size: 18px;
+    }
+    .header .gnb .gnb_close{
+        display: none;
+    }
+    .header .gnb > ul {
+        display: none;
+    }
+
+
+    .header.menu_mobile{
+        color: #1d1d1d;
+    }
+    .header.menu_mobile::before{
+        position: fixed;
+        left: 0; top: 0; width: 100%; height: 100%;
+        background-color: #FFF;
+        content: "";
+    }
+    .header.menu_mobile .logo{
+        display: none;
+    }
+    .header.menu_mobile .gnb .gnb_open{
+        display: none;
+    }
+    .header.menu_mobile .gnb .gnb_close{
+        float: right;
+        display: block;
+    }
+    .header.menu_mobile .gnb .gnb_close i{
+        margin-top: 13px;
+        font-size: 18px;
+    }
+    .header.menu_mobile .gnb > ul {
+        display: block;
+    }
+
+    .header.menu_mobile .gnb > ul > li > ul{
+        display: none;
+    }
+
+    .header .gnb > ul > li > a{
+        display: block;
+        position: relative;
+        font-size: 17px;
+        line-height: 54px;
+    }
+}
