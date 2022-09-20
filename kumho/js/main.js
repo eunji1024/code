@@ -44,6 +44,21 @@ $(document).ready(function(){
     // sub 메뉴(.header .gnb .open)를 클릭하면 menu_mobile 클래스 추가
     // .header .gnb .close를 클릭하면 menu_mobile 클래스 삭제
 
-    $('')
+
+    // .biz .list ul li 에 마우스 오버하면
+    // .biz .list ul 에 over 클래스 추가
+    // 마우스 오버한 li에만 active 클래스 추가
+
+    // 아웃 : 반대로 실행
+
+    $('.biz .list ul li').on('mouseenter' , function(){
+        $('.biz .list ul').addClass('over')
+        $(this).addClass('active')
+    })
+    $('.biz .list ul li').on('mouseleave' , function(){
+        $('.biz .list ul').removeClass('over')
+        $(this).removeClass('active')
+    })
+
 
 }) // html 로딩 이후에 jquary를 실행

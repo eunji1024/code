@@ -9,13 +9,10 @@ html,body{
     letter-spacing: -0.062em;
 }
 #wrap{
-    position:relative;
-    overflow:hidden;
-    min-width: 1280px;
+    position:relative; overflow:hidden; min-width: 1280px;
 }
 .wrapper{
-    width: 1280px;
-    margin: 0 auto;
+    width: 1400px; margin: 0 auto;
 }
 /*------------------------------------mobile ver.------------------------------------*/
 @media screen and (max-width:640px){
@@ -34,11 +31,7 @@ html,body{
 }
 /*------------------------------------mobile end------------------------------------*/
 .clearfix::after{
-    display: block;
-    clear: both;
-    content: ".";
-    visibility: hidden;
-    height: 0;
+    display: block; clear: both; content: "."; visibility: hidden; height: 0;
 }
 .clearfix{
     display: block;
@@ -185,8 +178,6 @@ html,body{
 .header.menu_open ul > li > ul{
     display: block;
 }
-
-
 @media screen and (max-width:640px){
     .header{
         height: 45px;
