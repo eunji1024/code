@@ -60,8 +60,21 @@ $(document).ready(function(){
     $('.header .gnb > ul >li').on('click',function(e){
         if( pcMobile == 'mobile'){
             $('.header').addClass('menu_mobile')
+            e.preventDefault()
+            $(this).toggleClass('sub_open')
         }
-        e.preventDefault()
-        $(this).toggleClass('sub_open')
     })
+
+    /* .footer .family .btn_open를 클릭하면 
+        .footer .family에 open 클래스가 추가
+        .footer .family .btn_close를 클릭하면 
+        .footer .family에서 open 클래스를 삭제
+    */
+    $('.footer .family .btn_open').on('click', function(){
+        $('.footer .family').addClass('open');
+    });
+
+    $('.footer .family .btn_close').on('click', function(){
+        $('.footer .family').removeClass('open');
+    });
 })
