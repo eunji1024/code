@@ -7,9 +7,7 @@
 .sub_visual {
     height: 350px;
     background-image: url(../images/sub/sub_01bg.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center center; background-repeat: no-repeat; background-size: cover;
 }
 /* 
     sub페이지는 1차메뉴마다 배경이미지교체됨
@@ -39,9 +37,7 @@
 
 .sub_visual p {
     padding: 206px 0 0 0;
-    color: #fff;
-    font-size: 35px;
-    line-height: 1.2;
+    color: #fff; font-size: 35px; line-height: 1.2;
 }
 
 @media screen and (max-width:640px){ 
@@ -57,11 +53,13 @@
 }
 
 .lnb {
+    position: relative;
+    z-index: 90;
     height: 45px;
     line-height: 45px;
     /* 높이가 제한되고 요소들이 좌우로 배치되어 있는 디자인은
        높이만큼 행간을 줌 */
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     /* color: #FFF; */
 }
 .lnb .lnb_wrap {
@@ -74,14 +72,14 @@
 .lnb .menu .home {
     display: block;
     width: 50px;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1); border-right: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
  
 }
 .lnb .menu .home i {
     display: block;
     margin: 10px 0 0 0;
+    color: #666666; font-weight: 300;
 }
 .lnb .menu .depth {
     position: relative;
@@ -102,9 +100,7 @@
 .lnb .menu .depth ul {
     display: none;
     position: absolute;
-    left: 0;
-    top: 45px;
-    width: 100%;
+    left: 0; top: 45px; width: 100%;
     background-color: #FFF;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     color: #3D3D3D;
@@ -154,9 +150,91 @@
     display: block;
 }
 .lnb .lnb_btn ul li button i {
-    margin: 8px 0 0 0;
-    color: #666666; font-size: 24px;
+    margin: 10px 0 0 0;
+    color: #666666; font-size: 24px;  font-weight: 300;
 }
+@media screen and (max-width:640px){
+    .lnb {
+        height: 40px;
+        line-height: 40px;
+    }
+    .lnb .wrapper{
+        margin: 0;
+    }
+    .lnb .menu .home {
+        width: 40px;
+        border-left: 0;
+    }
+    /* home - 40px
+    1 - 140px
+    2 - 140px
+    share - 40px
+
+    lnb wrap - 100%
+        - menu 100% -40px(share 크기)
+        - 자식에게는 menu 넓이가 100%
+        - depth 1차 메뉴 : (100% - 40px)의 절반
+        - depth 1차 메뉴
+        - share 사이즈 고정
+     */
+    .lnb .menu{
+        width: calc(100% - 40px);
+    }
+    .lnb .menu .home i {
+        font-size: 15px;
+        margin: 12px 0 0 0;
+    }
+    .lnb .menu .depth {
+        width: calc((100% - 40px) / 2);
+    }
+
+    .lnb .menu .depth button {
+        padding: 0 5px 0 10px;
+    }
+    .lnb .menu .depth button i {
+        font-size: 15px;
+    }
+    .lnb .menu .depth ul {
+        top: 40px;
+        width: 100%;
+    }
+    .lnb .menu .depth ul li a {
+        padding: 0 0 0 10px;
+        line-height: 36px;
+    }
+    /*
+        1차메뉴/2차메뉴가 열렸을때
+        1. btn_open 사라짐
+        2. ul이 나타남
+        3. btn_close 나타남
+    */
+    .lnb .lnb_btn ul {
+        display: flex;
+    }
+    .lnb .lnb_btn ul li {
+        width: 45px;
+        border-left: 0;
+    }
+    .lnb .lnb_btn ul li.print{
+        display: none;
+    }
+    .lnb .lnb_btn ul li:last-child {
+        border-right: 0;
+    }
+    .lnb .lnb_btn ul li button {
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+        display: block;
+    }
+    .lnb .lnb_btn ul li button i {
+        margin: 12px 0 0 0;
+        font-size: 15px;
+    }
+}
+
+
+
 .container {
     min-height: 300px;
     /* 
@@ -166,8 +244,27 @@
         그래서 최소높이를 주고 코딩함.
     */
 }
+.container .sub_tit{
+    margin: 108px 0 77px;
+}
 .container .sub_tit h2 {
     color: #1D1D1D;
     font-size: 40px;
     font-weight: 700;
+}
+
+.container #contents{
+    margin: 0 0 157px 0;
+}
+@media screen and (max-width:640px){
+    .container .sub_tit{
+        margin: 41px 0 47px;
+    }
+    .container .sub_tit h2 {
+        font-size: 25px; text-align: center;
+    }
+    
+    .container #contents{
+        margin: 0 0 108px 0;
+    }  
 }

@@ -1,0 +1,82 @@
+/* 각각의 콘텐츠 페이지의 스타일을 저장 */
+/* 회사소개 > CEO인사말 */
+.cnt_ceo{
+    position: relative;
+}
+.cnt_ceo .ceo_pic{
+    position: absolute;
+    right: 50%; top: 0;
+    margin: 0 200px 0 0;
+}
+.cnt_ceo .inner{
+    margin: 0 0 0 560px;
+}
+.cnt_ceo .tit{
+    margin: 0 0 44px 0;
+    font-size: 25px; font-weight: 700;
+}
+.cnt_ceo .sign{
+    margin: 105px 0 0 0;
+    text-align: right;
+}
+@media screen and (max-width:640px){
+    .cnt_ceo .ceo_pic{
+        display: none;
+    }
+    .cnt_ceo .inner{
+        margin: 0;
+    }
+    .cnt_ceo .tit{
+        margin: 0 0 22px 0;
+        font-size: 18px;
+    }
+    .cnt_ceo .sign{
+        margin: 74px 0 0 0;
+    }
+    .cnt_ceo .sign img{
+        width: 122px;
+    }
+}
+
+
+/* 회사소개 > 연혁 */
+
+.cnt_historyN .tit{
+    font-size: 20px; text-align: center;
+}
+.cnt_historyN .tit span{
+    display: block;
+}
+.cnt_historyN .history_wrap{
+    position: relative;
+    margin: 89px 0 0 0;
+}
+.cnt_historyN .history_wrap::before{
+    position: absolute;
+    left: 50%; top: 0; width: 2px; height: 100%;
+    background-color: #ED1C24;
+    content: "";
+}
+.cnt_historyN .inner{
+    position: relative;
+}
+.cnt_historyN .year_tit{
+    position: absolute;
+    top: 0;
+}
+.cnt_historyN .year_tit.left{
+    left: 80px;
+}
+.cnt_historyN .year_tit.right{
+    right: 80px;
+}
+.cnt_historyN .year_tit .bg{
+    width: 480px; height: 274px;
+    background-position: center center; background-repeat: no-repeat; background-size: cover;
+}
+.cnt_historyN .year_tit .bg.year2010{
+    background-image: url(../images/content/cnt_historyN01.png);
+}
+.cnt_historyN .year_tit .bg.year2000{
+    background-image: url(../images/content/cnt_historyN02.png);
+}

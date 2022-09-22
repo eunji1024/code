@@ -30,6 +30,7 @@ $(document).ready(function(){
 
     // 메뉴에 마우스 오버했을때 menu_open 클래스 추가
     // 마우스 벗어나면 menu_open 클래스 삭제
+
     
     $('.header .gnb > ul > li > a').on('mouseenter focusin',function(){
         if(pcMobile == 'pc'){
@@ -57,11 +58,11 @@ $(document).ready(function(){
 
     // 1차메뉴를 클릭하면 li에 sub_open 클래스를 추가
 
-    $('.header .gnb > ul >li').on('click',function(e){
+    $('.header .gnb > ul > li > a').on('click',function(e){
         if( pcMobile == 'mobile'){
             $('.header').addClass('menu_mobile')
             e.preventDefault()
-            $(this).toggleClass('sub_open')
+            $(this).parents('li').toggleClass('sub_open')
         }
     })
 
