@@ -1,0 +1,245 @@
+@import url(default.css);
+h1{
+    display: none;
+}
+.vis{
+    position: relative;
+    height: 800px;
+    background: no-repeat center center / cover;
+    color: #FFF;  
+}
+.vis h2{
+    margin-bottom: 15px;
+    font-size: 35px; font-weight: 700; line-height: 42px;
+}
+.vis .vis_right{
+    position: absolute;
+    right: 0; top: 0; width: 50%; height: 800px;
+    background-image: url(../images/vis_right.png);
+}
+.vis .vis_right::after{
+    position: absolute;
+    left: 0; top: 172px; width: 500px; height: 300px;
+    background-color: #B70002;
+    content: "";
+}
+.vis .vis_left{
+    position: absolute;
+    left: 0; top: 0; width: 50%; height: 800px;
+    background-image: url(../images/vis_left.png);
+    text-align: right;
+}
+.vis .vis_left::after{
+    position: absolute;
+    right: 0; top: 330px; width: 500px; height: 300px;
+    background-color: #023665;
+    content: "";
+}
+.vis .vis_right .txt_right{
+    position: relative; z-index: 100;
+    margin: 233px 0 0 60px;
+}
+.vis .vis_right .txt_right::after{
+    position: absolute;
+    left: 0; top: 156px; width: 370px; height: 1px;
+    background-color: #FFFFFF;
+    content: "";
+}
+.vis .vis_left .txt_left{
+    position: relative; z-index: 100;
+    margin: 391px 60px 0 0;
+}
+.vis .vis_left .txt_left::after{
+    position: absolute;
+    right: 0; top: 156px; width: 370px; height: 1px;
+    background-color: #B70002;
+    content: "";
+}
+
+
+.biss{
+    height: 800px;
+    padding: 207px 0 0 0;
+    background: url(../images/biss_bg.png) no-repeat center center / cover;
+    color: #FFF; text-align: center;
+}
+.biss .tit h2{
+    display: inline;
+    border-top: 1px solid #FFF;
+    font-size: 15px; font-weight: 700;
+}
+.biss .tit h3{
+    margin: 11px 0 6px 0;
+    font-size: 50px; font-weight: 700;
+}
+.biss .tit p{
+    margin-bottom: 70px;
+}
+.biss .tit p span{
+    display: block;
+}
+.biss ul{
+    display: flex; justify-content: center;
+}
+.biss ul li{
+    margin: 0 45px;
+}
+.biss ul li i{
+    margin-bottom: 8px;
+    font-size: 50px;
+}
+@media screen and (max-width:640px){
+    .biss{
+        height: auto;
+        padding: 73px 0 89px 0;
+    }
+    .biss .tit h2{
+        font-size: 13px;
+    }
+    .biss .tit h3{
+        margin: 9px 0 6px 0;
+        font-size: 25px;
+    }
+    .biss .tit p{
+        margin-bottom: 70px;
+    }
+    .biss .tit p span{
+        display: none;
+    }
+    .biss ul li{
+        width: 20%;
+        margin: 0;
+    }
+    .biss ul li i{
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+}
+.rc{
+    height: 800px;
+    padding: 207px 0 0 0;
+    background: url(../images/rc_bg.png) no-repeat center center / cover;
+}
+.rc .tit{
+    color: #FFF; text-align: center;
+}
+.rc .tit h2{
+    display: inline;
+    border-top: 1px solid #FFF;
+    font-size: 15px; font-weight: 700;
+}
+.rc .tit h3{
+    margin: 11px 0 6px 0;
+    font-size: 50px; font-weight: 700;
+}
+.rc .tit p{
+    margin-bottom: 83px;
+}
+.rc ul{
+    color: #3d3d3d;
+}
+.rc ul li{
+    float: left;
+    width: 230px; background-color: #FFF;
+    margin-right: 20px;
+}
+.rc ul li:last-child{
+    margin-right: 0;
+}
+.rc ul li.blue{
+    width: 510px; background-image: url(../images/rc_blue.png);
+    margin-right: 40px;
+    color: #FFF;
+}
+.rc ul li a{
+    display: block;
+    height: 316px;
+    padding: 51px 30px 0 30px;
+}
+.rc ul li.blue a{
+    padding: 51px 30px 0 51px;
+}
+.rc ul li a strong{
+    display: block;
+    margin-bottom: 18px;
+    font-size: 25px; font-weight: 700;
+}
+.rc ul li.blue a strong{
+    font-size: 30px;
+}
+.rc ul li a span{
+    display: block;
+}
+.rc ul li a span.more{
+    margin-top: 56px;
+}
+.rc ul li a span.more p{
+    display: inline;
+}
+.rc ul li a span.more i{
+    font-size: 14px;
+    padding: 4px 0 4px 6px;
+}
+@media screen and (max-width:640px){
+    .rc{
+        height: auto;
+        padding: 71px 0 90px 0;
+    }
+    .rc .tit h2{
+        font-size: 13px;
+    }
+    .rc .tit h3{
+        margin: 9px 0 6px 0;
+        font-size: 25px;
+    }
+    .rc .tit p{
+        margin-bottom: 70px;
+    }
+
+
+    .rc ul li{
+        width:calc(33.33% - 11px);
+        margin-right: 16px;
+    }
+    .rc ul li.blue{
+        width: 100%;
+        margin-right: 0;
+    }
+    .rc ul li a{
+        display: block;
+        height: auto;
+        padding: 19px 30px 19px 30px; text-align: center;
+    }
+    .rc ul li.blue a{
+        padding: 22px 20px 29px 20px;
+        text-align: left;
+    }
+    .rc ul li a strong{
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+    .rc ul li.blue a strong{
+        margin-bottom: 6px;
+        font-size: 20px;
+    }
+
+
+    .rc ul li a span{
+        display: none;
+    }
+
+    
+    .rc ul li.blue a span{
+        display: block;
+    }
+    .rc ul li a span.more{
+        margin-top: 56px;
+    }
+    .rc ul li a span.more p{
+        display: inline;
+    }
+    .rc ul li a span.more i{
+        font-size: 14px;
+        padding: 4px 0 4px 6px;
+    }
+}

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* @import url(font.css); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+body,header,div,nav,section,h1,h2,h3,h4,h5,h6,p,footer,address,span,strong,ul,li,em,button,a,i,dl,dt,dd,ol{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+em,address{
+    font-style: normal;
+}
+ul,ol,li{
+    list-style: none;
+}
+button{
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+}
+html,body{
+    color: #3d3d3d;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR','Malgun Gothic','Apple SD Gothic','Apple SD Gothic Neo','Dotum',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.062em;
+    word-break:keep-all;
+}
+#wrap{
+    overflow:hidden;
+    min-width: 1280px;
+}
+.wrapper{
+    width: 1280px;
+    margin: 0 auto;
+}
+/*------------------------------------mobile ver.------------------------------------*/
+@media screen and (max-width:640px){
+    html,body{
+        font-size: 13px;
+    }
+    #wrap{
+        min-width: 320px;
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 20px;
+    }
+}
+/*------------------------------------mobile end------------------------------------*/
+.clearfix::after{
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0;
+}
+.clearfix{
+    display: block;
+}
