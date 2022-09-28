@@ -1,3 +1,97 @@
 @import url('default.css');
 @import url('common.css');
 /* main style */
+
+.vis{
+    position: relative;
+    height: 100vh; /* 브라우저 높이의 100% */
+    background: url(../images/main/vis_bg.png) no-repeat center center / cover;
+    color: #FFF;
+}
+.vis .vis_wrap{
+    position: absolute;
+    left: calc(50% - 700px); top: 50%;
+    transform: translate(0, -50%);
+    /* 해당요소의 넓이와 높이를 계산해서 그 값의 50%룰 왼쪽 오른쪽으로 이동
+    top: 50%;를 주면 위아래 가운데에서 시작해서 아래로 콘텐츠가 배치됨 */
+}
+.vis h2{
+    line-height: 1; font-size: 35px; font-weight: 100;
+}
+.vis h2 strong{
+    display: block;
+    line-height: 1.2; font-weight: 400;
+}
+.vis .search{
+    width: 314px; height: 41px;
+    margin: 36px 0 0 0;
+    border: 1px solid #FFF; border-radius: 20px;
+}
+.vis .search label{
+    display: none;
+}
+.vis .search input[type="text"]{
+    float: left;
+    width: 260px; height: 39px;
+    margin: 0 0 0 18px;
+    outline: 0; border: 0; background-color: transparent;
+}
+.vis .search input[type="text"]::placeholder{
+    color: rgba(255, 255, 255, 0.8);
+}
+.vis .search .btn{
+    float: left;
+    width: 27px; height: 39px;
+}
+.vis .search input.btn{
+    border: 0;
+    background-color: transparent;
+    background-image: url(../images/main/search_ico.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 0;
+    cursor: pointer;
+}
+.vis .search button.btn span{
+    display: none;
+}
+.vis .search button.btn i{
+    color: rgba(255, 255, 255, 0.8); font-size: 15px;
+}
+@media screen and (max-width:640px){
+    .vis{
+        height: 400px;
+    }
+    .vis .vis_wrap{
+        left: 20px;
+    }
+    .vis h2{
+        font-size: 15px;
+    }
+    .vis .search{
+        width: 208px; height: 28px;
+        margin: 11px 0 0 0;
+    }
+    .vis .search label{
+        display: none;
+    }
+    .vis .search input[type="text"]{
+        width: 162px; height: 26px;
+        margin: 0 0 0 13px;
+    }
+    .vis .search .btn{
+        width: 31px; height: 26px;
+    }
+    .vis .search input.btn{
+        border: 0;
+        background-color: transparent;
+        background-image: url(../images/main/search_ico.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-size: 0;
+        cursor: pointer;
+    }
+    .vis .search button.btn i{
+        font-size: 13px;
+    }
+}

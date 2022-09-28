@@ -4,7 +4,7 @@ html,body{
     color: #3d3d3d;
     line-height: 1.5;
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 15px; font-weight: 400;
-    /* letter-spacing: -0.062em; */
+    letter-spacing: -0.062em;
 }
 #wrap{
     position:relative; overflow:hidden; min-width: 1280px;
