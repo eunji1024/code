@@ -39,10 +39,6 @@ html,body{
 }
 
 
-
-
-
-
 .header {
     position: absolute;
     left: 0;
@@ -146,7 +142,7 @@ html,body{
 }
 .header.fixed .logo a,
 .header.menu_open .logo a {
-    background-image: url(../images/common/logo.svg);
+    background-image: url(../images/common/logo_b.svg);
 }
 .header.menu_open::before {
     position: absolute;
@@ -298,3 +294,19 @@ html,body{
     }
 
 }/* header 모바일 스타일 */
+aside.top{
+    display: none;
+    position: fixed; z-index: 250;
+    right: 40px; bottom: 40px;
+    background-color: #1268B4;
+    color: #FFF;
+}
+aside.top button{
+    width: 50px; height: 50px;
+}
+aside.top span{
+    display: none;
+}
+aside.top i{
+    font-size: 23px;
+}

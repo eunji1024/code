@@ -149,7 +149,7 @@
 
 .part .more {
     position: absolute;
-    right: 0; top: 5px;
+    right: 0; top: 11px;
     display: flex; justify-content: space-between; align-items: center;
 }
 @media screen and (max-width:640px){ 
@@ -184,7 +184,6 @@
         margin: 8px 0 8px 0;
         font-size: 13px;
     }
-    
     .part .more {
         top: 2px;
         justify-content: center;
@@ -327,5 +326,185 @@
     }
     .notice ul li.active .more{
         display: flex;
+    }
+}
+.book{
+    position: relative;
+    padding: 85px 0 0 0;
+}
+.book::before{
+    position: absolute; z-index: -1;
+    left: 0; top: 0; width: 100%; height: 403px;
+    background-color: #1268B4;
+    content: "";
+}
+.book h2 {
+    position: relative;
+    padding: 0 0 40px 0;
+    color: #FFF; font-size: 35px; font-weight: 400;
+}
+.book h2::before {
+    position: absolute;
+    left: 0; top: -5px; width: 35px; height: 1px;
+    background-color: #FFF;
+    content: "";
+}
+.book .more {
+    position: absolute;
+    right: 0; top: 11px;
+    display: flex; justify-content: space-between; align-items: center;
+    color: #FFF;
+}
+.book .list ul{
+    width: 1680px;
+}
+.book .list ul li{
+    float: left;
+    width: 220px;
+    margin: 21px 30px 0 0;
+}
+.book .list ul li a{
+    display: block;
+}
+.book .list ul li a .pic{
+    overflow: hidden;
+    font-size: 0; line-height: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.book .list ul li a .pic img{
+    width: 100%;
+    transition: 0.5s;
+}
+.book .list ul li a:hover .pic img{
+    transform: scale3d(1.2, 1.2, 1);
+}
+.book .list ul li a .cnt h3{
+    margin-top: 8px;
+    font-size: 15px; font-weight: 400;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.book .list ul li a .cnt p{
+    display: none;
+}
+.book .list ul li:first-child{
+    width: 650px;
+    margin-top: 0;
+}
+.book .list ul li:first-child a .pic{
+    float: left;
+    width: 270px;
+}
+.book .list ul li:first-child a .cnt{
+    padding: 21px 120px 0 294px;
+    color: #FFF;
+}
+.book .list ul li:first-child a .cnt h3{
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 1.5; height: 3em; white-space: unset;
+}
+.book .list ul li:first-child a .cnt p{
+    display: block;
+    margin: 10px 0 0 0;
+}
+@media screen and (max-width:640px){
+    .book{
+        padding: 32px 0 0 0;
+    }
+    .book::before{
+        height: 197px;
+    }
+    .book h2{
+        padding: 0 0 40px 0;
+        font-size: 20px;
+    }
+    .book h2::before{
+        width: 21px;
+    }
+    .book .more{
+        top: 2px;
+        justify-content: center;
+        padding: 0;
+    }
+    .book .list{
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .book .list ul{
+        width: 840px;
+        padding-bottom: 10px;
+    }
+    .book .list ul li{
+        width: 152px;
+        margin: 0 16px 0 0;
+    }
+    .book .list ul li a .cnt h3{
+        margin-top: 4px;
+        font-size: 13px; font-weight: 400;
+        line-height: 1.5; height: 3em; white-space: unset;
+    }
+    .book .list ul li:first-child{
+        width: 152px;
+    }
+    .book .list ul li:first-child a .pic{
+        float: none;
+        width: auto;
+    }
+    .book .list ul li:first-child a .cnt{
+        padding: 0;
+        color: #3D3D3D;
+    }
+    .book .list ul li:first-child a .cnt h3{
+        margin-top: 0;
+        font-size: 13px;
+    }
+    .book .list ul li:first-child a .cnt p{
+        display: none;
+    }
+}
+.banner{
+    margin: 130px 0 152px 0;
+}
+.banner ul li{
+    float: left;
+    width: 680px;
+    margin: 0 40px 0 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+.banner ul li:last-child{
+    margin-right: 0;
+}
+.banner ul li a{
+    position: relative;
+    display: block;
+    height: 128px;
+    padding: 38px 40px 0 40px;
+}
+.banner ul li a i{
+    position: absolute;
+    right: 40px; top: 50px;
+    font-size: 28px; color: #1268B4;
+}
+.banner ul li a h2{
+    font-size: 20px; font-weight: 400;
+}
+@media screen and (max-width:640px){
+    .banner{
+        margin: 46px 0 64px 0;
+    }
+    .banner ul li{
+        float: none;
+        width: auto;
+        margin: 0 0 10px 0;
+    }
+    .banner ul li a{
+        height: auto;
+        padding: 20px 20px 17px 20px;
+    }
+    .banner ul li a i{
+        display: none;
+    }
+    .banner ul li a h2{
+        font-size: 15px;
     }
 }

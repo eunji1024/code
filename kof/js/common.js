@@ -36,9 +36,11 @@ $(document).ready(function(){
 
     let scrolling;
     scrollChk();//함수실행
+    topShow();
 
     $(window).scroll(function(){
         scrollChk();//함수실행
+        topShow();
     });
 
     function scrollChk(){ //함수의 선언
@@ -64,5 +66,24 @@ $(document).ready(function(){
             $(this).parents('li').toggleClass('sub_open');
         }
     });
+
+
+
+    // top버튼을 누르면 상단으로 스크롤
+    $('aside.top').on('click',function(){
+        $('html, body').animate({
+            scrollTop:0
+        },500)
+    })
+
+    function topShow(){ //함수의 선언
+        scrolling = $(window).scrollTop();
+        console.log(scrolling);
+        if(scrolling > 200){
+            $('aside.top').fadeIn();
+        }else{
+            $('aside.top').fadeOut();
+        }
+    }
 
 });//document.ready 종료
