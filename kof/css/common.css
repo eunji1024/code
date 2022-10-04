@@ -41,8 +41,7 @@ html,body{
 
 .header {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0; top: 0;
     z-index: 300;
     /*
         header와 서브메뉴(lnb)와 footer에서 풀다운 메뉴가
@@ -51,8 +50,7 @@ html,body{
         lnb - 200
         footer - 100
     */
-    width: 100%;
-    height: 100px;
+    width: 100%; height: 100px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     color: #FFF;
 }
@@ -62,14 +60,9 @@ html,body{
 }
 .header .logo a {
     display: block;
-    width: 171px;
-    height: 38px;
-    background-image: url(../images/common/logo_w.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    font-size: 0;
-    line-height: 0;
+    width: 171px; height: 38px;
+    background-image: url(../images/common/logo_w.svg); background-repeat: no-repeat; background-position: center center; background-size: contain;
+    font-size: 0; line-height: 0;
 }
 @media screen and (min-width:641px){
     /* 브라우저사이즈 641이상에서만 적용하는 스타일 */
@@ -136,34 +129,27 @@ html,body{
     background-color: #FFF;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
-.header.fixed,
-.header.menu_open {
+.header.fixed,.header.menu_open {
     color: #3D3D3D;
 }
-.header.fixed .logo a,
-.header.menu_open .logo a {
+.header.fixed .logo a,.header.menu_open .logo a {
     background-image: url(../images/common/logo_b.svg);
 }
 .header.menu_open::before {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0; top: 0;
     z-index: -1;
     /* position 속성이 있는 요소와 없는 요소가 나란히 존재하면 
      무조건 position 있는 요소가 위로 올라감. 
      이때 position있는 요소를 일반 요소 아래로 내리는 방법 z-index: -1 */
-    width: 100%;
-    height: 573px;
+    width: 100%; height: 573px;
     background-color: #FFF;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     content: "";
 }
 .header.menu_open::after {
     position: absolute;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    height: 1px;
+    left: 0; top: 100px; width: 100%; height: 1px;
     background-color: #EDEDED;
     content: "";
 }
@@ -309,4 +295,110 @@ aside.top span{
 }
 aside.top i{
     font-size: 23px;
+}
+@media screen and (max-width:640px){
+    aside.top{
+        position: absolute; /* 화면을 따라다니지 않게 함 */
+        right: 20px; bottom: 210px;
+    }
+    aside.top button{
+        width: 25px; height: 25px;
+    }
+    aside.top i{
+        font-size: 11px;
+    }
+}
+.footer{
+    background-color: #1D1D1D;
+    color: rgba(255, 255, 255, 0.8);
+}
+.footer .sns{
+    position: absolute;
+    right: 0; top: 20px;
+}
+.footer .sns ul li{
+    float: left;
+}
+.footer .sns ul li a{
+    display: flex;/* 이미지를 상하좌우 가운데 영역에 배치하기 위해 */
+    width: 42px; height: 45px;
+    justify-content: center; align-items: center;
+}
+.footer .flogo{
+    float: left;
+    margin: 40px 77px 0 0;
+}
+.footer .flogo img{
+    width: 157px;
+}
+.footer .inner{
+    float: left;
+    margin: 40px 0 0 0;
+}
+.footer .fnav li{
+    position: relative;
+    float: left;
+    margin: 0 38px 0 0;
+}
+.footer .fnav li::after{
+    position: absolute;
+    right: -20px; top: 5px; width: 1px; height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    content: "";
+}
+.footer .fnav li:last-child:after{
+    display: none;
+}
+.footer .finfo{
+    margin: 40px 0 10px 0;
+}
+.footer .finfo span{
+    display: inline-block;
+    /* display: inline-block;를 주면 모바일에서 span이 하나씩 떨어진다 */
+    margin: 0 33px 0 0;
+}
+.footer .copy{
+    margin: 0 0 75px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width:640px){
+    .footer .sns{
+        position: relative;
+        display: flex;
+        right: auto; top: auto; height: 65px;
+        justify-content: center; align-items: center;
+    }
+    .footer .sns::after{
+        position: absolute;
+        left: -20px; bottom: 0; width: calc(100% + 40px); height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+        content: "";
+    }
+    .footer .sns ul li a{
+        width: 35px; height:40px;
+    }
+    .footer .flogo{
+        margin: 18px 0 0 0;
+    }
+    .footer .flogo img{
+        width: 112px;
+    }
+    .footer .inner{
+        margin: 20px 0 0 0;
+    }
+    .footer .fnav li{
+        margin: 0 38px 5px 0;
+    }
+    .footer .fnav li::after{
+        height: 8px;
+    }
+    .footer .finfo{
+        margin: 20px 0 10px 0;
+    }
+    .footer .finfo span{
+        margin: 0 33px 5px 0;
+    }
+    .footer .copy{
+        margin: 0 0 37px 0;
+    }
 }

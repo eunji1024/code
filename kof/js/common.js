@@ -79,7 +79,7 @@ $(document).ready(function(){
     function topShow(){ //함수의 선언
         scrolling = $(window).scrollTop();
         console.log(scrolling);
-        if(scrolling > 200){
+        if(scrolling > 200){ 
             $('aside.top').fadeIn();
         }else{
             $('aside.top').fadeOut();

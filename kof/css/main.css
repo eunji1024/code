@@ -488,6 +488,14 @@
 .banner ul li a h2{
     font-size: 20px; font-weight: 400;
 }
+@media screen and (min-width:641px){
+    .banner ul li{
+        transition: 0.5s;
+    }
+    .banner ul li:hover{
+        transform: translate(-10px, -10px);
+    }
+}
 @media screen and (max-width:640px){
     .banner{
         margin: 46px 0 64px 0;
