@@ -27,3 +27,157 @@
     text-align: center; font-size: 35px; font-weight: 400;
     padding-top: 200px;
 }
+@media screen and (max-width:640px){
+    .sub_vis{
+        height: 200px;
+    }
+    .sub_vis strong{
+        display: block;
+        text-align: left; font-size: 18px;
+        padding-top: 110px;
+    }
+}
+.lnb{
+    position: relative; z-index: 250;
+    height: 70px;
+    border-bottom: 1px solid #999;
+}
+.lnb .menu{
+    float: left;
+}
+.lnb .menu .home{
+    float: left;
+    width: 70px; height: 70px;
+    border-width: 0 1px 0 1px; border-style: solid; border-color: #999;
+    line-height: 70px; text-align: center;
+}
+.lnb .menu .home{
+    color: #949494; font-size: 17px;
+}
+.lnb .menu .depth{
+    position: relative;
+    float: left;
+    width: 232px;
+    border-width: 0 1px 0 0; border-style: solid; border-color: #999;
+}
+.lnb .menu .depth .btn{
+    display: flex;
+    width: 100%; height: 70px;
+    padding: 0 20px 0 33px;
+    align-items: center; justify-content: space-between;
+}
+.lnb .menu .depth .btn i{
+    color: #949494; font-size: 15px;
+    transition: 0.5s;
+}
+.lnb .menu .depth ul{
+    display: none;
+    position: absolute;
+    left: 0; top: 70px; width: 100%;
+    background-color: #FFF;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.lnb .menu .depth ul li a{
+    display: block;
+    padding-left: 20px;
+    line-height: 44px;
+    border-bottom: 1px solid #949494;
+}
+.lnb .menu .depth ul li:last-child a{
+    border-bottom: 0;
+}
+.lnb .menu .depth ul li.now a,.lnb .menu .depth ul li a:hover{
+    font-weight: 700;
+}
+.lnb .menu .depth.open .btn i{
+    transform: rotate(180deg);
+}
+
+.lnb .print{
+    float: right;
+    width: 70px; height: 70px;
+    border-width: 0 1px 0 1px; border-style: solid; border-color: #999;
+    line-height: 70px; text-align: center;
+}
+.lnb .print i{
+    color: #949494; font-size: 20px;
+}
+@media screen and (max-width:640px){
+    .lnb{
+        height: 60px;
+    }
+    .lnb .wrapper{
+        margin: 0;
+    }
+    .lnb .menu{
+        float: none;
+    }
+    .lnb .menu .home{
+        display: none;
+    }
+    .lnb .menu .depth{
+        width: 50%;
+    }
+    .lnb .menu .depth:last-child{
+        border-width: 0;
+    }
+    .lnb .menu .depth .btn{
+        height: 60px;
+        padding: 0 20px 0 15px;
+    }
+    .lnb .menu .depth .btn i{
+        font-size: 10px;
+    }
+    .lnb .menu .depth ul{
+        top: 60px;
+    }
+    .lnb .print{
+        display: none;
+    }
+}
+.container{
+    min-height: 300px;
+}
+.container .sub_tit{
+    margin: 53px 0 63px 0;
+}
+.container .sub_tit h2{
+    color: #1d1d1d; font-size: 35px; font-weight: 400; line-height: 50px;
+}
+@media screen and (max-width:640px){
+    .container .sub_tit{
+        margin: 35px 0 24px 0;
+    }
+    .container .sub_tit h2{
+        font-size: 20px;
+    }
+}
+.contents .table_wrap table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.contents .table_wrap table th, .contents .table_wrap table td{
+    border: 1px solid #CCC;
+}
+.contents .table_wrap table th:first-child, .contents .table_wrap table td:first-child{
+    border-left: 0;
+}
+.contents .table_wrap table th:last-child, .contents .table_wrap table td:last-child{
+    border-right: 0;
+}
+.contents .table_wrap table thead th, .contents .table_wrap table thead td{
+    padding: 21px 5px;
+    background-color: #f4f4f4;
+    font-weight: 700; text-align: center;
+}
+.contents .table_wrap table tbody th{
+    font-weight: 400;
+}
+.contents .table_wrap table tbody th, .contents .table_wrap table tbody td{
+    padding: 8px 5px;
+    text-align: center;
+}
+.contents .table_wrap table tbody ul{
+    padding: 8px 0 8px 44px;
+    text-align: left;
+}
