@@ -70,3 +70,118 @@
         font-size: 18px;
     }
 }
+
+.contents .cnt_org{
+    margin: 0 0 100px 0;
+}
+.contents .table_wrap table{
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #1165AE;
+}
+.contents .table_wrap table th, .contents .table_wrap table td{
+    border: 1px solid #CCC;
+}
+.contents .table_wrap table th:first-child, .contents .table_wrap table td:first-child{
+    border-left: 0;
+}
+.contents .table_wrap table th:last-child, .contents .table_wrap table td:last-child{
+    border-right: 0;
+}
+.contents .table_wrap table thead th, .contents .table_wrap table thead td{
+    padding: 21px 5px;
+    background-color: #f4f4f4;
+    font-weight: 700; text-align: center;
+}
+.contents .table_wrap table tbody th{
+    font-weight: 400;
+}
+.contents .table_wrap table tbody th, .contents .table_wrap table tbody td{
+    padding: 8px 5px;
+    text-align: center;
+}
+.contents .table_wrap table tbody ul{
+    padding: 8px 0 8px 44px;
+    text-align: left;
+}
+.contents .table_wrap table tbody ul li{
+    position: relative;
+}
+.contents .table_wrap table tbody ul li::before{
+    position: absolute;
+    left: -10px; top: 10px; width: 3px; height: 3px;
+    background-color: #999;
+    border-radius: 3px;
+    content: "";
+}
+@media screen and (max-width:640px){
+    .contents .table_wrap{
+        overflow-x: scroll;
+        padding-bottom: 10px;
+    }
+    .contents .table_wrap table{
+        min-width: 580px;
+    }
+    .contents .cnt_org{
+        margin: 0 0 100px 0;
+    }
+    .contents .table_wrap table thead th, .contents .table_wrap table thead td{
+        padding: 10px 5px;
+    }
+    .contents .table_wrap table tbody th, .contents .table_wrap table tbody td{
+        padding: 4px 5px;
+    }
+    .contents .table_wrap table tbody ul{
+        padding: 4px 0 4px 10px;
+    }
+    .contents .table_wrap table tbody ul li::before{
+        left: -7px;
+    }
+}
+
+/* cnt_search - 해양학술정보DB센터 > 통합검색 */
+.cnt_search{
+    margin: 0 0 90px 0;
+}
+.cnt_search ul li a{
+    display: block;
+    padding: 30px 0 0 30px;
+}
+.cnt_search ul li a h3{
+    color: #1165AE; font-size: 18px; font-weight: 700;
+}
+.cnt_search ul li a p{
+    margin: 8px 0 20px 0;
+}
+.cnt_search ul li a strong{
+    display: block;
+    color: #666; font-weight: 400;
+}
+
+/* float 코딩
+.cnt_search ul li{
+    float: left;
+    width: 25%; height: 175px;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #CCC;
+}
+.cnt_search ul li:first-child{
+    border-left-width: 1px;
+} */
+
+/* table 코딩 */
+.cnt_search ul{
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+.cnt_search ul li{
+    display: table-cell;
+    width: 25%;
+    height: 175px;
+    border: 1px solid #CCC;
+}
+.cnt_search ul li a{
+    display: block;
+}

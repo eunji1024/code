@@ -152,32 +152,3 @@
         font-size: 20px;
     }
 }
-.contents .table_wrap table{
-    width: 100%;
-    border-collapse: collapse;
-}
-.contents .table_wrap table th, .contents .table_wrap table td{
-    border: 1px solid #CCC;
-}
-.contents .table_wrap table th:first-child, .contents .table_wrap table td:first-child{
-    border-left: 0;
-}
-.contents .table_wrap table th:last-child, .contents .table_wrap table td:last-child{
-    border-right: 0;
-}
-.contents .table_wrap table thead th, .contents .table_wrap table thead td{
-    padding: 21px 5px;
-    background-color: #f4f4f4;
-    font-weight: 700; text-align: center;
-}
-.contents .table_wrap table tbody th{
-    font-weight: 400;
-}
-.contents .table_wrap table tbody th, .contents .table_wrap table tbody td{
-    padding: 8px 5px;
-    text-align: center;
-}
-.contents .table_wrap table tbody ul{
-    padding: 8px 0 8px 44px;
-    text-align: left;
-}
