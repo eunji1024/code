@@ -1,9 +1,13 @@
 @import url(default.css);
 @import url(common.css);
 
+.event{
+    margin: 4.400rem 0 8.933rem 0;
+}
 .event h2{
-    color: #1d1d1d; font-size: 40px; font-weight: 700; line-height: 1.1;
-    margin: 2em 0;
+    position: relative;
+    color: #1d1d1d; font-size: 2.667rem; font-weight: 700; line-height: 1.1;
+    margin: 2rem 0; padding: 0 0 2.667rem 0;
 }
 .event ul li{
     float: left;
@@ -18,19 +22,88 @@
     li의 넓이 계산법 -한줄에 두개 50%
     한줄에 들어가야하는 여백의 총합을 li의 갯수로 나눔 = 40px/2 = 20px*/
     width: calc(50% - 20px);
-    margin: 0 40px 0 0;
+    margin: 0 2.667rem 0 0;
 }
 .event ul li:nth-child(2),.event ul li:last-child{
     margin-right: 0;
 }
+.event ul li:nth-child(2),.event ul li:nth-child(4){
+    margin-top: -9.467rem;
+}
+.event ul li a{
+    display: block;
+}
 .event ul li a img{
     width: 100%;
+    margin: 1rem 0 6.733rem 0;
+    border-radius: 2.000rem;
 }
-@media screen and (max-width:640px){
+.event ul li a strong{
+    font-size: 1.533rem; font-weight: 700;
+}
+.event ul li a strong span{
+    display: block;
+    font-size: 1rem; font-weight: 400;
+}
+.event .more{
+    position: absolute;
+    left: 10.467rem; top: 4rem;
+}
+@media screen and (max-width:1050px){
+    .event{
+        margin: 3.400rem 0 3.933rem 0;
+    }
     .event h2{
-        font-size: 20px;
+        font-size: 2rem;
+    }
+    .event ul li a strong{
+        font-size: 1.25rem;
+    }
+
+    .event ul li:nth-child(2),.event ul li:nth-child(4){
+        margin-top: -9.467rem;
+    }
+    .event ul li a img{
+        width: 100%;
+        margin: 1rem 0 2.733rem 0;
+        border-radius: 2.000rem;
+    }
+    .event .more{
+        position: absolute;
+        left: 8.5rem; top: 2.8rem;
+    }
+    .event .more img{
+        width: 1.333rem; height: auto;
     }
 }
+@media screen and (max-width:600px){
+    .event h2{
+        font-size: 3rem;
+    }
+    .event ul li{
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+    .event ul li:nth-child(2),.event ul li:nth-child(4){
+        margin-top: 0;
+    }
+    .event ul li a img{
+        width: 100%;
+        margin: 1rem 0 3.733rem 0;
+    }
+    .event .more{
+        position: absolute;
+        left: 12rem; top: 4.5rem;
+    }
+    .event .more img{
+        width: 1.7rem; height: auto;
+    }
+}
+
+
+
+
 .product{
     padding: 4.133rem 0 7.400rem 0;
     background-color: #0cd8cd;
@@ -47,7 +120,6 @@
     box-shadow: 0 0.667rem 0.667rem rgba(0, 0, 0, 0.1);
     background-position: right 10% bottom 5%;
     background-repeat: no-repeat; background-size: 171px auto;
-    /* background-size: 40% auto; */
 }
 .product ul li.pro1{
     background-image: url(../images/main/product1.png);
@@ -61,8 +133,18 @@
 .product ul li.pro4{
     background-image: url(../images/main/product4.png);
 }
+.product ul li:nth-child(2),.product ul li:nth-child(4){
+    margin-top: 2.533rem;
+}
 .product ul li:last-child{
     margin-right: 0;
+}
+.product ul li{
+    transition: 0.1s;
+}
+.product ul li:hover{
+    transform: translate(-0.667rem, -0.667rem);
+    box-shadow: 0.667rem 1.333rem 0.667rem rgba(0, 0, 0, 0.1);
 }
 .product ul li a{
     display: block;
@@ -117,6 +199,9 @@
     .product ul li:nth-child(2){
         margin-right: 0;
     }
+    .product ul li:nth-child(2){
+        margin-top: 0;
+    }
 }
 @media screen and (max-width:450px){
     .product ul li{
@@ -128,5 +213,8 @@
     }
     .product ul li{
         margin-right: 0;
+    }
+    .product ul li:nth-child(2),.product ul li:nth-child(4){
+        margin-top: 0;
     }
 }

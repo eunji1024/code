@@ -37,3 +37,7 @@ button{
 table caption{
     display: none;
 }
+/* 두꺼운 글씨 태그를 모두 일반 두께로 변경 */
+h1, h2, h3, h4, h5, h6, strong, th{
+    font-weight: 400;
+}
