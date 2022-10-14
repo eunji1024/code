@@ -39,7 +39,7 @@
     border-radius: 2.000rem;
 }
 .event ul li a strong{
-    font-size: 1.533rem; font-weight: 700;
+    font-size: 1.533rem; font-weight: 700; line-height: 1.2;
 }
 .event ul li a strong span{
     display: block;
@@ -97,7 +97,7 @@
         left: 12rem; top: 4.5rem;
     }
     .event .more img{
-        width: 1.7rem; height: auto;
+        width: 1.8rem; height: auto;
     }
 }
 
