@@ -1,0 +1,45 @@
+@import url(default.css);
+@import url(common.css);
+
+.popup ul li{
+    position: relative;
+}
+.popup ul li .txt{
+    position: absolute;
+    left: 50%; top:50%;
+    color: #FFF; text-align: center;
+    transform: translate(-50%, -50%);
+}
+.popup ul li .txt strong{
+    font-size: 50px; font-weight: 700; line-height: 0.9; 
+}
+
+.vis1 .ctrl_prev, .vis1 .ctrl_next{
+    position: absolute; z-index: 10;
+    top: 50%;
+    font-size: 0; line-height: 0;
+}
+.vis1 .ctrl_prev{
+    left: 5%;
+}
+.vis1 .ctrl_next{
+    right: 5%;
+}
+.vis1 .ctrl_prev::before, .vis1 .ctrl_next::before{
+    position: absolute; 
+    left: 0; top: calc(50% - 60px); width: 87px; height: 70px;
+    background: url(../images/popup_arrow.svg) no-repeat center center / contain;
+    opacity: 0.5;
+    content: "";
+}
+.vis1 .ctrl_next::before{
+    left: auto; right: 0;
+    transform: rotate(180deg);
+}
+.vis1 .ctrl_group{
+    display: flex; justify-content: center;
+    position: absolute; z-index: 10;
+    left: calc(50% - 61px); bottom: 5%; width: 123px; height: 32px;
+    background-color: rgba(0, 0, 0, 0.3); border-radius: 5px;
+    color: #FFF;
+}

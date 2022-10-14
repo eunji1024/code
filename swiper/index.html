@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popup.js"></script>
+    <title>팝업 테스트</title>
+</head>
+<body>
+    <div id="wrap">
+        <section class="popup swiper vis1">
+            <ul class="swiper-wrapper"> <!-- 첫번째 팝업 -->
+                <li class="swiper-slide">
+                    <div class="txt">
+                        <strong>설레는 여정,<br>REDCAP과 함께</strong>
+                    </div>
+                    <img src="images/popup1.png" alt="노란집 사진">
+                </li>
+                <li class="swiper-slide">
+                    <div class="txt">
+                        <strong>자연으로,<br>스마트하게</strong>
+                    </div>
+                    <img src="images/popup2.png" alt="녹색집 사진">
+                </li>
+                <li class="swiper-slide">
+                    <div class="txt">
+                        <strong>이동의 순간을<br>더 가치있게</strong>
+                    </div>
+                    <img src="images/popup3.png" alt="분홍집 사진">
+                </li>
+            </ul>
+            <button class="ctrl_prev">이전팝업보기</button>
+            <button class="ctrl_next">다음팝업보기</button>
+            <div class="ctrl_group">
+                <div class="ctrl_paging"></div>
+                <button class="ctrl_stop">정지</button>
+                <button class="ctrl_play">재생</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
