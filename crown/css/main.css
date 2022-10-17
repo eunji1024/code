@@ -4,6 +4,23 @@
 .popup{
     height: 450px;
 }
+.popup .popup_round{
+    position: absolute; z-index: 10000000;
+    right: 87%; top:0; width: 50%; height: 100%; 
+    background-color: #fff;
+}
+.popup .popup_round::before{
+    position: absolute;
+    right: -79px; top: 0; width: 80px; height: 80px;
+    background: url(../images/main/popupround.svg) no-repeat center center / contain;
+    content: "";
+}
+.popup .popup_round::after{
+    position: absolute;
+    right: -79px; top: 370px; width: 80px; height: 80px; transform: rotate(270deg);
+    background: url(../images/main/popupround.svg) no-repeat center center / contain;
+    content: "";
+}
 .popup h2{
     display: none;
 }
@@ -20,10 +37,19 @@
     .popup{
         height: 250px;
     }
+    .popup .popup_round::before{
+        display: none;
+    }
+    .popup .popup_round::after{
+        display: none;
+    }
 }
 @media screen and (max-width:640px){
     .popup{
         height: 433px;
+    }
+    .popup .popup_round{
+        display: none;
     }
     .popup ul li a .pc{
         display: none;
