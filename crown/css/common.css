@@ -37,8 +37,6 @@ html,body{
    .cnt_wrap {
     position: relative;
 }
-
-
 .skip_nav{
     position: absolute; z-index: 1000000000000000;
     left: 0; top: 0; width: 100%;
@@ -51,4 +49,156 @@ html,body{
 }
 .skip_nav a:focus{
     top: 0;
+}
+.header{
+    height: 100px;
+}
+.header .logo{
+    float: left;
+    width: 150px;
+    margin: 35px 0 0 0;
+    font-size: 0; line-height: 0;
+}
+.header .gnb{
+    float: right;
+}
+.header .gnb_button{
+    display: none;
+}
+.header .gnb ul li{
+    float: left;
+}
+.header .gnb ul li a{
+    display: block;
+    padding: 0 40px; margin: 0 2px;
+    color: #3d3d3d; font-size: 23px; font-weight: 700; line-height: 100px;
+}
+@media screen and (max-width:848px){
+    .header{
+        height: 60px;
+    }
+    .header .logo{
+        width: 90px;
+        margin: 21px 0 0 0;
+    }
+    .header .gnb{
+        margin-top: 21px;
+    }
+    .header .gnb_button{
+        display: block;
+        width: 20px;
+    }
+    .header .gnb ul li{
+        display: none;
+    }
+}
+.footer{
+    position: relative;
+}
+.footer .family{
+    position: absolute;
+    right: calc(50% - 700px); top: 85px;
+}
+.footer .family button{
+    width: 159px; height: 31px;
+    border: 1px solid #999;
+    color: #666;
+}
+.footer .ftop{
+    height: 70px;
+    border-bottom: 1px solid #666;
+}
+.footer .ftop .fnav li{
+    position: relative;
+    float: left;
+    margin-right: 35px;
+}
+.footer .ftop .fnav li::after{
+    position: absolute;
+    right: -18px; top: 31px; width: 1px; height: 10px;
+    background-color: #666;
+    content: "";
+}
+.footer .ftop .fnav li:last-child:after{
+    display: none;
+}
+.footer .ftop .fnav li a{
+    display: block;
+    color: #666; line-height: 70px;
+}
+.footer .ftop .fnav li.pri{
+    font-weight: 700;
+}
+.footer .fsub{
+    margin-top: 16px;
+}
+.footer .fsub .flogo{
+    float: left;
+    margin: 0 23px 60px 0;
+    width: 121px;
+    filter: grayscale(100%); opacity: 50%;
+}
+.footer .fsub .inner{
+    float: left;
+    margin-bottom: 50px;
+}
+.footer .fsub .inner .finfo{
+    margin-bottom: 20px;
+}
+.footer .fsub .inner .finfo span{
+    position: relative;
+    display: inline-block;
+    margin: 5px 37px 0 0;
+}
+.footer .fsub .inner .copy{
+    color: #999;
+}
+@media screen and (max-width:1440px){
+    .footer .family{
+        right: 20px;
+    }
+}
+@media screen and (max-width:930px){
+    .footer .family{
+        position: relative;
+        right: auto; top: auto;
+        margin: 20px 0 5px 20px;
+    }
+    .footer .family button{
+        width: 130px; height: 24px;;
+    }
+    .footer .ftop{
+        height: auto;
+        border-bottom: 0;
+    }
+    .footer .ftop .fnav li{
+        margin-right: 25px;
+    }
+    .footer .ftop .fnav li::after{
+        right: -15px; top: 19px;
+    }
+    .footer .ftop .fnav li a{
+        line-height: 45px;
+    }
+    .footer .fsub{
+        margin-top: 16px;
+    }
+    .footer .fsub .flogo{
+        display: none;
+    }
+    .footer .fsub .inner{
+        float: left;
+        margin-bottom: 50px;
+    }
+    .footer .fsub .inner .finfo{
+        margin-bottom: 20px;
+    }
+    .footer .fsub .inner .finfo span{
+        position: relative;
+        display: inline-block;
+        margin: 5px 37px 0 0;
+    }
+    .footer .fsub .inner .copy{
+        color: #999;
+    }
 }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/popup.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <title>swiper 팝업</title>
+</head>
+<body>
+    <div id="wrap">
+       <div class="popup swiper"><!-- 팝업의 높이를 결정 -->
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="tit">
+                        <strong>설레는 여정,<br>REDCAP과 함께</strong>
+                    </div>
+                    <img src="images/popup4.png" alt="초코칩쿠키 사진">
+                </li>
+                <li class="swiper-slide">
+                    <div class="tit">
+                        <strong>자연으로,<br>스마트하게</strong>
+                    </div>
+                    <img src="images/popup5.png" alt="크로와상 사진">
+                </li>
+                <li class="swiper-slide">
+                    <div class="tit">
+                        <strong>이동의 순간을<br>더 가치있게</strong>
+                    </div>
+                    <img src="images/popup6.png" alt="초코쿠키 사진">
+                </li>
+            </ul>
+            <!-- 
+                이전버튼 : swiper-button-prev
+                다음버튼 : swiper-button-next
+                페이징 : swiper_pagination
+                기본 swiper의 이름을 따르면 기본 스타일이 적용됨
+                그 기본 스타일을 그대로 사용하고 변경해서 사용하려면 class명을 변경해도 됨
+                > swiper는 일시정지 버튼과 재생버튼을 기본적으로 제공하지 않음
+
+                접근성 : button 태그에 버튼 기능을 텍스트로 써야함 (css로 글자 지우기)
+                일시정지 버튼과 재생버튼은 같이 사용 가능
+                단 기능을 설명하는 텍스트를 변경해야함
+            -->
+            <button class="btn_prev">이전 팝업 보기</button>
+            <button class="btn_next">다음 팝업 보기</button>
+            <div class="ctrl_wrap">
+                <div class="btn_paging"></div>
+                <button class="btn_stop">일시정지</button>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h1>배너 - 반응형으로 보일 갯수 제한</h1>
+            <div class="banner1 swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="images/banner1.png" alt="">
+                        <strong>탁월한 리더 조건…“현재에 깨어서 집중을” 김병전의 지금 명상 탁월한 리더들에게는 공통적인 특성들이 있다.</strong>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="images/banner2.png" alt="">
+                        <strong>조금 재미있는 주제를 나누고자 한다. 마음챙김과 발성에 관한 내용이다.</strong>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="images/banner3.png" alt="">
+                        <strong>‘좋은 발성’은 듣는 이로 하여금 ‘좋은 목소리’로도 인식되며, 무의식적으로는 ‘좋은 사람’으로까지 받아들여진다.</strong>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="images/banner4.png" alt="">
+                        <strong>외모만큼이나 본능적으로 상대방을 평가하고 인지하는 요소로 ‘목소리’가 크게 작용한다.</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h1>배너 - 사이즈 고정</h1>
+            <div class="banner2 swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="images/banner1.png" alt="">
+                        <strong>탁월한 리더 조건…“현재에 깨어서 집중을” 김병전의 지금 명상 탁월한 리더들에게는 공통적인 특성들이 있다.</strong>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="images/banner2.png" alt="">
+                        <strong>조금 재미있는 주제를 나누고자 한다. 마음챙김과 발성에 관한 내용이다.</strong>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="images/banner3.png" alt="">
+                        <strong>‘좋은 발성’은 듣는 이로 하여금 ‘좋은 목소리’로도 인식되며, 무의식적으로는 ‘좋은 사람’으로까지 받아들여진다.</strong>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="images/banner4.png" alt="">
+                        <strong>외모만큼이나 본능적으로 상대방을 평가하고 인지하는 요소로 ‘목소리’가 크게 작용한다.</strong>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="images/banner5.png" alt="">
+                        <strong>이와 같이 목소리가 주는 영향력과 중요성을 언급할 때 꼭 회자가 되는 법칙이 한 가지 있다.</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
