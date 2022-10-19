@@ -3,22 +3,204 @@
 .vis{
     background-color: #a7b8c9;
 }
+.vis h2{
+    position: absolute; z-index: 12;
+    left: calc(50% - 700px); top: 50%;
+    color: #FFF; font-size: 40px; line-height: 1.2;
+    transform: translate(0, -50%);
+}
 .vis video{
-    position:absolute;
+    position:absolute; z-index: 10;
     right:0; bottom:0; top:0; width:100%; height:100%;
     object-fit:cover;
 }
+.vis .bg{
+    position: absolute; z-index: 11;
+    left: 0; top: 0; right: 0; bottom: 0; /* 상하좌우 모두 0을 주면 높이넓이 100과 똑같이 들어간다 */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width:1440px){
+    .vis h2{
+        left: 20px; font-size: 30px;
+    }
+}
+@media screen and (max-width:700px){
+    .vis h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:640px){
+    .fp-responsive .fp-is-overflow.fp-section.vis{
+        min-height: auto !important;
+        height: 440px !important;
+    }
+    /* 모바일에서 풀페이지를 해제하고 높이를 줘야한다면 section 클래스를 준 요소말고 그 안에 있는 요소한테 높이를 줘야함
+     예) .vis 말고 .vis .inner */
+}
+
 .count{
-    background-color: #b91a99;
+    position: relative;
 }
+.count::before{
+    position: absolute; z-index: -1;
+    left: 0; top: 0; width: 57.5%; height: 100%;
+    background-color: #FBF6F1;
+    content: "";
+}
+.count .tit{
+    margin: 0 0 0 80px;
+}
+.count .tit h2{
+    font-size: 35px; line-height: 1.2;
+    margin-bottom: 20px;
+}
+.count .tit h2 strong{
+    font-weight: 700;
+}
+.count .tit p span{
+    display: block;
+}
+.count .rate{
+    position: absolute;
+    left: calc(50% + 260px); top: 50%; width: 50%;
+    transform: translate(0, -45%);
+}
+.count .rate li{
+    position: relative;
+    margin: 60px 0;
+}
+.count .rate .exp{
+    position: relative; z-index: 1;
+    line-height: 1;
+}
+.count .rate .num strong{
+    font-size: 50px; font-weight: 700; line-height: 1.2;
+    background-color: #FFF;
+}
+.count .rate .num span{
+    padding: 0 10px;
+    font-size: 25px;
+    background-color: #FFF;
+}
+.count .rate li::after{
+    position: absolute; z-index: -2;
+    left: 100px; bottom: 11px; width: 100%; height: 1px;
+    background-color: #ccc;
+    content: "";
+}
+@media screen and (max-width:1100px){
+    .count::before{
+        width: 70%;
+    }
+}
+@media screen and (max-width:700px){
+    .fp-responsive .fp-is-overflow.fp-section.count{
+        min-height: auto !important;
+        height: auto !important;
+    }
+    body .fp-overflow{
+        overflow: hidden;
+    }
+    .count{
+        height: auto;
+    }
+    .count::before{
+        position: absolute;  width: 100%;
+    }
+    .count .tit{
+        margin: 50px 0 0 0;
+    }
+    .count .tit h2{
+        font-size: 20px;
+    }
+    .count .tit h2 strong{
+        font-weight: 700;
+    }
+    .count .tit p span{
+        display: inline;
+    }
+    .count .rate{
+        position: relative;
+        left: auto; top: auto; width: auto;
+        transform: translate(0, 0);
+    }
+    .count .rate li{
+        position: relative;
+        margin: 34px 0;
+    }
+    .count .rate .exp{
+        position: relative;
+    }
+    .count .rate .num strong{
+        font-size: 30px;
+        background-color: inherit;
+    }
+    .count .rate .num span{
+        padding: 0 10px;
+        font-size: 13px;
+        background-color: inherit;
+    }
+    .count .rate li::after{
+        display: none;
+    }
+}
+
+
+
+
 .biz{
-    background-color: #a7b8c9;
+    background-color: #D87332;
 }
-.news{
-    background-color: #b91a99;
+/* .news{
 }
 .support{
-    background-color: #a7b8c9;
+} */
+
+/* 오른쪽 네비게이션 디자인 변경
+선택자가 #fp-nav ul li 인 것과 body #fp-nav ul li 인 것이 동시에 존재한다면
+body부터 선언한 요소가 먼저 적용됩니다. (단, 나머지 선택자는 동일) */
+body #fp-nav ul li{
+    width: 10px; height: 10px;
+    margin: 14px 0;
+}
+body #fp-nav ul li:last-child{
+    display: none;
+}
+body #fp-nav ul li a span, body #fp-nav ul li:hover a span{
+    border-radius: 50%;
+    position: absolute; z-index: 1;
+    height: 100%; width: 100%;
+    border: 1px solid #FFF; background: #D87332;
+    left: 0; top: 0;
+    margin: 0;
+}
+body #fp-nav ul li a.active span, body #fp-nav ul li:hover a.active span {
+    height: 100%; width: 100%;
+    margin: 0;
+    border-radius: 100%;
+    border: 0; background: #ED1B2D;
+}
+body #fp-nav ul li .fp-tooltip {
+    top: -5px;
+    color: #fff; font-size: 14px; font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    background-color: #ED1B2D; border-radius: 5px;
+    max-width: max-content;
+    padding: 0 8px;
+    overflow: visible;
+    display: block;
+    opacity: 0;
+    width: auto;
+    cursor: pointer;
+}
+body #fp-nav ul li .fp-tooltip::after{
+    position: absolute;
+    right: -3px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    background-color: #ED1B2D;
+    transform: rotate(45deg);
+    content: "";
 }
 .fp-watermark{
     display: none;

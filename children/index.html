@@ -10,21 +10,78 @@
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
     <title>세이브더칠드런</title>
 </head>
 <body>
     <div id="wrap">
         <header class="header">
+            <div class="wrapper">
+                <h1 class="logo"><a href="index.html">세이브더칠드런</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open">
+                        <span> 메뉴열기</span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="#n">기관</a>
+                        </li>
+                        <li>
+                            <a href="#n">사업</a>
+                        </li>
+                        <li>
+                            <a href="#n">후원</a>
+                        </li>
+                        <li>
+                            <a href="#n">참여</a>
+                        </li>
+                        <li>
+                            <a href="#n">소식</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header> 
         <div id="fullpage">
             <section class="section vis">
-                <h2>비주얼영역</h2>
-                <video loop muted data-autoplay playsinline>
-                    <source data-src="images/main/vis.mp4" type="video/mp4">
-                </video>
+                <div class="inner">
+                    <h2>모든 아동은<br>건강하게 태어나 자랄<br>권리가 있습니다.</h2>
+                    <div class="bg"></div>
+                    <video loop muted data-autoplay playsinline>
+                        <source data-src="images/main/vis.mp4" type="video/mp4">
+                    </video>
+                </div>
             </section>
             <section class="section count">
-                <h2>사망자수</h2>
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>
+                            <strong>매일 1만 4,200명 이상</strong>의<br>아동이 5살이 되기 전<br>목숨을 잃습니다.
+                        </h2>
+                        <p>
+                            <span>세이브더칠드런은 예방 가능한 질병으로</span>
+                            <span>사망하는 5세 미만 아동이 없도록</span>
+                            산모와 신생아 및 영유아를 위한 보건영양 사업을 진행합니다.
+                        </p>
+                    </div>
+                    <ul class="rate">
+                       <li>
+                            <div class="exp"><span>매일 5세 미만 영유아 사망수</span></div>
+                            <div class="num"><strong class="counter">14,200</strong><span>명</span></div>
+                       </li>
+                       <li>
+                            <div class="exp"><span>매년 5세 미만 영유아 사망수</span></div>
+                            <div class="num"><strong class="counter">5,200,000</strong><span>명</span></div>
+                       </li>
+                       <li>
+                            <div class="exp"><span>예방 가능한 질병으로 인한 사망 비율</span></div>
+                            <div class="num"><strong class="counter">45.54</strong><span>%</span></div>
+                        </li> 
+                    </ul>
+                </div>
             </section>
             <section class="section biz">
                 <h2>사업소개</h2>

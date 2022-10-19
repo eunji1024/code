@@ -12,6 +12,24 @@ $(document).ready(function(){
 
 		verticalCentered: true, /* 컨텐츠 요소 위아래 가운데 */
 
+		afterLoad: function(origin, destination, direction, trigger){
+			console.log(destination.index)
+			if ((destination.index == 1)||(destination.index == 3)||(destination.index == 4)||(destination.index == 5)) {
+				$('header').addClass('black')
+			} else {
+				$('header').removeClass('black')
+			}
+		},
+
+
+
 		responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
 	});
+
+	$('.count .rate.num strong').counterUp({   /* 상세설정을 해주는 경우 */
+	delay: 10,   /* 애니메이션이 작동되기 이전 대기 시간 */
+	time: 2000    /* 전체 애니메이션 시간 */
+	});
+
+
 })
