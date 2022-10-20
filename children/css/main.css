@@ -1,8 +1,5 @@
 @import url(default.css);
 @import url(common.css);
-.vis{
-    background-color: #a7b8c9;
-}
 .vis h2{
     position: absolute; z-index: 12;
     left: calc(50% - 700px); top: 50%;
@@ -194,7 +191,6 @@
     background-color: #FFF;
     content: "";
 }
-
 .biz a:hover .more{
     transform: rotate(360deg);
 }
@@ -238,23 +234,150 @@
         display: inline;
     }
 }
-
-
-
-
-/* .news{
+.news h2{
+    font-size: 35px; font-weight: 700;
+    margin: 0 20px 40px 0;
 }
-.support{
-} */
+.news .list ul li a{
+    display: block;
+}
+.news .list ul li a span{
+    display: block;
+    overflow: hidden;
+    font-size: 0; line-height: 0;
+}
+.news .list ul li a span img{
+    width: 100%;
+    transition: 0.5s;
+}
+.news .list ul li a:hover span img{
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+.news .list ul li strong{
+    display: block;
+    margin-top: 15px;
+    font-size: 18px; font-weight: 700; line-height: 1.2;
+    height: 2.4em; overflow: hidden;
+}
+.news .cnt_wrapper{
+    position: relative;
+}
+.news .list .btn_paging{
+    display: flex; justify-content: center;
+    margin: 27px 0 0 0;
+}
+.news .list .btn_paging span{
+    display: block;
+    width: 8px; height: 8px;
+    border-radius: 50px; border: 1px solid #ED1B2D;
+    background-color: #FFF;
+    opacity: 1;
+}
+.news .list .btn_paging span.swiper-pagination-bullet-active{
+    display: block;
+    width: 8px; height: 8px;
+    border-radius: 50px; border: 1px solid #ED1B2D;
+    background-color: #ED1B2D;
+}
+.news .more{
+    position: absolute;
+    right: 10px; top: 10px; width: 40px; height: 40px;
+    border: 1px solid #3d3d3d; border-radius: 20px;
+    font-size: 0; line-height: 0;
+    transition: 1s;
+}
+.news .more::before{
+    position: absolute;
+    left: 50%; top: 50%; width: 1px; height: 23px; transform: translate(0, -50%);
+    background-color: #3d3d3d;
+    content: "";
+}
+.news .more::after{
+    position: absolute;
+    left: 50%; top: 50%; width: 23px; height: 1px; transform: translate(-50%, 0);
+    background-color: #3d3d3d;
+    content: "";
+}
+.news .more:hover{
+    transform: rotate(360deg);
+}
+@media screen and (max-width:1200px){
+    .news h2{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:700px){
+    .news{
+        margin: 45px 0 85px 0;
+    }
+    .news h2{
+        display: inline-block;
+        font-size: 20px; font-weight: 700;
+        margin: 0 40px 38px 0;
+    }
+    .news .more{
+        top: 0;
+    }
+    .news .list ul li strong{
+        font-size: 15px;
+    }
+}
+.support .support_wrap{
+    display: flex; justify-content: space-between;
+}
+.support h2{
+    margin: 100px 0 15px 0;
+    font-size: 35px; font-weight: 700; line-height: 1.3;
+}
+.support p span{
+    display: block
+}
+.support ul{
+    width: 49%; /* 전체넓이/화면넓이*100 */
+    /* 여백이 고정일 때 100%/li의 갯수 = 50% - 한줄에 들어가야하는 모든여백의 합 (40px)/li의 갯수
+    (100/2)% - (40/2)px = calc(50% - 20px) */
+}
+.support ul li{
+    float: left;
+    width: 47%; /* ul넓이/li의넓이*100 */ 
+    margin: 0 5.8% 40px 0; /* 오른쪽 여백은 넓이*2-100 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.support ul li a{
+    display: block;
+    height: 170px;
+    padding: 12% 12% 0 12%;
+}
+.support ul li a span{
+    display: block;
+}
+.support ul li a strong{
+    display: block;
+    font-size: 25px; 
+}
+.support ul li:nth-child(1), .support ul li:nth-child(3){
+    transform: translate(0, -70px);
+}
+.support ul li:nth-child(2), .support ul li:nth-child(4){
+    margin-right: 0;
+    transform: translate(0, 70px);
+}
+.support ul li:nth-child(3){
+    background-color: #ED1B2D;
+    color: #FFF;
+}
+
+
+
+
+
+
+
 
 /* 오른쪽 네비게이션 디자인 변경
 선택자가 #fp-nav ul li 인 것과 body #fp-nav ul li 인 것이 동시에 존재한다면
 body부터 선언한 요소가 먼저 적용됩니다. (단, 나머지 선택자는 동일) */
-
 /* fullpage 공통사항 */
-
-
-
 body #fp-nav ul li{
     width: 10px; height: 10px;
     margin: 14px 0;
@@ -302,8 +425,8 @@ body #fp-nav ul li .fp-tooltip::after{
     min-height: auto !important;
     height: auto !important;
 }
-body .fp-overflow{
-    overflow: hidden;
+body .section .fp-overflow{
+    overflow: visible;
 }
 .fp-watermark{
     display: none;
