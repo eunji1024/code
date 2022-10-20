@@ -19,7 +19,7 @@
     left: 0; top: 0; right: 0; bottom: 0; /* 상하좌우 모두 0을 주면 높이넓이 100과 똑같이 들어간다 */
     background-color: rgba(0, 0, 0, 0.3);
 }
-@media screen and (max-width:1440px){
+@media screen and (max-width:1200px){
     .vis h2{
         left: 20px; font-size: 30px;
     }
