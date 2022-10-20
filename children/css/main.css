@@ -37,9 +37,10 @@
     /* 모바일에서 풀페이지를 해제하고 높이를 줘야한다면 section 클래스를 준 요소말고 그 안에 있는 요소한테 높이를 줘야함
      예) .vis 말고 .vis .inner */
 }
-
 .count{
     position: relative;
+    padding: 40px 0 0 0;/* header의 높이와 무관하게 위아래 가운데에 배치돼서 상단의 여백이 부족해보임
+    그래서 상단여백 추가 */
 }
 .count::before{
     position: absolute; z-index: -1;
@@ -48,7 +49,7 @@
     content: "";
 }
 .count .tit{
-    margin: 0 0 0 80px;
+    margin: 0 0 0 3.6%;
 }
 .count .tit h2{
     font-size: 35px; line-height: 1.2;
@@ -62,7 +63,7 @@
 }
 .count .rate{
     position: absolute;
-    left: calc(50% + 260px); top: 50%; width: 50%;
+    left: 65%; top: 50%; width: 50%;
     transform: translate(0, -45%);
 }
 .count .rate li{
@@ -88,24 +89,24 @@
     background-color: #ccc;
     content: "";
 }
-@media screen and (max-width:1100px){
-    .count::before{
-        width: 70%;
+@media screen and (max-width:1200px){
+    .count .tit h2{
+        font-size: 30px;
+    }
+    .count .rate .num strong{
+        font-size: 40px;
+    }
+    .count .rate .num span{
+        font-size: 20px;
     }
 }
 @media screen and (max-width:700px){
-    .fp-responsive .fp-is-overflow.fp-section.count{
-        min-height: auto !important;
-        height: auto !important;
-    }
-    body .fp-overflow{
-        overflow: hidden;
-    }
+   
     .count{
         height: auto;
     }
     .count::before{
-        position: absolute;  width: 100%;
+        display: none;
     }
     .count .tit{
         margin: 50px 0 0 0;
@@ -122,6 +123,7 @@
     .count .rate{
         position: relative;
         left: auto; top: auto; width: auto;
+        margin-bottom: 66px;
         transform: translate(0, 0);
     }
     .count .rate li{
@@ -144,13 +146,102 @@
         display: none;
     }
 }
-
-
-
-
 .biz{
     background-color: #D87332;
 }
+.biz .bis_wrap{
+    display: flex;
+    align-items: center;
+}
+.biz img{
+    width: 47.2%;
+}
+.biz .inner{
+    width: 430px;
+    margin: 0 0 0 120px;
+    color: #FFF;
+}
+.biz a strong{
+    display: block;
+    font-size: 20px;
+}
+.biz a h2{
+    font-size: 35px; font-weight: 700;
+    margin: 6px 0 29px 0;
+}
+.biz a .how{
+    margin-bottom: 45px;
+}
+.biz a .how span{
+    display: block;
+}
+.biz a .more{
+    position: relative;
+    width: 40px; height: 40px;
+    margin-top: 36px;
+    border: 1px solid #FFF; border-radius: 20px;
+    transition: 1s;
+}
+.biz a .more::before{
+    position: absolute;
+    left: 50%; top: 50%; width: 1px; height: 23px; transform: translate(0, -50%);
+    background-color: #FFF;
+    content: "";
+}
+.biz a .more::after{
+    position: absolute;
+    left: 50%; top: 50%; width: 23px; height: 1px; transform: translate(-50%, 0);
+    background-color: #FFF;
+    content: "";
+}
+
+.biz a:hover .more{
+    transform: rotate(360deg);
+}
+@media screen and (max-width:1200px){
+    .biz .inner{
+        margin: 0 0 0 50px;
+    }
+    .biz a strong{
+        font-size: 18px;
+    }
+    .biz a h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:700px){
+    .biz{
+        padding: 52px 0;
+    }
+    .biz .bis_wrap{
+        display: block;
+        align-items: center;
+    }
+    .biz img{
+        width: 100%;
+    }
+    .biz .inner{
+        width: 100%;
+        margin: 12px 0 0 0;
+    }
+    .biz a strong{
+        font-size: 13px;
+    }
+    .biz a h2{
+        font-size: 20px;
+        margin: 8px 0 20px 0;
+    }
+    .biz a .how{
+        margin-bottom: 12px;
+    }
+    .biz a .how span{
+        display: inline;
+    }
+}
+
+
+
+
 /* .news{
 }
 .support{
@@ -159,6 +250,11 @@
 /* 오른쪽 네비게이션 디자인 변경
 선택자가 #fp-nav ul li 인 것과 body #fp-nav ul li 인 것이 동시에 존재한다면
 body부터 선언한 요소가 먼저 적용됩니다. (단, 나머지 선택자는 동일) */
+
+/* fullpage 공통사항 */
+
+
+
 body #fp-nav ul li{
     width: 10px; height: 10px;
     margin: 14px 0;
@@ -201,6 +297,13 @@ body #fp-nav ul li .fp-tooltip::after{
     background-color: #ED1B2D;
     transform: rotate(45deg);
     content: "";
+}
+.fp-responsive .fp-is-overflow.fp-section{
+    min-height: auto !important;
+    height: auto !important;
+}
+body .fp-overflow{
+    overflow: hidden;
 }
 .fp-watermark{
     display: none;

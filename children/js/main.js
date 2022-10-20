@@ -19,17 +19,23 @@ $(document).ready(function(){
 			} else {
 				$('header').removeClass('black')
 			}
-		},
-
+			if (destination.index == 1) { //보건통계 슬라이드가 나타났을 때
+				funCount() //함수이름이 funCount인것을 실행한다
+			}
+			},
+			
 
 
 		responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
 	});
 
-	$('.count .rate.num strong').counterUp({   /* 상세설정을 해주는 경우 */
-	delay: 10,   /* 애니메이션이 작동되기 이전 대기 시간 */
-	time: 2000    /* 전체 애니메이션 시간 */
-	});
-
+	// 보건통계 숫자 카운팅 효과
+	
+	function funCount(){
+		console.log('counting')
+		$('.count .rate .num strong').counterUp();
+		 /* 숫자 요소의 클래스명을 써준다. */
+	}
+	
 
 })
