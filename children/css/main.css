@@ -3,7 +3,7 @@
 .vis h2{
     position: absolute; z-index: 12;
     left: calc(50% - 700px); top: 50%;
-    color: #FFF; font-size: 40px; line-height: 1.2;
+    color: #FFF; font-size: 50px; font-weight: 700; line-height: 1.2;
     transform: translate(0, -50%);
 }
 .vis video{
@@ -15,6 +15,28 @@
     position: absolute; z-index: 11;
     left: 0; top: 0; right: 0; bottom: 0; /* 상하좌우 모두 0을 주면 높이넓이 100과 똑같이 들어간다 */
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width:700px){
+ /* vis가 로딩됐을 때 애니메이션 : 글자가 밑에서 위로 나타날 것 */
+    .vis h2 .block{
+        display: block;
+        overflow: hidden;
+    }
+    .vis h2 .block em{
+        display: block;
+        transition: 1s;
+        transform: translate(0, 100px);
+    }
+    .vis.fp-completely h2 .block em{
+        transform: translate(0, 0);
+    }
+    .vis.fp-completely h2 .block:nth-child(2) em{
+        transition-delay: 0.2s;
+    }
+    .vis.fp-completely h2 .block:nth-child(3) em{
+        transition-delay: 0.4s;
+    }
 }
 @media screen and (max-width:1200px){
     .vis h2{
@@ -85,6 +107,17 @@
     left: 100px; bottom: 11px; width: 100%; height: 1px;
     background-color: #ccc;
     content: "";
+}
+@media screen and (min-width:700px){
+    .count .tit{
+        transition: 1.3s;
+        opacity: 0;
+        transform: translate(-500px, 0);
+    }
+    .count.fp-completely .tit{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
 @media screen and (max-width:1200px){
     .count .tit h2{
@@ -194,6 +227,27 @@
 }
 .biz a:hover .more{
     transform: rotate(360deg);
+}
+@media screen and (min-width:700px){
+    .biz img{
+        transition: 1s;
+        opacity: 0;
+        transform: translate(0, 200px);
+    }
+    .biz.fp-completely img{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    .biz .inner{
+        transition: 1s;
+        transition-delay: 0.3s;
+        opacity: 0;
+        transform: translate(500px, 0);
+    }
+    .biz.fp-completely .inner{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
 @media screen and (max-width:1200px){
     .biz .inner{
@@ -492,25 +546,6 @@ transform: translate(0, 높이의 반절);으로 나눠가진다 */
         background-size: contain;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 오른쪽 네비게이션 디자인 변경
 선택자가 #fp-nav ul li 인 것과 body #fp-nav ul li 인 것이 동시에 존재한다면
 body부터 선언한 요소가 먼저 적용됩니다. (단, 나머지 선택자는 동일) */
@@ -558,13 +593,19 @@ body #fp-nav ul li .fp-tooltip::after{
     transform: rotate(45deg);
     content: "";
 }
+
+
 .fp-responsive .fp-is-overflow.fp-section{
     min-height: auto !important;
     height: auto !important;
 }
 body .section .fp-overflow{
     overflow: visible;
+    padding: 200px 0;
 }
 .fp-watermark {
     display: none;
+}
+body .section.fp-auto-height .fp-overflow, body.fp-responsive .section .fp-overflow{
+    padding: 0;
 }

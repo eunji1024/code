@@ -105,11 +105,13 @@ html,body{
     .header{
         height: 60px;
         border-bottom: 0;
+        color: #3d3d3d;
     }
     .header .logo{
         margin: 14px 0 0 0;
     }
     .header .logo a{
+        background-image: url(../images/common/logo_b.svg);
         width: 146.42px; height: 29.77px;
     }
     .header .gnb{
@@ -123,13 +125,64 @@ html,body{
         display: block;
         width: 20px; height: 2px;
         margin: 4px 0 0 0;
-        border-radius: 1px; background-color: #FFF;
+        border-radius: 1px; background-color: #3d3d3d;
         font-size: 0; line-height: 0;
     }
     .header .gnb ul li{
         display: none;
     }
     .header.black .gnb .gnb_open span{
-        background-color: #3d3d3d;
+        background-color: #3d3d3d; 
+    }
+}
+@media screen and (max-width:640px){
+    .header{
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    .header.black{
+        border-bottom: 0;
+    }
+    .header.black .gnb .gnb_open span{
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+.footer{
+    padding: 28px 0 62px 0;
+    border-top: 1px solid #CCC;
+}
+.footer .fnav{
+    float: right;
+    text-align: right;
+}
+.footer .fnav li{
+    color: #666; font-size: 30px; font-weight: 700; line-height: 2;
+}
+.footer .inner{
+    float: left;
+}
+.footer .flogo{
+    width: 97px; height: 102px;
+    margin-bottom: 32px;
+    background: url(../images/common/logo_w.svg) no-repeat left top / auto 102px;
+}
+.footer .copy{
+    color: #666;
+}
+@media screen and (max-width:700px){
+    .footer{
+        padding: 27px 0 75px 0;
+    }
+    .footer .fnav li{
+        font-size: 20px;
+    }
+    .footer .inner{
+        float: left;
+        margin-top: 27px;
+    }
+    .footer .flogo{
+        display: none;
     }
 }
