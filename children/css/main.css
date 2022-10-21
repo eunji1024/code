@@ -421,7 +421,7 @@ transform: translate(0, 높이의 반절);으로 나눠가진다 */
     }
     .support ul{
         width: auto; /* 680/1400*100 % */
-        margin-right: 40px;
+        margin-right: 0;
     }
     .support .inner{
         width: auto; text-align: center;
@@ -492,6 +492,23 @@ transform: translate(0, 높이의 반절);으로 나눠가진다 */
         background-size: contain;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 오른쪽 네비게이션 디자인 변경
