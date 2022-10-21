@@ -472,8 +472,12 @@ transform: translate(0, 높이의 반절);으로 나눠가진다 */
         margin-top: 1%;
         font-size: 20px;
     }
-    .support ul li a::after{
-        bottom: 25px;
+    .support ul li a::after {
+        right: 20px;
+        bottom: 18px;
+        width: 25px;
+        height: 25px;
+        background-size: contain;
     }
 }
 
