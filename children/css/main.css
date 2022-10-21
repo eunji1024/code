@@ -152,7 +152,7 @@
 }
 .biz img{
     width: 47.2%;
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1) ;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1); border-radius: 3px;
 }
 .biz .inner{
     width: 430px;
@@ -245,7 +245,7 @@
 .news .list ul li a span{
     display: block;
     overflow: hidden;
-    font-size: 0; line-height: 0;
+    font-size: 0; line-height: 0;  border-radius: 3px;
 }
 .news .list ul li a span img{
     width: 100%;
@@ -365,7 +365,7 @@ transform: translate(0, 높이의 반절);으로 나눠가진다 */
     display: block;
     height: 170px;
     padding: 30px 9.3% 0 9.3%;
-    border-radius: 3px;  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: 0.2s;
 }
 .support ul li a span{
@@ -413,16 +413,28 @@ transform: translate(0, 높이의 반절);으로 나눠가진다 */
 }
 .support ul li a:hover{
     transform: translate(-5px, -5px);
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
-/* @media screen and (max-width:1200px){
-    .support .inner h2{
-        font-size: 25px;
+@media screen and (max-width:1200px){
+    .support .support_wrap{
+        display: block;
     }
-    .support ul li a::after{
-        width: 30px; height: 30px;background-size: contain;
+    .support ul{
+        width: auto; /* 680/1400*100 % */
+        margin-right: 40px;
     }
-} */
+    .support .inner{
+        width: auto; text-align: center;
+        margin-bottom: 50px;
+    }
+    .support ul li:nth-child(1),.support ul li:nth-child(3){
+        transform: translate(0, 0);
+    }
+    .support ul li:nth-child(2), .support ul li:nth-child(4){
+        margin-right: 0;
+        transform: translate(0, 0);
+    }
+}
 @media screen and (max-width:700px){
     .support .support_wrap{
         display: block;
@@ -465,7 +477,7 @@ transform: translate(0, 높이의 반절);으로 나눠가진다 */
     .support ul li a{
         height: 90px;
         padding: 24px 20px 0 20px;
-        border-radius: 3px;  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         transition: 0.2s;
     }
     .support ul li a strong{
@@ -480,18 +492,6 @@ transform: translate(0, 높이의 반절);으로 나눠가진다 */
         background-size: contain;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* 오른쪽 네비게이션 디자인 변경
