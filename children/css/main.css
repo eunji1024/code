@@ -16,7 +16,21 @@
     left: 0; top: 0; right: 0; bottom: 0; /* 상하좌우 모두 0을 주면 높이넓이 100과 똑같이 들어간다 */
     background-color: rgba(0, 0, 0, 0.3);
 }
-
+.vis .scroll{
+    position: absolute; z-index: 13;
+    left: 50%; bottom: 50px;
+    transform: translate(-50%, 0);
+    opacity: 0.7;
+    animation-name:scrollmove;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+@keyframes scrollmove{
+    0%{transform: translate(0, 0);}
+    50%{transform: translate(0, 10px);}
+    100%{transform: translate(0, 0);}
+}
 @media screen and (min-width:700px){
  /* vis가 로딩됐을 때 애니메이션 : 글자가 밑에서 위로 나타날 것 */
     .vis h2 .block{
