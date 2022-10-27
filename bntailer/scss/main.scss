@@ -8,7 +8,7 @@
     .tit{
         position: absolute; z-index: 10;
         left: 50%; top: 50%; transform: translate(-700px, 0);
-        color: #FFF;
+        color: $w_tit_color;
         strong{
             display: block;
         }
@@ -121,4 +121,56 @@
             }
         }
     }
+}
+.fabric{
+    position: relative;
+    padding-bottom: 255px;
+    ::after{
+        position: absolute; z-index: -10;
+        left: 0; bottom: 0; width: 100%; height: 289px;
+        background-color: #383431;
+        content: "";
+    }
+    h2{
+        padding: 177px 0 37px 0;
+        font-size: 25px;
+    }
+    .tit{
+        padding: 0 0 42px 0;
+        font-size: 40px; font-weight: 700;
+        @include font_serif;
+    }
+    .cnt{
+        padding: 0 0 42px 0;
+        width: 650px;
+    }
+    .tag{
+        span{
+            padding-right: 14px;
+            color: $point_color;
+        }
+        
+    }
+    .bg{
+        position: absolute; z-index: -1;
+        left: calc(50% - 100px); top: 0; width: 680px; height: 100%;
+        overflow: hidden; // bg 영역보다 img가 더 커서
+        img{
+            display: block;
+            width: 120%; height: 120%; object-fit: cover;
+        }
+    }
+    .bg2{
+        position: absolute;
+        left: calc(50% + 460px); top: calc(50% - 150px); width: 100%; height: 100%;
+        img{
+            border-radius: 3px;
+            box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.1);
+            transition: 0.5s;
+        }
+    }
+}
+.product{
+    height: 1000px;
+    background-color: #383431;
 }

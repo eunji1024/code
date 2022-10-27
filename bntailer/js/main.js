@@ -37,5 +37,22 @@ $(document).ready(function(){
 		}
 	})
 
+	//페브릭의 이미지 스크롤 효과
 
+	let scrolling
+	let moveTop
+	let objName = $('.fabric .bg2 img')
+	fabScroll()
+	$(window).scroll(function(){
+		fabScroll()
+	})
+
+	function fabScroll(){
+		//스크롤값을 요소의 위치값으로 변경해서 스타일을 적용
+		scrolling = $(window).scrollTop()
+		console.log(scrolling, 'scroll')
+		console.log(objName.offset().top)
+		moveTop = scrolling*0.1
+		//objName.css('transform','translate(0 , -'+moveTop+'px)')
+	}
 })

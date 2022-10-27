@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap');
 html,body{
-    color: #383431; 
+    color: $basic_color; 
     line-height: 1.2;
     font-family:'Noto Sans KR','Malgun Gothic','Apple SD Gothic','Apple SD Gothic Neo','Dotum',sans-serif; font-size: 16px; font-weight: 400;
     letter-spacing: -0.062em;
@@ -55,3 +55,133 @@ html,body{
 ::selection{background:#AB6E34;color:#383431;}
 ::-moz-selection{background:#AB6E34;color:#383431;}
 ::-webkit-selection{background:#AB6E34;color:#383431;}
+
+.header{
+    position: absolute; z-index: 100;
+    left: 0; top: 0; width: 100%; height: 100px;
+    .logo{
+        float: left;
+        margin: 20px 0 0 40px;
+    }
+    .gnb{
+        float: right;
+        margin-right: 14px;
+        .gnb_open{
+            display: none;
+        }
+        ul{
+            li{
+                float: left;
+                a{
+                    display: block;
+                    padding: 0 26px;
+                    color: $w_tit_color; font-size: 22px; line-height: 100px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1400px){
+    .header{
+        .logo{
+            margin: 35px 0 0 40px;
+            a{
+                img{
+                    width: 120px;
+                }
+            }
+        }
+        .gnb{
+            ul{
+                li{
+                    a{
+                        padding: 0 16px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .header{
+        height: 60px;
+        .logo{
+            margin: 20px 0 0 20px;
+            a{
+                img{
+                    width: 102px;
+                }
+            }
+        }
+        .gnb{
+            position: relative;
+            width: 60px; height: 60px;
+            margin-right: 0;
+            .gnb_open{
+                display: block;
+                strong{
+                    display: none;
+                }
+                span{
+                    position: absolute;
+                    right: 20px; width: 20px; height: 2px;
+                    background-color: #FFF;
+                    &.line1{
+                        top: 22px;
+                    }
+                    &.line2{
+                        top: 28px; width: 15px;
+                    }
+                    &.line3{
+                        top: 34px;
+                    }
+                }
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .header{
+        height: 60px;
+        .logo{
+            margin: 20px 0 0 20px;
+            a{
+                img{
+                    width: 102px;
+                }
+            }
+        }
+        .gnb{
+            position: relative;
+            width: 60px; height: 60px;
+            margin-right: 0;
+            .gnb_open{
+                display: block;
+                strong{
+                    display: none;
+                }
+                span{
+                    position: absolute;
+                    right: 20px; width: 20px; height: 2px;
+                    background-color: #FFF;
+                    &.line1{
+                        top: 22px;
+                    }
+                    &.line2{
+                        top: 28px; width: 15px;
+                    }
+                    &.line3{
+                        top: 34px;
+                    }
+                }
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+}

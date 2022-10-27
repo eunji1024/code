@@ -1,3 +1,14 @@
+$basic_color:#383431; //기본글자색
+$tit_color:#383431; //제목글자색
+$white_color:rgba(255,255,255,0.8);//흰색 내용색
+$w_tit_color:#FFF;//흰색 타이틀색
+$gray_color:#666;//회색
+$gray_light_color:#F5F5F4;//배경에 연한 글씨색
+$point_color:#C27934;//포인트색
+
 @mixin font_serif {
     font-family: 'Noto Serif KR', serif;
 }
+@mixin zindex2 {
+    position: relative;
+}   
