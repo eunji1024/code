@@ -19,6 +19,23 @@ $(document).ready(function(){
 		nextEl: '.swiper-button-next',  /* 다음 버튼의 클래스명 */
 		prevEl: '.swiper-button-prev',  
 	},
-
     });
+
+	// 팝업의 정지버튼 재생버튼
+	// 하나의 버튼이 두가지 기능을 함
+
+	$('.vis .popup .btn_stop').on('click',function(){
+		let popStat = $(this).hasClass('play')//true일 시 재생, false일 시 일시정지
+		if (popStat == true) {//버튼의 상태가 play 모양(현재 정지 상태라는 뜻)
+			swiper.autoplay.start()
+			$(this).removeClass('play')
+			$(this).text('일시정지')
+		} else {//버튼의 상태가 일시정지 모양 - 현재 재생상태 - 일시정지 기능을 실행
+			swiper.autoplay.stop()
+			$(this).addClass('play')
+			$(this).text('재생')
+		}
+	})
+
+
 })
