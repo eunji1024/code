@@ -11,4 +11,10 @@ $point_color:#C27934;//포인트색
 }
 @mixin zindex2 {
     position: relative;
-}   
+}
+@mixin clearfix {
+    display: block; 
+    &::after{
+        display: block; clear: both; content: "."; visibility: hidden; height: 0;
+    }
+}
