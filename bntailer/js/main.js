@@ -81,15 +81,86 @@ $(document).ready(function(){
 		offTop = objParent.offset().top
 		scrolling = $(window).scrollTop()
 		moveVal = (scrolling - offTop + winH)*moveRate
-		// console.log(winH,'window.height')
-		// console.log(offTop,'offTop')
-		// console.log(scrolling,'window.scrolling')
-		console.log(moveVal,'moveVal')
+		// console.log(moveVal)
 		if (moveDir == 'left') {
 			objMove.css('transform','translateX(-'+moveVal+'px)')
 		} else {
 			objMove.css('transform','translateY(-'+moveVal+'px)')
 		}
 	}
+
+	/*
+		.product .list .tit 고정
+		-- 스크롤을 내리다가 화면에 product 콘텐츠가 보일 때는 fixed 클래스를 추가
+		1908 - 3358
+		.product .list 가 페이지 상단에 도달했을 때 : 콘텐츠가 보이는 시작점
+		.offset().top 은 해당 콘텐츠가 브라우저 상단에 닿았을 때의 스크롤 값
+
+		-- 처음에 tit가 나타나기 전 영역
+		tit이 고정되는 영역(고정되어 옆에 콘텐츠만 스크롤 됨)
+		tit이 고정 된 이후 영역 (다른 콘텐츠를 따라서 사라짐)
+	*/
+
+
+	let fixObj = $('.product .list .tit') //고정요소
+	let fixArea = $('.product .list') //고정요소를 감싸는 요소
+	let fixTop = 130
+	let fixBtm = 175
+	let fixStart //1983.75 - 130 fixed 시작점
+	let fixEnd // fixed 종료점
+	// console.log(fixStart, 'fixStart')
+	// console.log(fixEnd, 'fixEnd')
+
+	objfixed()
+
+	$(window).scroll(function(){
+		objfixed()
+	})
+	$(window).resize(function(){
+		objfixed()
+	})
+
+	function objfixed(){
+		// console.log(scrolling)
+		fixStart = fixArea.offset().top - fixTop
+		fixEnd = fixArea.offset().top + fixArea.height() - fixObj.height() - fixBtm - fixTop
+		if(scrolling < fixStart){
+			fixObj.removeClass('fixed')
+			fixObj.removeClass('end')
+		}else if((scrolling >= fixStart)&&(scrolling < fixEnd)){
+			fixObj.addClass('fixed')
+			fixObj.removeClass('end')
+		}else{
+			fixObj.addClass('end')
+			fixObj.removeClass('fixed')
+		}
+	}
+
+	// 인스타 팝업
+	const swiperInsta = new Swiper('.insta .list', { /* 팝업을 감싼는 요소의 class명 */
+	slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+	slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+	breakpoints: {
+		640: {    /* 640px 이상일때 적용 */
+			slidesPerView: 3,
+			spaceBetween: 10,
+		},
+		768: {    /* 640px 이상일때 적용 */
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1024: {    /* 1024px 이상일때 적용 */
+			slidesPerView: 4,
+			spaceBetween: 20,
+		},
+		1440: {    /* 1440px 이상일때 적용 */
+			slidesPerView: 6,
+			spaceBetween: 20,
+		}
+	},
+
+});
+
 
 })
