@@ -70,13 +70,16 @@ html,body{
         .gnb_open{
             display: none;
         }
-        ul{
-            li{
-                float: left;
-                a{
-                    display: block;
-                    padding: 0 26px;
-                    color: $w_tit_color; font-size: 22px; line-height: 100px;
+        .gnb_wrap{
+            right: 100%;
+            ul{
+                li{
+                    float: left;
+                    a{
+                        display: block;
+                        padding: 0 26px;
+                        color: $w_tit_color; font-size: 22px; line-height: 100px;
+                    }
                 }
             }
         }
@@ -100,11 +103,13 @@ html,body{
             }
         }
         .gnb{
-            ul{
-                li{
-                    a{
-                        padding: 0 16px;
-                        font-size: 18px;
+            .gnb_wrap{
+                ul{
+                    li{
+                        a{
+                            padding: 0 16px;
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -124,10 +129,11 @@ html,body{
         }
         .gnb{
             position: relative;
-            width: 60px; height: 60px;
             margin-right: 0;
             .gnb_open{
+                position: relative; z-index: 2;
                 display: block;
+                width: 60px; height: 60px;
                 strong{
                     display: none;
                 }
@@ -135,6 +141,7 @@ html,body{
                     position: absolute;
                     right: 20px; width: 20px; height: 2px;
                     background-color: #FFF;
+                    transition: 0.3s;
                     &.line1{
                         top: 22px;
                     }
@@ -146,8 +153,68 @@ html,body{
                     }
                 }
             }
-            ul{
-                display: none;
+            .gnb_wrap{
+                display: block;
+                position: fixed;  z-index: 1;
+                right: -100%; top: 0; width: 100%; max-width: 375px; height: 100vh;
+                background-color: #FFF;
+                color: $basic_color;
+                transition: 0.5s;
+                ul{
+                    margin: 60px 0 0 0;
+                    li{
+                        float: none;
+                        a{
+                            padding: 0 20px;
+                            color: $basic_color; font-size: 20px; line-height: 60px;
+                        }
+                    }
+                }
+                /*
+                <div class="gnb">
+                    <button class="gnb_open"></button>
+                    <div class="gnb_wrap"></div>
+                    ::after -- gnb::after
+                </div>
+                이런 구조에서
+                gnb_open과 gnb_wrap, gnb::after의 순서를 조정할 수 있음
+                z-index;는 나란히 들어간 요소 사이에서 높은 숫자가 위로 올라감
+                */
+            }
+            &::after{
+                // 메뉴 하단을 검은 배경으로 채울 때는 position: fixed;
+                position: fixed;
+                left: 0; top: 0; right: 0; bottom: 0;  height: 100vh;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                content: "";
+                opacity: 0;
+            }
+            &.mobile_open{
+                .gnb_open{
+                    span{
+                        position: absolute;
+                        right: 20px; width: 20px; height: 2px;
+                        background-color: #383431;
+                        &.line1{
+                            top: 27px;
+                            transform: rotate(45deg);
+                        }
+                        &.line2{
+                            right: -22px;
+                        }
+                        &.line3{
+                            top: 27px;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+                .gnb_wrap{
+                    right: 0;
+                }
+                &::after{
+                    opacity: 1;
+                }
+
             }
         }
     }
@@ -187,9 +254,92 @@ html,body{
                     }
                 }
             }
-            ul{
-                display: none;
+        }
+    }
+}
+.footer{
+    padding: 28px 0 0 0;
+    border-top: 1px solid #CCC;
+    color: $gray_color;
+    .left{
+        float: left;
+        .flogo{
+            float: left;
+            height: 89px;
+            padding-right: 34px; margin: 0 0 32px 0;
+            border-right: 1px solid #CCC;
+        }
+        .finfo{
+            float: left;
+            padding: 5px 0 0 89px;
+        }
+    }
+    .right{
+        float: right;
+        padding: 5px 0 0 0;
+        ul{
+            float: right;
+            li{
+                float: left;
+                margin: 10px 0 0 4px;
+                a{
+                    position: relative;
+                    display: block;
+                    width: 25px; height: 25px;
+                    font-size: 0; line-height: 0;
+                    &::before{
+                        position: absolute;
+                        left: 50%; top: 50%; width: 25px; height: 25px; // 아이콘 넓이
+                        transform: translate(-50%, -50%);
+                        background-image: url(/code/bntailer/images/common/footer_ico.svg); background-repeat: no-repeat;
+                        content: "";
+                    }
+                }
+                &.f_insta a::before{
+                    background-position: left top;
+                }
+                &.f_fbook a::before{
+                    background-position: left -25px top;
+                }
+                &.f_naver a::before{
+                    background-position: right top;
+                }
             }
+        }
+        .copy{
+            color: #999;
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .footer{
+        .left{
+            .finfo{
+                padding: 5px 0 0 59px;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .footer{
+        padding: 21px 0 0 0;
+        .left{
+            margin-bottom: 40px;
+            .flogo{
+                display: block;
+                float: none;
+                height: auto;
+                padding-right: 0; margin: 0 0 5px 0;
+                border-right: 0;
+            }
+            .finfo{
+                display: block;
+                float: none;
+                padding-left: 0;
+            }
+        }
+        .right{
+            margin-bottom: 40px;
         }
     }
 }
