@@ -63,6 +63,12 @@ html,body{
     .logo{
         float: left;
         margin: 25px 0 0 40px;
+        svg{
+            width:162px;
+            text{
+                fill: #FFF;
+            }
+        }
     }
     .gnb{
         float: right;
@@ -96,10 +102,8 @@ html,body{
     .header{
         .logo{
             margin: 35px 0 0 40px;
-            a{
-                img{
-                    width: 120px;
-                }
+            svg{
+                width: 120px;
             }
         }
         .gnb{
@@ -121,10 +125,8 @@ html,body{
         height: 60px;
         .logo{
             margin: 10px 0 0 20px;
-            a{
-                img{
-                    width: 102px;
-                }
+            svg{
+                width: 102px;
             }
         }
         .gnb{
@@ -224,10 +226,8 @@ html,body{
         height: 60px;
         .logo{
             margin: 15px 0 0 20px;
-            a{
-                img{
-                    width: 102px;
-                }
+            svg{
+                width: 102px;
             }
         }
         .gnb{

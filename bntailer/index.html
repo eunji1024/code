@@ -16,7 +16,16 @@
     <div id="wrap">
         <header class="header">
             <h1 class="logo">
-                <a href="/code/bntailer/index.html"><img src="/code/bntailer/images/common/logo_w.svg" alt="BNTAILER logo"></a>
+                <a href="/code/bntailer/index.html"> 
+                    <!-- svg 파일을 코드로 삽입하는 방법
+                         svg 파일을 코딩프로그램으로 열어서 html에 삽입할 위치에 추가한다.
+                         css에서 svg를 불러서 사이즈와
+                         색상(svg 클래스 안의 path나 text 같은 하위 클래스에 fill: #FFF; 로 넣어야함) 조절
+                         모든 브라우저에서 지원하지 않음 -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162 44">
+                        <text id="logo_w" transform="translate(0 35)" font-size="30" font-family="NotoSerifKR-Bold, Noto Serif KR" font-weight="700"><tspan x="0" y="0">B&amp;TAILOR</tspan></text>
+                    </svg>
+                </a>
             </h1>
             <!-- 모바일에서 메뉴를 열면 gnb에 m_open 클래스 부여
             gnb_open 은 三 > X 애니메이션

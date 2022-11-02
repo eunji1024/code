@@ -2,10 +2,119 @@
 @import "_default.scss";
 @import "_common.scss";
 
-.container{
-    svg{
-        path{
-            fill: #C27934;
+.sub_vis{
+    position: relative;
+    height: 600px;
+    .sub_vis_bg{
+        position: absolute; z-index: -1;
+        left: 0; top: 0; width: 100%; height: 680px;
+        background-image: url(/code/bntailer/images/sub/sub_vis1.png); background-repeat: no-repeat; background-position: center center; background-size: cover;
+        clip-path: url(#sub_vis_path);
+    }
+    &.sub_bg1 .sub_vis_bg{
+        background-image: url(/code/bntailer/images/sub/sub_vis1.png); 
+    }
+    &.sub_bg2 .sub_vis_bg{
+        background-image: url(/code/bntailer/images/sub/sub_vis2.png); 
+    }
+    &.sub_bg3 .sub_vis_bg{
+        background-image: url(/code/bntailer/images/sub/sub_vis3.png); 
+    }
+    &.sub_bg4 .sub_vis_bg{
+        background-image: url(/code/bntailer/images/sub/sub_vis4.png); 
+    }
+    &.sub_bg5 .sub_vis_bg{
+        background-image: url(/code/bntailer/images/sub/sub_vis5.png); 
+    }
+    &.sub_bg6 .sub_vis_bg{
+        background-image: url(/code/bntailer/images/sub/sub_vis6.png); 
+    }
+    &.sub_bg7 .sub_vis_bg{
+        background-image: url(/code/bntailer/images/sub/sub_vis7.png); 
+    }
+    .location{
+        display: flex;
+        padding: 403px 0 0 0;
+        color: $w_tit_color;
+        span{
+            position: relative;
+            margin-right: 20px;
+            &::after{
+                position: absolute;
+                right: -13px; top: 7px; width: 6px; height: 9px;
+                background-color: rgba($color: #ffffff, $alpha: 0.8);
+                clip-path: polygon(50% 0%, 77% 0%, 33.6% 50%, 77% 100%, 50% 100%, 0% 50%);
+                content: "";/* path로 원하는 도형과 아이콘을 그릴 수 있음
+                단점은 크기를 수정할 수 없고, 브라우저 호환성이 떨어지며, path를 그리는 방법은 많은데 일부 적용이 안 됨*/
+            }
+            &:last-child::after{
+                display: none;
+            }
+        }
+    }
+    .tit{
+        color: $w_tit_color; font-size: 60px; font-weight: 700;
+        @include font_serif
+    }
+    .sub_vis_path{ //공간을 차지하지만 display:none을 하면 효과가 사라지기 때문에 구석으로 보낸다
+        position: absolute;
+        left: 0; top: 0;
+        svg{
+            width: 1px; height: 1px;
+        }
+    }
+}
+@media screen and (max-width:1440px){
+    .sub_vis{
+        .location{
+            padding: 380px 0 0 0;
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .sub_vis{
+        height: 350px;
+        .sub_vis_bg{
+            height: 100%;
+            clip-path: none;
+        }
+        .location{
+            padding: 255px 0 10px 0;
+            span{
+                &::after{
+                    top: 4px;
+                }
+            }
+        }
+        .tit{
+            font-size: 30px;
+        }
+    }
+}
+.lnb{
+    height: 92px;
+    .lnb_wrap{
+        ul{
+            margin: 10px 0 0 0;
+            li{
+                float: left;
+                a{
+                    display: block;
+                    padding: 0 25px;
+                    color: rgba(56, 52, 49, 0.8); font-size: 20px;
+                }
+                &:first-child{
+                    a{
+                        padding-left: 0;
+                    }
+                }
+                &.active{
+                    a{
+                        color: rgba(56,52,49,1); font-weight: 700;
+                    }
+                    
+                }
+            }
         }
     }
 }
