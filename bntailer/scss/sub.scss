@@ -94,13 +94,16 @@
 .lnb{
     height: 92px;
     .lnb_wrap{
+        overflow-x: auto;
+        overflow-y: hidden;
         ul{
-            margin: 10px 0 0 0;
+            margin: 20px 0 0 0;
+            white-space: nowrap; //블록요소는 안됨 (float 들어간 것도 안됨) inline, inline-block 요소만 가능
             li{
-                float: left;
+                display: inline-block; //ul에 준 white-space: nowrap; 쓰기 위해서 float left 대용
                 a{
                     display: block;
-                    padding: 0 25px;
+                    padding: 0 23px;
                     color: rgba(56, 52, 49, 0.8); font-size: 20px;
                 }
                 &:first-child{
@@ -113,6 +116,49 @@
                         color: rgba(56,52,49,1); font-weight: 700;
                     }
                     
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .lnb{
+        .lnb_wrap{
+            ul{
+                margin: 33px 0 0 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .lnb{
+        height: 60px;
+        .lnb_wrap{
+            ul{
+                margin: 18px 0 10px 0;
+                white-space: nowrap; //블록요소는 안됨 (float 들어간 것도 안됨) inline, inline-block 요소만 가능
+                li{
+                    a{
+                        padding: 0 16px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .lnb{
+        height: 38px;
+        .lnb_wrap{
+            ul{
+                margin: 10px 0 10px 0;
+                white-space: nowrap; //블록요소는 안됨 (float 들어간 것도 안됨) inline, inline-block 요소만 가능
+                li{
+                    a{
+                        padding: 0 16px;
+                        font-size: 15px;
+                    }
                 }
             }
         }

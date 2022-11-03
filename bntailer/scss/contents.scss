@@ -1,1 +1,176 @@
 // 각각의 컨텐츠 페이지 스타일
+@import "_var.scss";
+
+// Chairman > About us //
+.cts_about1{
+    margin: 60px 0 95px 0;
+    .about_top{
+        position: relative;
+        padding: 81px 0 0 0;
+        overflow: hidden;
+        p{
+            position: absolute;
+            left: 79px; top: 228px;
+            color: $white_color;
+            @include font_serif;
+            &.master{
+                opacity: 0.8;
+                font-size: 25px; 
+            }
+            &.name{
+                margin-top: 38px;
+                font-size: 45px;
+                color: $w_tit_color;
+            }
+        }
+        img{
+            position: absolute;
+            right: 148px; top: 0; 
+        }
+        .bg{
+            height: 500px;
+            background: url(/code/bntailer/images/contents/about_bg.png) no-repeat center center / cover;
+        }
+    }
+    .about_sub{
+        position: relative; z-index: 10;
+        margin: -130px 0 0 40%;
+        padding: 61px 40px 52px 40px;
+        background-color: #FFF;
+        .tit{
+            font-size: 35px;
+        }
+        .cnt{
+            margin: 10px 0 25px 0;
+            font-size: 18px; line-height: 1.9;
+        }
+        .sign{
+            font-size: 25px; font-weight: 700;
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .cts_about1{
+        margin: 60px 0 95px 0;
+        .about_top{
+            position: relative;
+            padding: 81px 0 0 0;
+            overflow: hidden;
+            p{
+                position: absolute;
+                left: 79px; top: 228px;
+                color: $white_color;
+                @include font_serif;
+                &.master{
+                    opacity: 0.8;
+                    font-size: 25px; 
+                }
+                &.name{
+                    margin-top: 38px;
+                    font-size: 45px;
+                    color: $w_tit_color;
+                }
+            }
+            img{
+                right: 68px;
+            }
+        }
+        .about_sub{
+            padding: 30px 40px 52px 40px;
+            .tit{
+                font-size: 30px;
+            }
+            .sign{
+                font-size: 23px;;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .cts_about1{
+        margin: 47px 0;
+        .about_top{
+            padding: 35px 0 0 0;
+            p{
+                left: 15px; top: calc(50%);
+                transform: translateY(-50%);
+                margin-right: 151px;
+                &.master{
+                    display: none;
+                }
+                &.name{
+                    margin-top: 19px;
+                    font-size: 25px;
+                    .m_no{
+                        display: none;
+                    }
+                }
+            }
+            img{
+                right: 30px; top: 0; width: 251px;
+            }
+            .bg{
+                height: 244px;
+            }
+        }
+        .about_sub{
+            position: relative; z-index: 10;
+            margin: 20px 0;
+            padding: 0;
+            .tit{
+                font-size: 25px;
+            }
+            .cnt{
+                margin: 14px 0 25px 0;
+                font-size: 13px;
+            }
+            .sign{
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .cts_about1{
+        margin: 47px 0;
+        .about_top{
+            padding: 35px 0 0 0;
+            p{
+                left: 15px; top: calc(50%);
+                transform: translateY(-50%);
+                margin-right: 151px;
+                &.master{
+                    display: none;
+                }
+                &.name{
+                    margin-top: 19px;
+                    font-size: 20px;
+                    .m_no{
+                        display: none;
+                    }
+                }
+            }
+            img{
+                right: 0; top: 0; width: 151px;
+            }
+            .bg{
+                height: 144px;
+            }
+        }
+        .about_sub{
+            position: relative; z-index: 10;
+            margin: 20px 0;
+            padding: 0;
+            .tit{
+                font-size: 25px;
+            }
+            .cnt{
+                margin: 14px 0 25px 0;
+                font-size: 13px;
+            }
+            .sign{
+                font-size: 15px;
+            }
+        }
+    }
+}
