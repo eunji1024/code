@@ -1,0 +1,160 @@
+@import url(default.css);
+@import url(common.css);
+
+.vis{
+    height: 100vh;
+    background: url(../images/main/vis_bg.png) no-repeat center center / cover;
+    color: #FFF;
+}
+.vis h2{
+    padding-top: 259px;
+    font-size: 50px; line-height: 1.2;
+}
+.vis h2 strong{
+    font-weight: 400;
+}
+@media screen and (max-width:1024px){
+    .vis h2{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:768px){
+    .vis h2{
+        text-align: center;
+    }
+}
+@media screen and (max-width:640px){
+    .vis{
+        height: auto;
+        color: #FFF;
+    }
+    .vis h2{
+        padding: 151px 0 122px 0;
+        font-size: 25px; text-align: center;
+    }
+    .vis h2 strong{
+        font-weight: 400;
+    } 
+}
+.exp{
+    margin: 95px 0 201px 0;
+    color: #FFF;
+}
+.exp h2{
+    position: relative;
+    margin-bottom: 58px;
+    color: #1d1d1d; font-size: 40px;
+}
+.exp h2::after{
+    position: absolute;
+    left: 0; top: 0; width: 42px; height: 1px;
+    background-color: #1F5FAD;
+    content: "";
+}
+.exp .col{
+    position:relative;
+}
+.exp .pic_box{
+    position:absolute;
+    left:0;
+    top:48px;
+}
+.exp .pic_box img{
+    border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 0; line-height: 0;
+}
+.exp .cnt_box{
+    height:500px;
+    margin:0 0 0 100px;
+    background-color:#1F5FAD;
+}
+.exp .cnt_box .inner{
+    padding:137px 80px 0 631px;
+}
+.exp .cnt_box h3{
+    margin-bottom:5px;
+}
+.exp .cnt_box strong{
+    display:block;
+    font-size: 30px; font-weight:400;
+}
+.exp .cnt_box p{
+    padding:35px 0 40px 0;
+}
+.exp .cnt_box a{
+    display:block;
+    width:170px; height:37px;
+    padding:10px 0;
+}
+.exp .cnt_box a span{
+    position: relative;
+    float:left;
+}
+.exp .cnt_box a span::after{
+    position: absolute;
+    right: -80px; top: 10px; width: 72px; height: 6px;
+    background: url(../images/main/arrow_w.svg) no-repeat center center / contain;
+    content: "";
+}
+@media screen and (max-width:640px){
+    .exp{
+        margin: 95px 0 201px 0;
+        color: #FFF;
+    }
+    .exp h2{
+        position: relative;
+        margin-bottom: 58px;
+        color: #1d1d1d; font-size: 40px;
+    }
+    .exp h2::after{
+        position: absolute;
+        left: 0; top: 0; width: 42px; height: 1px;
+        background-color: #1F5FAD;
+        content: "";
+    }
+    .exp .col{
+        position:relative;
+    }
+    .exp .pic_box{
+        position:absolute;
+        left:0;
+        top:48px;
+    }
+    .exp .pic_box img{
+        border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 0; line-height: 0;
+    }
+    .exp .cnt_box{
+        height:500px;
+        margin:0 0 0 100px;
+        background-color:#1F5FAD;
+    }
+    .exp .cnt_box .inner{
+        padding:137px 80px 0 631px;
+    }
+    .exp .cnt_box h3{
+        margin-bottom:5px;
+    }
+    .exp .cnt_box strong{
+        display:block;
+        font-size: 30px; font-weight:400;
+    }
+    .exp .cnt_box p{
+        padding:35px 0 40px 0;
+    }
+    .exp .cnt_box a{
+        display:block;
+        width:170px; height:37px;
+        padding:10px 0;
+    }
+    .exp .cnt_box a span{
+        position: relative;
+        float:left;
+    }
+    .exp .cnt_box a span::after{
+        position: absolute;
+        right: -80px; top: 10px; width: 72px; height: 6px;
+        background: url(../images/main/arrow_w.svg) no-repeat center center / contain;
+        content: "";
+    }
+}
