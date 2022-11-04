@@ -3,6 +3,14 @@
 @import "_common.scss";
 // scss 내에서 import할 default와 common 등의 파일은 파일 앞에 언더바( _ )를 붙이면 컴파일되지않음
 // main.css나 sub.css에서 default나 common을 필요에 따라서 임포트해서 사용하면 됨
+
+.header.fixed{
+    position: fixed;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.2) ;
+}
+
 .vis{
     position: relative;
     .tit{
