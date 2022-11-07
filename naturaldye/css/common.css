@@ -24,9 +24,9 @@ html,body{
 .cnt_wrap {
     position: relative;
 }
-::selection{background:#0E2D5B;color:#1F5FAD;}
-::-moz-selection{background:#0E2D5B;color:#1F5FAD;}
-::-webkit-selection{background:#0E2D5B;color:#1F5FAD;} 
+::selection{background:#1F5FAD;color:#fff;}
+::-moz-selection{background:#1F5FAD;color:#fff;}
+::-webkit-selection{background:#1F5FAD;color:#fff;} 
 
 .header{
     position: absolute; z-index: 1000;
@@ -69,6 +69,18 @@ html,body{
 .header .tnb button span{
     display: none;
 }
+
+.header.fixed {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.header.fixed ul li a{
+    color: #3d3d3d;
+}
+.header.fixed .tnb{
+    color: #3d3d3d;
+}
+
 @media screen and (max-width:1024px){
     .header h1{
         margin: 28px 20px 0 0;
@@ -106,6 +118,12 @@ html,body{
     .header .tnb{
         display: none;
     }
+
+    .header.fixed {
+        min-width: 320px; /* 최소넓이 */
+    }
+
+
 }
 @media screen and (max-width:640px){
     .header{
@@ -122,3 +140,98 @@ html,body{
         font-size: 20px; line-height: 50px;
     }
 }
+.footer{
+    height: 225px;
+    padding: 28px 0 0 0;
+    background-color: #f4f4f4;
+    color: rgba(61, 61, 61, 0.8); font-weight: 400;
+}
+.footer .flogo{
+    float: left;
+    height: 180px;
+    margin: 10px 50px 0 0;
+}
+.footer .finfo{
+    line-height: 30px;
+    margin: 0 0 14px 0;
+}
+.footer .finfo span{
+    display: inline-block;
+    margin-right: 36px;
+}
+.footer .copy{
+    color: #999;
+    margin: 0 0 0 80px;
+}
+.footer .family{
+    float: right;
+}
+.footer .family ul li{
+    float: left;
+    width: 200px; height: 41px;
+    margin: 0 12px 0 0;
+    border: 1px solid #999; border-radius: 5px;
+}
+.footer .family ul li a{
+    display: block;
+    padding: 0 19px;
+}
+.footer .family ul li a span{
+    line-height: 40px;
+}
+.footer .family ul li a i{
+    float: right;
+    font-size: 20px; line-height: 40px;
+}
+@media screen and (max-width:768px){
+    .footer .finfo{
+        line-height: 25px;
+        margin: 0 0 10px 0;
+    }
+    .footer .finfo br{
+        display: none;
+    }
+    .footer .copy{
+        margin: 0 0 20px 0;
+    }
+}
+@media screen and (max-width:640px){
+    .footer{
+        height: auto;
+        padding: 24px 0 45px 0;
+    }
+    .footer .flogo{
+        float: none;
+        height: auto;
+        margin: 0 0 13px 0;
+    }
+    .footer .finfo{
+        line-height: 22px;
+    }
+    .footer .finfo span{
+        margin-right: 28px;
+    }
+    .footer .copy{
+        margin: 0 0 27px 0;
+    }
+    .footer .family{
+        float: none;
+    }
+    .footer .family ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;    
+    }
+    .footer .family ul li{
+        float: none;
+        width: 180px; height: 37px;
+        margin: 0 0 8px 0;
+    }
+    .footer .family ul li a span{
+        line-height: 37px;
+    }
+    .footer .family ul li a i{
+        font-size: 15px; line-height: 37px;
+    }
+}
+
