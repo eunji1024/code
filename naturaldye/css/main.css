@@ -97,7 +97,6 @@
     background: url(../images/main/arrow_w.svg) no-repeat center center / contain;
     content: "";
 }
-
 @media screen and (max-width:1024px){
     .exp h2{
         font-size: 30px;
@@ -207,7 +206,7 @@
     display: block;
     overflow: hidden;
     border-radius:5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .lecture ul li a strong{
     position: absolute; z-index: 2;
@@ -290,6 +289,7 @@
     width: calc(50% - 20px);
     margin: 0 40px 0 0;
     border-radius: 10px;
+    background-color: #FFF; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .road ul li:last-child{
     margin: 0;

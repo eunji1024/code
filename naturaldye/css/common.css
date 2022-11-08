@@ -106,13 +106,13 @@ html,body{
     .header .gnb .gnb_open{
         display: block;
     }
-    .header .gnb .gnb_open i{
+    .header .gnb .gnb_open i, .header .gnb .gnb_close i{
         font-size: 30px; line-height: 100px;
     }
-    .header .gnb .gnb_open span{
+    .header .gnb .gnb_open span, .header .gnb .gnb_close span{
         font-size: 0;
     }
-    .header .gnb ul li{
+    .header .gnb ul{
         display: none;
     }
     .header .tnb{
@@ -122,7 +122,42 @@ html,body{
     .header.fixed {
         min-width: 320px; /* 최소넓이 */
     }
+    .header.fixed .gnb .gnb_open{
+        color: #3d3d3d;
+    }
 
+    .header.menu_mobile{
+        color: #3d3d3d;
+    }
+    .header.menu_mobile::before{
+        position: fixed; z-index: -1;
+        left: 0; top: 0; width: 100%; height: 100%;
+        background-color: #FFF; content: "";
+    }
+    .header.menu_mobile h1{
+        display: none;
+    }
+    .header.menu_mobile .gnb{
+        float: none;
+    }
+    .header.menu_mobile .gnb .gnb_open{
+        display: none;
+    }
+    .header.menu_mobile .gnb .gnb_close{
+        display: block;
+        float: right;
+    }
+    .header.menu_mobile .gnb ul{
+        display: block;
+        float: left;
+        padding-top: 100px;
+    }
+    .header.menu_mobile .gnb ul li{
+        float: none;
+    }
+    .header.menu_mobile .gnb ul li a{
+        font-size: 25px; font-weight: 400; line-height: 80px;
+    }
 
 }
 @media screen and (max-width:640px){
@@ -136,10 +171,22 @@ html,body{
     .header h1 a{
         width: 20px; height: 20px;
     }
-    .header .gnb .gnb_open i{
+    .header .gnb .gnb_open i, .header .gnb .gnb_close i{
         font-size: 20px; line-height: 50px;
     }
+    
+    
+
+    .header.menu_mobile .gnb ul{
+        padding-top: 50px;
+    }
+    .header.menu_mobile .gnb ul li a{
+        font-size: 20px; font-weight: 400; line-height: 50px;
+    }
+
 }
+
+
 .footer{
     height: 225px;
     padding: 28px 0 0 0;
