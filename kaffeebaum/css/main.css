@@ -1,0 +1,468 @@
+@import url(default.css);
+@import url(common.css);
+.swiper {
+    position: relative;
+    height:100vh
+}
+.swiper-slide img {
+    display:block;
+    width:100%; height:100%;
+    object-fit:cover;
+}
+.vis h2 img{
+    position: absolute; z-index: 100;
+    left: 50%; top: 50%; width: 218px; transform: translate(-50%, -50%);
+}
+@media screen and (max-width:640px){
+    .swiper {
+        height:500px
+    }
+    .vis h2 img{
+         width: 128px;
+    }
+}
+.brand{
+    margin: 80px 0 125px 0;
+}
+.brand .brand_tit{
+    margin-bottom: 100px;
+    text-align: center;
+}
+.brand .brand_tit img{
+    width: 50px;
+}
+.brand .brand_tit h2{
+    margin: 20px 0 40px 0;
+    font-size: 18px;
+}
+.brand .brand_tit strong{
+    display: block;
+    color: #1d1d1d; font-family: 'GmarketSansMedium'; font-size: 25px;
+}
+.brand .brand_tit p{
+    margin: 20px 0 40px 0;
+}
+.brand .brand_tit p span{
+    display: block;
+}
+.brand .brand_tit a{
+    display: inline-block;
+    width: 134px; height: 30px;
+    padding: 5px 0 0 0;
+    border-bottom: 1px solid #3d3d3d;
+}
+.brand .brand_cnt ul{
+    display: flex; justify-content: center;
+}
+.brand .brand_cnt ul li{
+    float: left;
+    width: 400px;
+    margin: 0 100px 0 0;
+    text-align: center;
+}
+.brand .brand_cnt ul li:last-child{
+    margin: 0;
+}
+.brand .brand_cnt ul li img{
+    width: 100%;
+    font-size: 0; line-height: 0;
+}
+.brand .brand_cnt ul li .cnt_txt strong{
+    display: block;
+    margin: 20px 0 8px 0;
+    color: #1d1d1d; font-family: 'GmarketSansMedium'; font-size: 22px;
+}
+@media screen and (max-width:1440px){
+    .brand .brand_cnt ul li{
+        margin: 0 70px 0 0;
+    }
+}
+@media screen and (max-width:1024px){
+    .brand .brand_cnt ul li{
+        margin: 0 40px 0 0;
+    }
+}
+@media screen and (max-width:768px){
+    .brand{
+        margin: 80px 0 125px 0;
+    }
+    .brand .brand_tit{
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    .brand .brand_tit img{
+        width: 50px;
+    }
+    .brand .brand_tit h2{
+        margin: 20px 0 40px 0;
+        font-size: 18px;
+    }
+    .brand .brand_tit strong{
+        display: block;
+        color: #1d1d1d; font-family: 'GmarketSansMedium'; font-size: 25px;
+    }
+    .brand .brand_tit p{
+        margin: 20px 0 40px 0;
+    }
+    .brand .brand_tit p span{
+        display: block;
+    }
+    .brand .brand_tit a{
+        display: inline-block;
+        width: 134px; height: 30px;
+        padding: 5px 0 0 0;
+        border-bottom: 1px solid #3d3d3d;
+    }
+    .brand .brand_cnt ul{
+        display: block;
+    }
+    .brand .brand_cnt ul li{
+        position: relative; 
+        float: none;
+        width: auto;
+        margin: 0 0 30px 0;
+        text-align: center;
+        overflow: hidden;
+    }
+    .brand .brand_cnt ul li::after{
+        position: absolute;
+        left: 0; top: 0; width: 100%; height: calc(100% - 7px);
+        background-color: rgba(0, 0, 0, 0.4);
+        content: "";
+    }
+    .brand .brand_cnt ul li .cnt_txt{
+        position: absolute; z-index: 1;
+        left: 50%; top: 50%; width: 100%; transform: translate(-50%, -50%);
+    }
+    .brand .brand_cnt ul li .cnt_txt strong{
+        display: block;
+        margin: 20px 0 8px 0;
+        color: #FFF;font-size: 22px;
+    }
+    .brand .brand_cnt ul li .cnt_txt p{
+        color: #FFF;
+    }
+}
+@media screen and (max-width:640px){
+    .brand{
+        margin: 40px 0 30px 0;
+    }
+    .brand .brand_tit{
+        margin-bottom: 40px;
+    }
+    .brand .brand_tit img{
+        width: 30px;
+    }
+    .brand .brand_tit h2{
+        margin: 10px 0 35px 0;
+        font-size: 13px;
+    }
+    .brand .brand_tit strong{
+        font-size: 18px;
+    }
+    .brand .brand_tit p{
+        margin: 20px 0 25px 0;
+    }
+    .brand .brand_tit p span{
+        display: inline;
+    }
+    .brand .brand_tit a{
+        width: 114px; height: 22px;
+        padding: 4px 0 0 0;
+    }
+}
+.franchise{
+    height: 350px;
+    padding: 69px 0 0 0;
+    background: url(../images/main/franchise_bg.png) no-repeat center center / cover;
+    color: #FFF; text-align: center;
+}
+.franchise h2{
+    font-size: 18px;
+}
+.franchise strong{
+    display: block;
+    margin: 40px 0 10px 0;
+    font-family: 'GmarketSansMedium'; font-size: 50px;
+}
+.franchise p{
+    padding: 0 0 40px 0;
+}
+.franchise a{
+    display: inline-block;
+    width: 134px; height: 30px;
+    padding: 5px 0 0 0;
+    border-bottom: 1px solid #FFF;
+}
+@media screen and (max-width:1440px){
+    .franchise{
+        height: 300px;
+        padding: 49px 0 0 0;
+    }
+    .franchise h2{
+        font-size: 18px;
+    }
+    .franchise strong{
+        display: block;
+        margin: 30px 0 10px 0;
+        font-family: 'GmarketSansMedium'; font-size: 40px;
+    }
+    .franchise p{
+        padding: 0 0 30px 0;
+    }
+    .franchise a{
+        display: inline-block;
+        width: 134px; height: 30px;
+        padding: 5px 0 0 0;
+        border-bottom: 1px solid #FFF;
+    }
+}
+@media screen and (max-width:640px){
+    .franchise{
+        height: auto;
+        padding: 17px 0 18px 0;
+    }
+    .franchise h2{
+        font-size: 13px;
+    }
+    .franchise strong{
+        margin: 10px 0 10px 0;
+        font-family: 'GmarketSansMedium'; font-size: 25px;
+    }
+    .franchise p{
+        display: none;
+    }
+    .franchise a{
+        width: 114px; height: 22px;
+        padding: 4px 0 0 0;
+    }
+}
+.menu{
+    text-align: center; color: #FFF;
+}
+.menu ul li{
+    position: relative;
+    float: left;
+    width: 33.33%;
+    background-position: center center; background-repeat: no-repeat; background-size: cover;
+}
+.menu ul li.menu_bg01{
+    background-image: url(../images/main/menu01.png);
+}
+.menu ul li.menu_bg02{
+    background-image: url(../images/main/menu02.png);
+}
+.menu ul li.menu_bg03{
+    background-image: url(../images/main/menu03.png);
+}
+.menu ul li a{
+    display: block;
+    height: 850px;
+}
+.menu ul li a .txt{
+    position: relative; z-index: 1;
+    top: 50%;
+}
+.menu ul li a .txt h2{
+    margin: 0 0 10px 0;
+    font-family: 'GmarketSansMedium'; font-size: 40px; 
+}
+.menu ul li a::after{
+    position: absolute;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    content: ""; transition: 0.5s;
+}
+.menu ul li a:hover::after{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width:1440px){
+    .menu ul li a{
+        height: 700px;
+    }
+    .menu ul li a .txt h2{
+        font-size: 30px; 
+    }
+}
+@media screen and (max-width:1024px){
+    .menu ul li a{
+        height: 600px;
+    }
+}
+@media screen and (max-width:768px){
+    .menu{
+        text-align: left;
+    }
+    .menu ul li{
+        float: none;
+        width: 100%;
+    }
+    .menu ul li a{
+        height: auto;
+    }
+    .menu ul li a .txt{
+        top: auto;
+        padding: 95px 0 20px 20px;
+    }
+    .menu ul li a::after{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+@media screen and (max-width:640px){
+    .menu{
+        text-align: left;
+    }
+    .menu ul li{
+        float: none;
+        width: 100%;
+    }
+    .menu ul li a{
+        height: auto;
+    }
+    .menu ul li a .txt{
+        top: auto;
+        padding: 95px 0 20px 20px;
+    }
+    .menu ul li a .txt h2{
+        font-size: 20px; 
+    }
+    .menu ul li a::after{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+.menu_slide{
+    position: relative;
+    height: 280px;
+}
+.menu_slide img{
+    position: absolute;
+    left: 0; top: 0; height: 280px;
+    animation-name: bg_txt_ani;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes bg_txt_ani{
+0% {transform: translateX(0);}
+100% {transform: translateX(-50%);}
+}
+@media screen and (max-width:1024px){
+    .menu_slide{
+        height: 200px;
+    }
+    .menu_slide img{
+        height: 200px;
+    }
+}
+@media screen and (max-width:640px){
+    .menu_slide{
+        height: 97px;
+    }
+    .menu_slide img{
+        height: 97px;
+    }
+}
+.banner{
+    color: #FFF;
+}
+.banner ul li{
+    position: relative;
+    float: left;
+    width: 50%;
+}
+.banner ul li.banner_01{
+    background-color: #96612F;
+}
+.banner ul li.banner_01::after{
+    position: absolute;
+    right: 80px; top: -20px; width: 410px; height: 410px;
+    background: url(../images/main/banner_01.png) no-repeat center center / cover;
+    content: "";
+}
+.banner ul li.banner_02{
+    background-color: #A0AE7F;
+}
+.banner ul li.banner_02::after{
+    position: absolute;
+    right: 38px; top: 0; width: 364px; height: 364px;
+    background: url(../images/main/banner_02.png) no-repeat center center / cover;
+    content: "";
+}
+.banner ul li a{
+    display: block;
+    height: 350px;
+    padding: 60px 0 0 100px;
+}
+.banner ul li a h2{
+    font-size: 18px;
+}
+.banner ul li a strong{
+    display: block;
+    margin: 14px 0 35px 0;
+    font-family: 'GmarketSansMedium'; font-size: 40px;
+}
+.banner ul li a p{
+    width: 134px; height: 30px;
+    padding: 5px 0 0 0;
+    border-bottom: 1px solid #FFF;
+    text-align: center;
+}
+@media screen and (max-width:1440px){
+    .banner ul li.banner_01::after{
+        position: absolute;
+        right: 60px; top: -20px; width: 310px; height: 310px;
+    }
+    .banner ul li.banner_02::after{
+        position: absolute;
+        right: 18px; top: 0; width: 264px; height: 264px;
+    }
+    .banner ul li a{
+        display: block;
+        height: 270px;
+        padding: 60px 0 0 100px;
+    }
+    .banner ul li a h2{
+        font-size: 18px;
+    }
+    .banner ul li a strong{
+        display: block;
+        margin: 14px 0 35px 0;
+        font-family: 'GmarketSansMedium'; font-size: 40px;
+    }
+    .banner ul li a p{
+        width: 134px; height: 30px;
+        padding: 5px 0 0 0;
+        border-bottom: 1px solid #FFF;
+        text-align: center;
+    }
+}
+@media screen and (max-width:640px){
+    .banner ul li{
+        float: none;
+        width: 100%;
+    }
+    .banner ul li.banner_01::after{
+        display: none;
+    }
+    .banner ul li.banner_02::after{
+        display: none;
+    }
+    .banner ul li a{
+        position: relative;
+        height: auto;
+        padding: 15px 20px 20px 20px;
+    }
+    .banner ul li a h2{
+        font-size: 13px;
+    }
+    .banner ul li a strong{
+        display: block;
+        margin: 10px 0 30px 0;
+        font-size: 20px;
+    }
+    .banner ul li a p{
+        position: absolute;
+        right: 20px; bottom: 20px; width: 114px; height: 22px;
+        padding: 4px 0 0 0;
+    }
+}

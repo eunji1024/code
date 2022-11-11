@@ -273,9 +273,6 @@ logo나 다른요소가 있으면 모두 absolute로 처리
         display: block;
         font-size: 13px; line-height: 25px;
     }
-    .header .gnb > ul > li.sub_open > a{
-        
-    }
     .header .gnb > ul > li.sub_open > a::after{
         content: "\e5ce";
     }
