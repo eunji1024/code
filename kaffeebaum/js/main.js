@@ -76,8 +76,6 @@ $(document).ready(function(){
                 $(this).find('ul').slideDown()
                 $(this).addClass('sub_open') 
             }
-
-            // $(this).toggleClass('sub_open')
         }
     })
     
