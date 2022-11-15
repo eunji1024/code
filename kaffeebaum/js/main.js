@@ -25,8 +25,10 @@ $(document).ready(function(){
 
         if(scrolling>0){
             $('header').addClass('fixed')
+            $('header').removeClass('end')
         }else{
             $('header').removeClass('fixed')
+            $('header').addClass('end')
         }
     });
 
@@ -52,18 +54,30 @@ $(document).ready(function(){
     $('.header .gnb .gnb_wrap > ul > li').on('mouseenter focusin',function(){
         if (pcMobile == 'pc') {
             $('.header').addClass('menu_open')
+            $('.header .gnb .gnb_wrap > ul > li > ul').slideDown()
         }
     })
     $('.header').on('mouseleave',function(){
         $('.header').removeClass('menu_open')
+        $('.header .gnb .gnb_wrap > ul > li > ul').slideUp()
     })
     $('.header .gnb .gnb_wrap > ul > li:last-child > ul > li:last-child > a').on('focusout',function(){
         $('.header').removeClass('menu_open')
+        $('.header .gnb .gnb_wrap > ul > li > ul').slideUp()
     })
     $('.header .gnb .gnb_wrap > ul > li').on('click',function(e){
         if (pcMobile == 'mobile') {
             e.preventDefault()
-            $(this).toggleClass('sub_open')
+            let sub_status = $(this).hasClass('sub_open')
+            if(sub_status == true){ //열린상태 - 닫기기능작동
+                $(this).find('ul').slideUp()
+                $(this).removeClass('sub_open') 
+            }else{
+                $(this).find('ul').slideDown()
+                $(this).addClass('sub_open') 
+            }
+
+            // $(this).toggleClass('sub_open')
         }
     })
     
