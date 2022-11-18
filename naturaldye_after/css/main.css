@@ -37,18 +37,20 @@
     } 
 }
 .exp{
-    margin: 95px 0 180px 0;
-    color: #FFF;
+    padding: 95px 0 174px 0; margin: 0 0 107px 0;
+    height: 884px;
+    background-color: #1F5FAD;
+    color: #3d3d3d;
 }
 .exp h2{
     position: relative;
     margin-bottom: 58px;
-    color: #3d3d3d; font-size: 40px;
+    color: #FFF; font-size: 40px;
 }
 .exp h2::after{
     position: absolute;
     left: 0; top: 0; width: 42px; height: 2px;
-    background-color: #1F5FAD;
+    background-color: #FFF;
     content: "";
 }
 .exp .col{
@@ -66,7 +68,7 @@
 .exp .cnt_box{
     height:500px;
     margin:0 0 0 100px;
-    background-color:#1F5FAD;
+    background-color:#FFF;
 }
 .exp .cnt_box .inner{
     padding:137px 80px 0 631px;
@@ -94,7 +96,7 @@
 .exp .cnt_box a span::after{
     position: absolute;
     right: -80px; top: 10px; width: 72px; height: 6px;
-    background: url(../images/main/arrow_w.svg) no-repeat center center / contain;
+    background: url(../images/main/arrow_r.svg) no-repeat center center / contain;
     content: "";
 }
 @media screen and (max-width:1024px){
@@ -199,9 +201,6 @@
 .lecture ul li:last-child{
     margin-right: 0;
 }
-.lecture ul li:nth-child(2),.lecture ul li:nth-child(4){
-    margin: 40px 20px 0 0;
-}
 .lecture ul li a{
     display: block;
     overflow: hidden;
@@ -210,9 +209,9 @@
 }
 .lecture ul li a strong{
     position: absolute; z-index: 2;
-    left: 20px; top: -20px; 
+    left: 20px; top: 10px; 
     display: block;
-    font-size: 30px; font-weight: 400;
+    color: #FFF; font-size: 30px; font-weight: 400;
 }
 .lecture ul li a img{
     display: block;
@@ -282,23 +281,24 @@
 }
 .road{
     padding: 0 0 160px 0;
-    color: #FFF;
+    color: #3d3d3d;
 }
 .road ul li{
-    float: left;
-    width: calc(50% - 20px);
-    margin: 0 40px 0 0;
+    margin: 0 0 20px 0;
     border-radius: 10px;
     background-color: #FFF; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 .road ul li:last-child{
     margin: 0;
 }
-.road ul li.road_01{
+.road ul li.road_01:hover{
     background-color: #0E2D5B;
+    color: #FFF;
 }
-.road ul li.road_02{
+.road ul li.road_02:hover{
     background-color: #1F5FAD;
+    color: #FFF;
 }
 .road ul li a{
     position: relative;

@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap');
+html,body{
+    color: #3d3d3d; line-height: 1.3; font-family: 'Noto Serif KR', serif ,'Malgun Gothic','Apple SD Gothic','Apple SD Gothic Neo','Dotum',sans-serif; font-size: 15px; font-weight: 300; letter-spacing: -0.062em;
+}
+#wrap{
+    position:relative; overflow:hidden; min-width: 350px; /*안주면 배경 잘림*/
+}
+.wrapper{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px; margin: 0 auto;
+}
+@media screen and (max-width:640px){
+    html,body{
+        font-size: 13px;
+    }
+}
+.clearfix::after{
+    display: block; clear: both; content: "."; visibility: hidden; height: 0;
+}
+.clearfix{
+    display: block;
+}
+.cnt_wrap {
+    position: relative;
+}
+::selection{background:#1F5FAD;color:#fff;}
+::-moz-selection{background:#1F5FAD;color:#fff;}
+::-webkit-selection{background:#1F5FAD;color:#fff;} 
+
+.header{
+    position: absolute; z-index: 1000;
+    left: 0; top: 0; width: 100%; height: 100px;
+    color: #FFF;
+}
+.header h1{
+    float: left;
+    margin: 28px 54px 0 0;
+}
+.header h1 a{
+    display: block;
+    width: 44px; height: 44px;
+    background: url(../images/common/logo.svg) no-repeat center center / contain;
+    font-size: 0;
+}
+.header .gnb{
+    float: left;
+}
+.header .gnb .gnb_open,.header .gnb .gnb_close{
+    display: none;
+}
+.header .gnb ul li{
+    float: left;
+}
+.header .gnb ul li a{
+    display: block;
+    padding: 0 22px;
+    font-size: 20px; line-height: 100px;
+}
+.header .gnb ul li a:hover{
+    color: #1F5FAD; font-weight: 700;
+}
+.header .tnb{
+    float: right;
+}
+.header .tnb button{
+    margin: 0 15px;
+}
+.header .tnb button i{
+    font-size: 30px; line-height: 100px;
+}
+.header .tnb button span{
+    display: none;
+}
+
+.header.fixed {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.header.fixed ul li a{
+    color: #3d3d3d;
+}
+.header.fixed .tnb{
+    color: #3d3d3d;
+}
+
+@media screen and (max-width:1024px){
+    .header h1{
+        margin: 28px 20px 0 0;
+    }
+    .header .gnb ul li a{
+        padding: 0 15px;
+        font-size: 18px;
+    }
+    .header .tnb button i{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:768px){
+    .header{
+        height: 100px;
+    }
+    .header h1{
+        margin: 28px 0 0 0;
+    }
+    .header .gnb{
+        float: right;
+    }
+    .header .gnb .gnb_open{
+        display: block;
+    }
+    .header .gnb .gnb_open i, .header .gnb .gnb_close i{
+        font-size: 30px; line-height: 100px;
+    }
+    .header .gnb .gnb_open span, .header .gnb .gnb_close span{
+        font-size: 0;
+    }
+    .header .gnb ul{
+        display: none;
+    }
+    .header .tnb{
+        display: none;
+    }
+
+    .header.fixed {
+        min-width: 320px; /* 최소넓이 */
+    }
+    .header.fixed .gnb .gnb_open{
+        color: #3d3d3d;
+    }
+
+    .header.menu_mobile{
+        color: #3d3d3d;
+    }
+    .header.menu_mobile::before{
+        position: fixed; z-index: -1;
+        left: 0; top: 0; width: 100%; height: 100%;
+        background-color: #FFF; content: "";
+    }
+    .header.menu_mobile h1{
+        display: none;
+    }
+    .header.menu_mobile .gnb{
+        float: none;
+    }
+    .header.menu_mobile .gnb .gnb_open{
+        display: none;
+    }
+    .header.menu_mobile .gnb .gnb_close{
+        display: block;
+        float: right;
+    }
+    .header.menu_mobile .gnb ul{
+        display: block;
+        float: left;
+        padding-top: 100px;
+    }
+    .header.menu_mobile .gnb ul li{
+        float: none;
+    }
+    .header.menu_mobile .gnb ul li a{
+        font-size: 25px; font-weight: 400; line-height: 80px;
+    }
+
+}
+@media screen and (max-width:640px){
+    .header{
+        height: 50px;
+    }
+    .header h1{
+        float: left;
+        margin: 15px 0 0 0;
+    }
+    .header h1 a{
+        width: 20px; height: 20px;
+    }
+    .header .gnb .gnb_open i, .header .gnb .gnb_close i{
+        font-size: 20px; line-height: 50px;
+    }
+    
+    
+
+    .header.menu_mobile .gnb ul{
+        padding-top: 50px;
+    }
+    .header.menu_mobile .gnb ul li a{
+        font-size: 20px; font-weight: 400; line-height: 50px;
+    }
+
+}
+
+
+.footer{
+    height: 225px;
+    padding: 28px 0 0 0;
+    background-color: #f4f4f4;
+    color: rgba(61, 61, 61, 0.8); font-weight: 400;
+}
+.footer .flogo{
+    float: left;
+    height: 180px;
+    margin: 10px 50px 0 0;
+}
+.footer .finfo{
+    line-height: 30px;
+    margin: 0 0 14px 0;
+}
+.footer .finfo span{
+    display: inline-block;
+    margin-right: 36px;
+}
+.footer .copy{
+    color: #999;
+    margin: 0 0 0 80px;
+}
+.footer .family{
+    float: right;
+}
+.footer .family ul li{
+    float: left;
+    width: 200px; height: 41px;
+    margin: 0 12px 0 0;
+    border: 1px solid #999; border-radius: 5px;
+}
+.footer .family ul li a{
+    display: block;
+    padding: 0 19px;
+}
+.footer .family ul li a span{
+    line-height: 40px;
+}
+.footer .family ul li a i{
+    float: right;
+    font-size: 20px; line-height: 40px;
+}
+@media screen and (max-width:768px){
+    .footer .finfo{
+        line-height: 25px;
+        margin: 0 0 10px 0;
+    }
+    .footer .finfo br{
+        display: none;
+    }
+    .footer .copy{
+        margin: 0 0 20px 0;
+    }
+}
+@media screen and (max-width:640px){
+    .footer{
+        height: auto;
+        padding: 24px 0 45px 0;
+    }
+    .footer .flogo{
+        float: none;
+        height: auto;
+        margin: 0 0 13px 0;
+    }
+    .footer .finfo{
+        line-height: 22px;
+    }
+    .footer .finfo span{
+        margin-right: 28px;
+    }
+    .footer .copy{
+        margin: 0 0 27px 0;
+    }
+    .footer .family{
+        float: none;
+    }
+    .footer .family ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;    
+    }
+    .footer .family ul li{
+        float: none;
+        width: 180px; height: 37px;
+        margin: 0 0 8px 0;
+    }
+    .footer .family ul li a span{
+        line-height: 37px;
+    }
+    .footer .family ul li a i{
+        font-size: 15px; line-height: 37px;
+    }
+}
+
