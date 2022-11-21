@@ -24,29 +24,307 @@ html,body{
 .cnt_wrap {
     position: relative;
 }
-
-
 .header{
     position: absolute; z-index: 1000;
     left: 0; top: 0; width: 100%; height: 100px;
-    color: #FFF;
-}
-.header h1{
-    float: left;
-    margin: 28px 54px 0 0;
     background-color: #0061B2;
+    color: #FFF; font-size: 20px;
+    transition: 0.2s;
 }
-.header h1 a{
+.header .logo{
+    float: left;
+    margin: 25px 0 0 100px;
+}
+.header .logo a{
     display: block;
     width: 155px; height: 51px;
-    background: url(../images/common/logo_w.png) no-repeat center center / contain;
-    font-size: 0;
+    background-image: url(../images/common/logo_w.svg); background-position: center center; background-repeat: no-repeat; background-size: contain;
+    font-size: 0; line-height: 0;
+}
+.header .inner{
+    float: right;
 }
 .header .gnb{
     float: left;
-    background-color: #0061B2;
+    margin: 0 40px 0 0;
+    line-height: 100px;
+}
+.header .gnb .gnb_open{
+    display: none;
+}
+.header .gnb ul li{
+    float: left;
+}
+.header .gnb ul li a{
+    display: block;
+    padding: 0 45px;
 }
 .header .gnb_top{
     float: left;
-    background-color: #0061B2;
+    background-color: #FFF;
+    color: #3d3d3d;
+}
+.header .gnb_top a{
+    display: block;
+}
+.header .gnb_top ul li{
+    float: left;
+}
+.header .gnb_top ul li a{
+    position: relative;
+    display: block;
+    margin: 0 35px;
+    line-height: 100px;
+}
+.header .gnb_top ul li:first-child a::after{
+    position: absolute;
+    right: -35px; top: 41px; width: 1px; height: 20px;
+    background-color: #999;
+    content: "";
+}
+.header .gnb_top ul li button{
+    width: 100px; height: 100px;
+}
+.header .gnb_top ul li button i{
+    font-size: 30px;
+}
+.header .all_menu{
+    float: left;
+    width: 100px; height: 100px;
+    background-color: #BC1D55;
+}
+.header .all_menu i{
+    font-size: 30px;
+}
+.header.fixed{
+    position: fixed;
+    background-color: #FFF;
+    color: #3d3d3d;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.header.fixed .logo a{
+    background-image: url(../images/common/logo_r.svg);
+}
+.header.fixed .all_menu{
+    background-color: #FFF;
+}
+@media screen and (max-width:1440px){
+    .header .gnb{
+        float: left;
+        margin: 0 15px 0 0;
+        line-height: 100px;
+    }
+    .header .gnb ul li a{
+        display: block;
+        padding: 0 15px;
+    }
+    .header .gnb_top ul li a{
+        margin: 0 20px;
+        line-height: 100px;
+    }
+    .header .gnb_top ul li:first-child a::after{
+        right: -20px;
+    }
+    .header .gnb_top ul li button{
+        width: 70px; height: 100px;
+    }
+    .header .gnb_top ul li button i{
+        font-size: 30px;
+    }
+    .header.fixed .gnb_top ul li button i{
+        color: #3d3d3d;
+    }
+}
+@media screen and (max-width:1024px){
+    .header .logo{
+        margin: 25px 0 0 20px;
+    }
+    .header .gnb{
+        float: right;
+    }
+    .header .gnb .gnb_open{
+        display: block;
+        margin-top: 6px;
+    }
+    .header .gnb .gnb_open span{
+        display: none;
+    }
+    .header .gnb .gnb_open i{
+        font-size: 30px;
+    }
+    .header .gnb ul li a{
+        display: none;
+    }
+    .header .gnb_top{
+        float: right;
+        margin-top: 6px;
+        background-color: inherit;
+    }
+    .header .gnb_top ul li a{
+        display: none;
+    }
+    .header .gnb_top ul li button{
+        height: 95px;
+        color: #FFF;
+    }
+    .header .gnb_top ul li button i{
+        font-size: 30px;
+    }
+    .header .all_menu{
+        display: none;
+    }
+}
+@media screen and (max-width:640px){
+    .header{
+        height: 45px;
+        font-size: 20px;
+    }
+    .header .logo{
+        margin: 11px 0 0 20px;
+    }
+    .header .logo a{
+        width: 73px; height: 24px;
+        background-image: url(../images/common/logo_w.svg);
+    }
+    .header .inner{
+        float: right;
+    }
+    .header .gnb{
+        float: right    ;
+        margin: 0 20px 0 0;
+        line-height: 0;
+    }
+    .header .gnb .gnb_open{
+        display: block;
+        margin: 0;
+        height: 45px;
+    }
+    .header .gnb .gnb_open i{
+        font-size: 20px;
+    }
+    .header .gnb .gnb_open span{
+        display: none;
+    }
+    .header .gnb ul li{
+        display: none;
+    }
+    .header .gnb ul li a{
+        display: block;
+        padding: 0 45px;
+    }
+    .header .gnb_top{
+        float: right;
+        margin: 0;
+        background-color: inherit;
+    }
+    .header .gnb_top ul li{
+        float: right;
+    }
+    .header .gnb_top ul li a{
+        display: none;
+    }
+    .header .gnb_top ul li button{
+        width: 45px; height: 45px;
+    }
+    .header .gnb_top ul li button i{
+        color: #FFF; font-size: 18px;
+    }
+    .header .all_menu{
+        display: none;
+    }
+    .header.fixed{
+        position: fixed;
+        background-color: #FFF;
+        color: #3d3d3d;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header.fixed .logo a{
+        background-image: url(../images/common/logo_r.svg);
+    }
+    .header.fixed .gnb_top ul li button i{
+        color: #3d3d3d;
+    }
+    .header.fixed .all_menu{
+        background-color: #FFF;
+    }
+}
+.notice{
+    margin: 102px 0 105px 0;
+    height: 208px;
+}
+.notice .tit{
+    float: left;
+    margin: 0 0 106px 0;
+}
+.notice .tit h2{
+    font-size: 40px; font-weight: 700;
+}
+.notice ul.notice_wrap{
+    position: relative;
+    margin: 0 0 0 260px;
+}
+.notice ul.notice_wrap > li{
+    float: left;
+    margin: 0 18px;
+}
+.notice ul li.active h3{
+    position: relative;
+    border-bottom: 1px solid #0061B2;
+    color: #0061B2; font-weight: 700;
+}
+.notice ul li .detail{
+    position: absolute;
+    display: none;
+    right: 0; top: 76px;
+}
+.notice ul li.active .detail{
+    display: block;
+}
+.notice ul li .detail ul{
+    float: left;
+    width: 1120px;
+}
+.notice ul li .detail ul li{
+    position: relative;
+    float: left;
+    width: 280px;
+}
+.notice ul li .detail ul li::after{
+    position: absolute;
+    right: 0; bottom: 0; width: 1px; height: 145px;
+    background-color: #999;
+    content: "";
+}
+.notice ul li .detail ul li:last-child:after{
+    display: none;
+}
+.notice ul li .detail ul li a{
+    display: block;
+    height: 158px;
+    padding: 0 25px;
+}
+.notice ul li .detail ul li:first-child a{
+    padding: 0 25px 0 0;
+}
+.notice ul li .detail ul li:last-child a{
+    padding: 0 0 0 25px;
+}
+.notice ul li .detail ul li a h4{
+    font-size: 25px; font-weight: 700;
+    line-height: 1.2; height: 2.3em; overflow: hidden;
+}
+.notice ul li .detail ul li a p{
+    margin: 10px 0 20px 0;
+    line-height: 1.5; height: 3em; overflow: hidden;
+}
+.notice ul li .more {
+    position: absolute;
+    right: 0; top: 11px;
+    display: none; justify-content: space-between; align-items: center;
+}
+.notice ul li .more span{
+    display: none;
+}
+.notice ul li.active .more{
+    display: flex;
 }
