@@ -707,7 +707,7 @@
     }
 }
 .midia{
-    margin: 100px 0 150px 0;
+    margin: 80px 0 100px 0;
 }
 .midia .tit{
     float: left;
@@ -844,26 +844,21 @@
     float: right;
     width: calc(50% + 140px);
 }
-.region .region_01{
-    float: left;
-    padding: 66px 0 0 0;
-}
-.region .region_02{
-    float: right;
-    width: 360px; height: 400px;
-    padding: 66px 40px 0 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 .region h2{
     margin: 0 0 5px 0;
     font-size: 20px;
 }
 .region strong{
+    display: block;
     color: rgba(255, 255, 255, 0.8);
+}
+.region .region_01{
+    float: left;
+    padding: 66px 0 0 0;
 }
 .region .region_01 p{
     position: relative;
-    margin: 38px 20px 67px 20px;
+    margin: 38px 25px 67px 25px;
     font-size: 30px;
 }
 .region .region_01 p span{
@@ -871,17 +866,116 @@
 }
 .region .region_01 p::after{
     position: absolute;
-    left: -20px; top: -13px; width: 15px; height: 110px;
+    left: -22px; top: -13px; width: 15px; height: 110px;
     background: url(../images/main/region_01.svg) no-repeat center center / cover;
     content: "";
 }
 .region .region_01 p::before{
     position: absolute;
-    right: -20px; top: -13px; width: 15px; height: 110px;
+    right: -22px; top: -13px; width: 15px; height: 110px;
     background: url(../images/main/region_02.svg) no-repeat center center / cover;
     content: "";
 }
 .region .region_01 a{
-    display: block;
+    display: flex; justify-content: space-between;
+    width: 105px;
 }
-.region .region_01 a
+.region .region_01 a i{
+    font-size: 20px;
+}
+.region .region_02{
+    position: relative;
+    float: right;
+    width: 360px; height: 400px;
+    padding: 66px 40px 0 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.region .region_02 strong{
+    margin: 0 0 58px 0;
+}
+.region .region_02 ul li{
+    width: 100%;
+    margin: 0 0 10px 0;
+    border: 1px solid #FFF;
+}
+.region .region_02 ul li a{
+    display: flex; align-items: center; justify-content: space-between;
+    height: 55px;
+    padding: 0 20px;
+}
+.region .region_02 ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.region .region_02 .more{
+    position: absolute;
+    right: 40px; top: 60px;
+}
+.region .region_02 .more i{
+    font-size: 30px;
+}
+.region .region_02 .more span{
+    display: none;
+}
+@media screen and (max-width:1024px){
+    .region .inner{
+        width: calc(50% + 340px);
+    }
+}
+@media screen and (max-width:768px){
+    .region::after{
+        display: none;
+    }
+    .region .inner{
+        width: 100%;
+    }
+    .region .region_01 p{
+        margin: 38px 20px 67px 20px;
+    }
+    .region .region_02{
+        width: 320px;
+        padding: 66px 20px 0 20px;
+        transform: translate(20px, 0);
+    }
+}
+@media screen and (max-width:640px){
+    .region{
+        height: auto;
+    }
+    .region::after{
+        display: none;
+    }
+    .region .inner{
+        position: relative; z-index: 1;
+        float: none;
+        width: 100%;
+    }
+    .region h2{
+        font-size: 18px;
+    }
+    .region .region_01{
+        float: none;
+        padding: 36px 0;
+    }
+    .region .region_01 p{
+        margin: 60px 25px 67px 25px;
+        text-align: center; font-size: 20px;
+    }
+    .region .region_01 p::after{
+        top: -30px;
+    }
+    .region .region_01 p::before{
+        top: -30px;
+    }
+    .region .region_02{
+        float: none;
+        width: calc(100% + 40px); height: auto;
+        padding: 40px 20px 50px 20px;
+        transform: translate(-20px, 0);
+    }
+    .region .region_02 strong{
+        margin: 0 0 14px 0;
+    }
+    .region .region_02 .more{
+        right: 20px; top: 35px;
+    }
+}
