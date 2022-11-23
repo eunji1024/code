@@ -8,8 +8,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <title>충북대학교</title>
@@ -40,8 +42,8 @@
                         <li><button><i class="material-symbols-outlined">search</i></button></li>
                     </ul>
                 </div>
-                <button class="all_menu"><i class="material-symbols-outlined">menu</i></button>
             </div>
+            <button class="all_menu"><i class="material-symbols-outlined">menu</i></button>
         </header>
         <section class="vis clearfix">
             <div class="popup">
@@ -88,10 +90,10 @@
                         충북대학교의 주요 공지를<br>알려드립니다.
                     </strong>
                 </div>
-                <ul class="notice_wrap clearfix">
+                <ul class="notice_wrap clearfix" data-aos="fade-up">
                     <li class="active">
-                        <h3 data-aos="fade-up"><button>공지</button></h3>
-                        <div class="detail" data-aos="fade-up" data-aos-delay="200">
+                        <h3><button>공지</button></h3>
+                        <div class="detail">
                             <ul class="clearfix">
                                 <li>
                                     <a href="#n">
@@ -123,14 +125,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#n" class="more" data-aos="fade-up">
+                        <a href="#n" class="more">
                             <i class="material-symbols-outlined">add</i>
                             <span>더보기</span>
                         </a>
                     </li>
                     <li>
-                        <h3 data-aos="fade-up"><button>학사 · 장학</button></h3>
-                        <div class="detail" data-aos="fade-up" data-aos-delay="200">
+                        <h3><button>학사 · 장학</button></h3>
+                        <div class="detail">
                             <ul class="clearfix">
                                 <li>
                                     <a href="#n">
@@ -162,14 +164,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#n" class="more" data-aos="fade-up">
+                        <a href="#n" class="more">
                             <i class="material-symbols-outlined">add</i>
                             <span>더보기</span>
                         </a>
                     </li>
                     <li>
-                        <h3 data-aos="fade-up"><button>행사</button></h3>
-                        <div class="detail" data-aos="fade-up" data-aos-delay="200">
+                        <h3><button>행사</button></h3>
+                        <div class="detail">
                             <ul class="clearfix">
                                 <li>
                                     <a href="#n">
@@ -201,14 +203,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#n" class="more" data-aos="fade-up">
+                        <a href="#n" class="more">
                             <i class="material-symbols-outlined">add</i>
                             <span>더보기</span>
                         </a>
                     </li>
                     <li>
-                        <h3 data-aos="fade-up"><button>채용 · 인사</button></h3>
-                        <div class="detail" data-aos="fade-up" data-aos-delay="200">
+                        <h3><button>채용 · 인사</button></h3>
+                        <div class="detail">
                             <ul class="clearfix">
                                 <li>
                                     <a href="#n">
@@ -240,7 +242,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#n" class="more" data-aos="fade-up">
+                        <a href="#n" class="more">
                             <i class="material-symbols-outlined">add</i>
                             <span>더보기</span>
                         </a>
@@ -252,7 +254,7 @@
             <div class="wrapper">
                 <div class="news_01">
                     <h2>PRESS</h2>
-                    <ul>
+                    <ul data-aos="fade-up" data-aos-delay="50">
                         <li>
                             <a href="#n">
                                 <strong>충북대, '충북지역 총장협의회' 개최</strong>
@@ -291,7 +293,7 @@
                 </div>
                 <div class="news_02">
                     <h2>CBNU NEWS</h2>
-                    <ul>
+                    <ul data-aos="fade-up" data-aos-delay="150">
                         <li>
                             <a href="#n">
                                 <span><img src="images/main/news01.png" alt="소프트웨어학과 컴퓨터 사진"></span>
@@ -393,14 +395,14 @@
                     </ul>
                 </div>
                 <div class="midia_cnt">
-                    <div class="colgroup01">
+                    <div class="colgroup01" data-aos="fade-up">
                         <a href="#n">
                             <img src="images/main/midia01.png" alt="손하트를 하고 있는 간호사 사진">
                             <h3>충북대, 나이팅게일의 꿈을 펼쳐온 10년의 시간을 빛내다!</h3>
                             <p>충북대학교 간호학과가 학과 개설 10주년을 맞아 ‘10주년 기념식’을 개최했다. 이날 기념식에는 간호학과를 설립하고 기틀을 마련하는데 아낌없는 지원을 하고 중추적인 역할을 한 이들에게 감사패를 증정하고, 10년 발전사 전달, 발전기금 기탁 등 다채로운 행사를 진행했다.</p>
                         </a>
                     </div>
-                    <div class="colgroup02">
+                    <div class="colgroup02" data-aos="fade-up" data-aos-delay="100">
                         <ul>
                             <li><a href="#n"><img src="images/main/midia02.png" alt="학교 휴게실 사진"></a></li>
                             <li><a href="#n"><img src="images/main/midia03.png" alt="학교 강의 사진"></a></li>
@@ -426,32 +428,67 @@
                         </a>
                     </div>
                     <div class="region_02">
-                        <h2>열린충북대</h2>
-                        <strong>학교구성원, 지역주민<br>모두와 함께합니다.</strong>
-                        <ul>
-                            <li>
-                                <a href="#n">
-                                    <span>열린신문고</span>
-                                    <i class="material-symbols-outlined">east</i>
+                        <div class="inner">    
+                            <h2>열린충북대</h2>
+                            <strong>학교구성원, 지역주민<br>모두와 함께합니다.</strong>
+                            <ul>
+                                <li>
+                                    <a href="#n">
+                                        <span>열린신문고</span>
+                                        <i class="material-symbols-outlined">east</i>
 
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <span>불편신고</span>
-                                    <i class="material-symbols-outlined">east</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <span>불편신고</span>
+                                        <i class="material-symbols-outlined">east</i>
 
-                                </a>
-                            </li>
-                        </ul>
-                        <a href="#n" class="more">
-                            <span>더보기</span>
-                            <i class="material-symbols-outlined">add</i>
-                        </a>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#n" class="more">
+                                <span>더보기</span>
+                                <i class="material-symbols-outlined">add</i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <footer class="footer">
+                <div class="f_top">
+                    <div class="wrapper">
+                        <div class="top_inner">
+                            <ul class="f_nav clearfix">
+                                <li class="pri"><a href="#n">개인정보처리방침</a></li>
+                                <li><a href="#n">대학정보공시</a></li>
+                                <li><a href="#n">정보공개 3.0</a></li>
+                                <li><a href="#n">정책실명제 안내</a></li>
+                                <li><a href="#n">행정서비스헌장</a></li>
+                                <li><a href="#n">오시는길</a></li>
+                                <li><a href="#n">Webmaster</a></li>
+                                <li><a href="#n">오류신고게시판</a></li>
+                            </ul>
+                            <div class="family">
+                                <button>
+                                    <span>관련기관사이트</span>
+                                    <i class="material-symbols-outlined">add</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f_sub">
+                    <div class="wrapper">
+                        <div class="f_logo"><img src="images/common/f_logo.svg" alt="충북대학교 로고"></div>
+                        <div class="inner">
+                            <div class="f_info">(28644) 충북 청주시 서원구 충대로 1, 충북대학교 TEL 043)261-2114</div>
+                            <div class="copy">Copyright 2014 Chungbuk National University (c) Allrights Reserved</div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
     </div>
 </body>
 </html>

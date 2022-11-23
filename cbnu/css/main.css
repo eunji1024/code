@@ -247,7 +247,7 @@
 .notice ul li.active .more{
     display: flex;
 }
-@media screen and (max-width:1024px){
+/* @media screen and (max-width:1024px){
     .notice .tit strong{
         font-size: 15px;
     }
@@ -279,8 +279,8 @@
     .notice ul li .detail ul li:last-child a{
         display: none;
     }
-}
-@media screen and (max-width:768px){
+} */
+/* @media screen and (max-width:768px){
     .notice{
         margin: 32px 0 50px 0;
         height: 300px;
@@ -332,7 +332,7 @@
     .notice ul li .more {
         top: -10px;
     }
-}
+} */
 @media screen and (max-width:640px){
     .notice{
         margin: 32px 0 40px 0;
@@ -500,7 +500,7 @@
 .press .more span{
     display: none;
 }
-@media screen and (max-width:1024px){
+/* @media screen and (max-width:1024px){
     .press{
         padding: 60px 0;
     }
@@ -562,13 +562,13 @@
     .press .news_01 .more{
         right: 20px;
     }
-}
+} */
 @media screen and (max-width:640px){
     .press{
         padding: 40px 0;
     }
     .press::before{
-        right: 0; width: 100%; height: 384px;
+        right: 0; width: 100%; height: 400px;
     }
     .press .news_01{
         float: none;
@@ -598,6 +598,9 @@
     }
     .press .news_02 ul li:first-child{
         margin: 0;
+    }
+    .press .news_02 ul li:last-child{
+        display: none;
     }
     .press .news_02 ul li a span img{
         width: 100%; height: auto;
@@ -637,12 +640,13 @@
 }
 .service ul{
     float: right;
+    width: calc(100% - 360px);
     padding: 20px 0 0 0;
 }
 .service ul li{
     position: relative;
     float: left;
-    width: 174px;
+    width: 16.66%;
     text-align: center;
 }
 .service ul li::after{
@@ -661,15 +665,19 @@
     display: block;
     margin: 0 0 15px 0;
     font-size: 48px;
+    transition: 0.2s;
 }
-@media screen and (max-width:1024px){
+.service ul li:hover i{
+    margin: -8px 0 23px 0;
+}
+/* @media screen and (max-width:1024px){
     .service .tit strong{
         font-size: 15px;
     }
     .service ul li{
         width: 120px;
     }
-}
+} */
 @media screen and (max-width:768px){
     .service{
         height: auto;
@@ -688,6 +696,7 @@
     }
     .service ul{
         float: none;
+        width: 100%;
         padding: 10px 0 0 0;
     }
     .service ul li{
@@ -778,21 +787,6 @@
 .midia .colgroup02 ul li:hover img{
     transform: scale(1.1, 1.1);
 }
-@media screen and (max-width:1024px){
-    .midia .midia_cnt{
-        float: none;
-    }
-    .midia .colgroup01{
-        width: 100%;
-        margin: 0 60px 0 0;
-    }
-    .midia .colgroup02{
-        display: none;
-    }
-    .midia .colgroup01 a{
-        display: block;
-    }
-}
 @media screen and (max-width:640px){
     .midia{
         margin: 50px 0;
@@ -807,6 +801,9 @@
     }
     .midia .tit strong{
         display: none;
+    }
+    .midia .midia_cnt{
+        float: none;
     }
     .midia .sns{
         float: right;
@@ -825,6 +822,9 @@
     .midia .colgroup01 a h3{
         margin: 10px 0 5px 0;
         font-size: 20px;
+    }
+    .midia .colgroup02{
+        display: none;
     }
 }
 .region{
@@ -916,7 +916,7 @@
 .region .region_02 .more span{
     display: none;
 }
-@media screen and (max-width:1024px){
+/* @media screen and (max-width:1024px){
     .region .inner{
         width: calc(50% + 340px);
     }
@@ -936,7 +936,7 @@
         padding: 66px 20px 0 20px;
         transform: translate(20px, 0);
     }
-}
+} */
 @media screen and (max-width:640px){
     .region{
         height: auto;
