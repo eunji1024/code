@@ -92,7 +92,7 @@
         left: 100px; top: 262px;
     }
 }
-@media screen and (max-width:1024px){
+/* @media screen and (max-width:1024px){
     .vis{
         position: relative;
         margin: 100px 0 0 0;
@@ -116,7 +116,7 @@
     .vis .side_menu{
         display: none;
     }
-}
+} */
 @media screen and (max-width:640px){
     .vis{
         margin: 45px 0 0 0;
@@ -908,7 +908,7 @@
 }
 .region .region_02 .more{
     position: absolute;
-    right: 40px; top: 60px;
+    right: 0; top: 0;
 }
 .region .region_02 .more i{
     font-size: 30px;
@@ -974,8 +974,5 @@
     }
     .region .region_02 strong{
         margin: 0 0 14px 0;
-    }
-    .region .region_02 .more{
-        right: 20px; top: 35px;
     }
 }

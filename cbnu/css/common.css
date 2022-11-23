@@ -64,15 +64,19 @@ html,body{
     width: 16.66%;
 }
 .header .gnb ul li a{
-    position: relative;
     display: block;
     text-align: center;
     line-height: 100px;
     white-space: nowrap;
 }
-.header .gnb ul li:hover a{
-    background-color: #FFF;
-    color: #0061B2;
+.header .gnb ul li a span{
+    position: relative;
+}
+.header .gnb ul li:hover a span::before{
+    position: absolute;
+    left: -15px; top: -5px; width: 5px; height: 5px;
+    border-radius: 5px; background-color: #fff;
+    content: "";
 }
 .header .gnb_top{
     float: left;
@@ -124,6 +128,12 @@ html,body{
 }
 .header.fixed .all_menu{
     background-color: #FFF;
+}
+.header.fixed .gnb ul li:hover a span::before{
+    background-color: #0061B2;
+}
+.header.fixed .gnb ul li:hover a{
+    color: #0061B2;
 }
 /* 
 @media screen and (max-width:1440px){
