@@ -1,0 +1,24 @@
+@import url(default.css);
+@import url(common.css);
+.vis{
+    height: 1000px;
+    background-color: #F4F4F4;
+    padding: 120px 0 0 0;
+}
+.vis::after{
+    position: absolute;
+    right: -320px; top: -300px; width: 819px; height: 819px;
+    background: url(../images/main/vis_round.png) no-repeat center center / cover;
+    content: "";
+}
+.vis h1{
+    display: none;
+}
+.vis .tit_top{
+    margin: 0 0 40px 0;
+    color: #3d3d3d; font-family: 'GangwonEduPowerExtraBoldA'; font-size: 100px; line-height: 40px;
+}
+.vis .tit_top h2{
+    margin: 0 0 0 3px;
+    color: #F4F4F4; text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
