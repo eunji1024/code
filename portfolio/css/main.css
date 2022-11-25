@@ -2,8 +2,9 @@
 @import url(common.css);
 .vis{
     height: 1000px;
-    background-color: #F4F4F4;
     padding: 120px 0 0 0;
+    background-color: #F4F4F4;
+    font-family: 'GangwonEduPowerExtraBoldA';
 }
 .vis::after{
     position: absolute;
@@ -15,10 +16,224 @@
     display: none;
 }
 .vis .tit_top{
-    margin: 0 0 40px 0;
-    color: #3d3d3d; font-family: 'GangwonEduPowerExtraBoldA'; font-size: 100px; line-height: 40px;
+    margin: 0 0 100px 0;
+    color: #3d3d3d; font-size: 100px; line-height: 40px;
 }
 .vis .tit_top h2{
     margin: 0 0 0 3px;
     color: #F4F4F4; text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+.vis .tit_bottom{
+    vertical-align: bottom;
+    margin: -100px 0 0 0;
+    text-align: right;
+}
+.vis .tit_bottom strong{
+    display: block;
+    color: #F4F4F4; font-size: 200px; line-height: 100px; text-shadow: -1.5px 0 #000, 0 1.5px #000, 1.5px 0 #000, 0 -1.5px #000;
+}
+.vis .tit_bottom span{
+    letter-spacing: -16px;
+}
+.vis .tit_bottom em{
+    display: block;
+    font-family: 'SBAggroL';
+}
+.cbnu{
+    position: relative;
+    height: 1300px;
+    padding: 112px 0 0 0;
+    background: url(../images/main/cbnu_bg.png) no-repeat center center / cover;
+    color: #FFF;
+}
+.cbnu .cbnu_tit{
+    margin: 0 0 76px 0;
+}
+.cbnu .cbnu_tit strong{
+    display: block;
+    margin: 5px 0 -20px -2px;
+    font-family: 'GangwonEduPowerExtraBoldA'; font-size: 90px;
+}
+.cbnu .cbnu_tit p{
+    font-size: 25px;
+}
+.cbnu .cbnu_cnt strong{
+    display: block;
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+.cbnu .cbnu_cnt .tool, .cbnu .cbnu_cnt .color{
+    margin: 0 0 60px 0;
+}
+.cbnu .cbnu_cnt .color .color_01{
+    display: inline-block;
+    width: 60px; height: 60px;
+    background-color: #005FAF;
+}
+.cbnu .cbnu_cnt .color .color_02{
+    display: inline-block;
+    width: 60px; height: 60px;
+    background-color: #B81C53;
+}
+.cbnu .cbnu_cnt .font{
+    position: relative;
+    margin: 0 0 200px 0;
+}
+.cbnu .cbnu_cnt .font p{
+    font-family: 'Noto Sans KR';
+}
+.cbnu .cbnu_cnt .link{
+    position: relative; z-index: 10;
+}
+.cbnu .cbnu_cnt .link a strong{
+    display: inline-block;
+}
+.cbnu .cbnu_cnt .link strong{
+    padding: 5px 0 0 0;
+}
+.cbnu .cbnu_cnt .direction{
+    margin: 220px 0 0 0;
+}
+.cbnu .cbnu_preview .preview_01{
+    position: absolute; z-index: 1;
+    left: calc(50% - 285px); bottom: calc(50% - 308px);
+}
+.cbnu .cbnu_preview .preview_02{
+    position: absolute;
+    left: calc(50% + 134px); bottom: calc(50% - 560px);
+    font-size: 0; line-height: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.baum{
+    position: relative;
+    height: 1300px;
+    padding: 112px 0 0 0;
+    background: url(../images/main/baum_bg.png) no-repeat center center / cover;
+    color: #FFF; text-align: right;
+}
+.baum .baum_tit{
+    margin: 0 0 76px 0;
+}
+.baum .baum_tit strong{
+    display: block;
+    margin: 5px -2px -20px 0;
+    font-family: 'GangwonEduPowerExtraBoldA'; font-size: 90px;
+}
+.baum .baum_tit p{
+    font-size: 25px;
+}
+.baum .baum_cnt strong{
+    display: block;
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+.baum .baum_cnt .tool, .baum .baum_cnt .color{
+    margin: 0 0 60px 0;
+}
+.baum .baum_cnt .color .color_01{
+    display: inline-block;
+    width: 60px; height: 60px;
+    background-color: #935F2E;
+}
+.baum .baum_cnt .color .color_02{
+    display: inline-block;
+    width: 60px; height: 60px;
+    background-color: #A0AE7F;
+}
+.baum .baum_cnt .font{
+    position: relative;
+    margin: 0 0 200px 0;
+}
+.baum .baum_cnt .font p{
+    font-family: 'GmarketSansMedium';
+}
+.baum .baum_cnt .link{
+    position: relative; z-index: 10;
+}
+.baum .baum_cnt .link a strong{
+    display: inline-block;
+}
+.baum .baum_cnt .link strong{
+    padding: 5px 0 0 0;
+}
+.baum .baum_cnt .direction{
+    margin: 220px 0 0 0;
+}
+.baum .baum_preview .preview_01{
+    position: absolute; z-index: 1;
+    right: calc(50% - 580px); bottom: calc(50% - 400px);
+}
+.baum .baum_preview .preview_02{
+    position: absolute;
+    right: calc(50% + 204px); bottom: calc(50% - 560px);
+    font-size: 0; line-height: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.dye{
+    position: relative;
+    height: 1300px;
+    padding: 112px 0 0 0;
+    background: url(../images/main/dye_bg.png) no-repeat center center / cover;
+    color: #FFF;
+}
+.dye .dye_tit{
+    margin: 0 0 76px 0;
+}
+.dye .dye_tit strong{
+    display: block;
+    margin: 5px 0 -20px -2px;
+    font-family: 'GangwonEduPowerExtraBoldA'; font-size: 90px;
+}
+.dye .dye_tit p{
+    font-size: 25px;
+}
+.dye .dye_cnt strong{
+    display: block;
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+.dye .dye_cnt .tool, .dye .dye_cnt .color{
+    margin: 0 0 60px 0;
+}
+.dye .dye_cnt .color .color_01{
+    display: inline-block;
+    width: 60px; height: 60px;
+    background-color: #0E2D5B;
+}
+.dye .dye_cnt .color .color_02{
+    display: inline-block;
+    width: 60px; height: 60px;
+    background-color: #1F5FAD;
+}
+.dye .dye_cnt .font{
+    position: relative;
+    margin: 0 0 200px 0;
+}
+.dye .dye_cnt .font p{
+    font-family: 'Noto Sans KR';
+}
+.dye .dye_cnt .link{
+    position: relative; z-index: 10;
+}
+.dye .dye_cnt .link a strong{
+    display: inline-block;
+}
+.dye .dye_cnt .link strong{
+    padding: 5px 0 0 0;
+}
+.dye .dye_cnt .direction{
+    margin: 220px 0 0 0;
+}
+.dye .dye_preview .preview_01{
+    position: absolute; z-index: 1;
+    left: calc(50% - 590px); bottom: calc(50% - 390px);
+}
+.dye .dye_preview .preview_02{
+    position: absolute;
+    left: calc(50% + 110px); bottom: calc(50% - 567px);
+    font-size: 0; line-height: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.footer{
+    height: 100px;
+    padding: 42px 0 0 0;
+    background-color: #F4F4F4;
+    text-align: right; font-size: 15px;
 }
